@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-28T04:41:23.838Z</updated>
+  <updated>2023-02-03T15:14:13.980Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,132 +17,12 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第五篇文章</title>
-    <link href="http://example.com/%E7%AC%AC%E4%BA%94%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/%E7%AC%AC%E4%BA%94%E7%AF%87%E6%96%87%E7%AB%A0/</id>
-    <published>2023-01-26T15:05:07.000Z</published>
-    <updated>2023-01-28T04:41:23.838Z</updated>
+    <title>在Windows上使用宝塔面板搭建网站</title>
+    <link href="http://example.com/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/"/>
+    <id>http://example.com/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</id>
+    <published>2023-02-03T15:14:13.000Z</published>
+    <updated>2023-02-03T15:14:13.980Z</updated>
     
-    <content type="html"><![CDATA[<p><code>cd adjad</code></p><p><code>#dir/s</code></p><p><a href="https://i.328888.xyz/2023/01/26/bKyKC.jpeg">https://i.328888.xyz/2023/01/26/bKyKC.jpeg</a></p><p><img src="https://i.328888.xyz/2023/01/26/bKyKC.jpeg" alt="图片"></p><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> stdio.h</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="默认" scheme="http://example.com/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第四篇文章</title>
-    <link href="http://example.com/%E7%AC%AC%E5%9B%9B%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/%E7%AC%AC%E5%9B%9B%E7%AF%87%E6%96%87%E7%AB%A0/</id>
-    <published>2023-01-26T15:05:07.000Z</published>
-    <updated>2023-01-26T16:55:39.046Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>cd adjad</code></p><p><code>#dir/s</code></p><p><a href="https://i.328888.xyz/2023/01/26/bKyKC.jpeg">https://i.328888.xyz/2023/01/26/bKyKC.jpeg</a></p><p><img src="https://i.328888.xyz/2023/01/26/bKyKC.jpeg" alt="图片"></p><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> stdio.h</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="默认" scheme="http://example.com/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第三篇文章</title>
-    <link href="http://example.com/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/%E7%AC%AC%E4%B8%89%E7%AF%87%E6%96%87%E7%AB%A0/</id>
-    <published>2023-01-26T15:02:07.000Z</published>
-    <updated>2023-01-28T04:34:31.567Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>cd adjad</code></p><p><code>#dir/s</code></p><p><a href="https://i.328888.xyz/2023/01/26/bKyKC.jpeg">https://i.328888.xyz/2023/01/26/bKyKC.jpeg</a></p><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> stdio.h</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="默认" scheme="http://example.com/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第二篇文章</title>
-    <link href="http://example.com/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</id>
-    <published>2023-01-26T14:02:07.000Z</published>
-    <updated>2023-01-30T09:55:32.725Z</updated>
-    
-    <content type="html"><![CDATA[<p>以下两个编辑器任选其一即可。</p><p>郎哥更推荐安装Typora。</p><h1 id="MarkdownPad"><a href="#MarkdownPad" class="headerlink" title="MarkdownPad"></a><strong>MarkdownPad</strong></h1><p>可以去官网下载安装包，也可以直接下载郎哥提供的配套资源（官网不一定进得去，郎哥的配套资源<strong>获取方式在文末</strong>。配套资源除了有MarkdownPad安装包，还有Awesomium SDK安装包和激活信息哦！）</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">官网：https://markdownpad.com/</span><br></pre></td></tr></table></figure><center>运行安装包，确定</center><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLWQauT9qx0TAGXWlGgj5rUPh5QCicMNavxepfnic1uIImicGicsn7CTwepg/640?wx_fmt=png" alt="img"></p><p>下一步</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLenv711hyiawIXp318Erh3mlv8liaHomfa8mvyYQv50G9JM6wKFmyEgVQ/640?wx_fmt=png" alt="img"></p><p>下一步</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLV3HZF5xYgyMFOShCF9xkyFrr4mBiaJaVZ7z8U8xqeZgZViaPRnkFN3Yg/640?wx_fmt=png" alt="img"></p><p>接受协议，下一步</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLjY2rl61ficqANNEQHuLicd90AdaYVW34iaSO3iaP3cQFicwqtUSVZZt0vfQ/640?wx_fmt=png" alt="img"></p><p>选择安装路径，建议选择C盘以外的地方，下一步</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLJs2viaiagVsn5TNtSg2xXU6jrPXiaXaw8m4o4z0CkWe81m2CHV3nG3vUg/640?wx_fmt=png" alt="img"></p><p>下一步</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLicNibibyOoZqyjYAJjoRIticFiaYSJ5hjOgXaMibCdDKh9YibHfLwiczaUiac4w/640?wx_fmt=png" alt="img"></p><p>安装</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLFVIZnlzrtgkSTmgUEbgyjWZAhLfbZc5W0u7KZicwunsXFgBE9mOic0Ag/640?wx_fmt=png" alt="img"></p><p>取消勾选“启动 MarkdownPad 2”，完成</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLjba2Y7X7bsu5wXdlMKic3l1VD3JA5poibicMLVrVybOvibeHbawoaD7Wkg/640?wx_fmt=png" alt="img"></p><p>接下来需要安装Awesomium SDK，否则MarkdownPad无法正常使用</p><p>运行Awesomium SDK的安装程序（配套资源里有），Next</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLaS0sUtSQoDZXM2p1Mz0WHBUR2CUTp0hibMNzGck0O9X9aSLA0pQibHWA/640?wx_fmt=png" alt="img"></p><p>接受协议，Next</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLBssX1fQvYsaH8DXD6OHoMica0L6IRIm66fFfUGa0zgroPUSd4u8aCmQ/640?wx_fmt=png" alt="img"></p><p>Next</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLpMialXmoSo2ZjSCOLCPtrKaNuGlcOmiah3YmeJQ3dBdYS36FUTlzGRMA/640?wx_fmt=png" alt="img"></p><p>先选好安装路径(建议选择C盘以外的地方)，然后点击Typical</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLYic8Mc0v3drGd1OOG9VvZ7h5OkXnThXMz7gDUyz3sx3tdRqXwIEVTMg/640?wx_fmt=png" alt="img"></p><p>点击Install开始安装</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLgMVrs3QibFZvpk2XV9Pb6MghXamIwzskHkLANia5j7OTORHsGRnVUNow/640?wx_fmt=png" alt="img"></p><p>提示需要重启电脑，点击确定（不是马上重启，需要自己手动重启）</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLQMrjhHnaqBF1FYcNhyakC2q3icQDRThMkTjEOIKiagHXnaXT0OgL3eEg/640?wx_fmt=png" alt="img"></p><p>可以先关掉这两个页面再重启电脑，也可以直接重启</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLNuYrCToudJPI9qsdyIpbNCaNnc8IOY1S4gzcLrk1NkhqgkZevDYslg/640?wx_fmt=png" alt="img"></p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLx9HKm4NWY8yrR9tckBObgD5XXaMdzsoAUsyqJ294pTzEbOmnbGaIvg/640?wx_fmt=png" alt="img"></p><p>重启后打开MarkdownPad 2，点击Enter Key</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLxrLFk6oTx1BYYXAtKiaiawtWiaNOBRKLjT8ffGw897b6xhjXDVxwRH09g/640?wx_fmt=png" alt="img"></p><p>输入激活信息（配套资源里有），OK</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLuJX7k9X0ubm5GCTgxvL1HK3XAUNc803WG0bDdWyurpAshCMJo4yy7g/640?wx_fmt=png" alt="img"></p><p>弹出这个提示就是激活成功了，点击OK</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLa0gNUjicsuRBI0UEQt8mV8iaKzrwhu90uBaIciadmzrZTicjdnsjXT2x1Q/640?wx_fmt=png" alt="img"></p><p>如果看不惯英文，可以切换成中文</p><p>点击Tools&gt;Options</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLaRCict1Bo3aJtpcicn5CWE4EeH1ZZISs3M6x3jnia9icJIfTfVicLjuusEg/640?wx_fmt=png" alt="img"></p><p>在Languages中选择“中文(中国)”</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLD3HJ5ucrH2eGpicbmOicHNYSSjn17tRhx8fyiasq36PaLThGMDnM32u7w/640?wx_fmt=png" alt="img"></p><p>确定</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLr6ibRX4Fla0oZJeIB1pzOecuicfzLPxoicjXtjBg6VPdeVPJvsFZKBBRg/640?wx_fmt=png" alt="img"></p><p>点击保存并关闭，然后重新打开软件就可以切换为中文了</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLfgIRld1ozz9ib7FRiauqh8ic4iaR3Jf37iaZ4IPv120fvQAdhaHRav8YTSw/640?wx_fmt=png" alt="img"></p><p>随便打开一个md文件看看效果</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLcvicK56zWSEoBf6I0kcekvIwOvEXfYsicanC5CTMsdCPbGoY9sw8qXJw/640?wx_fmt=png" alt="img"></p><h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a><strong>Typora</strong></h1><h2 id="一、下载"><a href="#一、下载" class="headerlink" title="一、下载"></a><strong>一、下载</strong></h2><p>可以去官网下载安装包，也可以直接下载郎哥提供的配套资源（官网需要加速才能进去，郎哥的配套资源<strong>获取方式在文末</strong>。配套资源除了有Typora安装包，还有激活文件哦！）</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">官网：https://www.typora.io/</span><br></pre></td></tr></table></figure><h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a><strong>二、安装</strong></h2><p>运行Typora安装包</p><p>这里建议选择第一项（也可以根据自己的需求进行选择）</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLc3bDh3xSXsXWbeZPXJmr4ghgV7VquybW8UKo7UxTBOlW4ibMsQKR7icw/640?wx_fmt=png" alt="img"></p><p>选择安装路径(建议选择C盘以外的地方)，Next</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLLjRFMpODNU6ibt41tJ3ynAiczYF5y8uf3HaWdh73sHic2Z1CCHzmnmKIg/640?wx_fmt=png" alt="img"></p><p>勾选“Create a desktop shortcut（创建桌面快捷方式）”，Next</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLibQRx81oYoBQbMBDLqdvREqxHYy5YDGBdTfxG2e6zBzmsgv0GeVRkxg/640?wx_fmt=png" alt="img"></p><p>点击Install开始安装</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLR9FcNliaNCyDrknJ2EmJ0jjvZeHqMSQMPIIINTQ18GISb2hexzjGeDQ/640?wx_fmt=png" alt="img"></p><p>取消勾选“Launch Typora”，Finish</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLSj5Uo84JibjBS1NZ2YgbOglptv47zQS2BfQ31eL7FSpSjztI4uQcWLg/640?wx_fmt=png" alt="img"></p><h2 id="三、激活"><a href="#三、激活" class="headerlink" title="三、激活"></a><strong>三、激活</strong></h2><p>目前郎哥提供的激活方法适用于最新版本（即1.4.8），其他版本自测</p><p>右键Typora桌面快捷方式，打开文件所在的位置</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLMnmxxAdmD0SwBt2vL7UW192ZSy77IKs8tvSsWGC4ZibEY6JibI2DvavA/640?wx_fmt=png" alt="img"></p><p>将winmm.dll复制到Typora安装目录（winmm.dll在配套资源里有）</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLZMmrr8SE3cjBVwOj4nELFya6zBHRlcu7ssM8oTeqCZ1XKFkdaBiaLjQ/640?wx_fmt=png" alt="img"></p><p>打开Typora，点击帮助&gt;我的许可证</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgL5tNXTcqVYAMcicxHvLLExaOxnicpQXERgQl4iay1cmsNrGmPjXL1RkhlA/640?wx_fmt=png" alt="img"></p><p>可以看到已经成功激活</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLPrGI2Hg2tiakdZUpNX9aBCichQfK1Gq5TDhhVvQhnLCDGIv4BCpfDu4A/640?wx_fmt=png" alt="img"></p><p>随便打开一个md文件查看效果</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KueajuSgvuMGQClEicNVK5xhgLSMN6OpoScqSGiajWAYRnLbXk5wO1aoEOTdGBGAo3w4IGXeiaib4ZnAmXg/640?wx_fmt=png" alt="img"></p><p><strong>总结</strong></p><p>两款软件各有优势，但目前比较流行的是Typora，大家可以按需选择安装！</p><p><img src="https://mmbiz.qpic.cn/mmbiz_gif/TmvhXK7KuebpLXvtwwMMY3PkroLkSvH1KNOHprpvD3T2H9orttnGfZCLRaOQyT4nMM0xlqWUodibyPyTPrZOiaMA/640?wx_fmt=gif" alt="img"></p><p>END</p><p><img src="https://mmbiz.qpic.cn/mmbiz_png/TmvhXK7KuebpLXvtwwMMY3PkroLkSvH1FHVUjd0icWeribDdYKeia62ZewibwHSQjwcU1k7XolGnbVIibR04H1uc0Zg/640?wx_fmt=png" alt="img"></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="默认" scheme="http://example.com/categories/%E9%BB%98%E8%AE%A4/"/>
-    
-    
-    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="科技" scheme="http://example.com/tags/%E7%A7%91%E6%8A%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/hello-world/"/>
-    <id>http://example.com/hello-world/</id>
-    <published>2023-01-25T13:06:26.950Z</published>
-    <updated>2023-01-25T13:06:26.951Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
     
     
     
@@ -150,13 +30,301 @@
   </entry>
   
   <entry>
-    <title>第一篇Hexo blog文章</title>
-    <link href="http://example.com/%E7%AC%AC%E4%B8%80%E7%AF%87Hexo-blog%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/%E7%AC%AC%E4%B8%80%E7%AF%87Hexo-blog%E6%96%87%E7%AB%A0/</id>
-    <published>2022-01-25T14:02:07.000Z</published>
-    <updated>2023-01-30T10:11:33.907Z</updated>
+    <title>快来领取郎粉专属红包封面啦~</title>
+    <link href="http://example.com/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/"/>
+    <id>http://example.com/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/</id>
+    <published>2023-02-03T15:13:28.000Z</published>
+    <updated>2023-02-03T15:13:28.723Z</updated>
     
-    <content type="html"><![CDATA[<p><code>cd adjad</code></p><p><code>#dir/s</code></p><p><a href="https://i.328888.xyz/2023/01/26/bKyKC.jpeg">https://i.328888.xyz/2023/01/26/bKyKC.jpeg</a></p><p><img src="https://i.328888.xyz/2023/01/26/bKyKC.jpeg" alt="图片"></p><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> stdio.h</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"></p>]]></content>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何下载并运行Github上面的开源项目</title>
+    <link href="http://example.com/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://example.com/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
+    <published>2023-02-03T15:12:58.000Z</published>
+    <updated>2023-02-03T15:12:58.878Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>郎粉专属红包封面发放预通知</title>
+    <link href="http://example.com/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/"/>
+    <id>http://example.com/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/</id>
+    <published>2023-02-03T15:12:20.000Z</published>
+    <updated>2023-02-03T15:12:20.732Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown编辑器--MarkdownPad和Typora的安装教程</title>
+    <link href="http://example.com/Markdown%E7%BC%96%E8%BE%91%E5%99%A8-MarkdownPad%E5%92%8CTypora%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>http://example.com/Markdown%E7%BC%96%E8%BE%91%E5%99%A8-MarkdownPad%E5%92%8CTypora%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</id>
+    <published>2023-02-03T15:10:52.000Z</published>
+    <updated>2023-02-03T15:10:52.244Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Windows上Git的下载、安装与配置</title>
+    <link href="http://example.com/Windows%E4%B8%8AGit%E7%9A%84%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/Windows%E4%B8%8AGit%E7%9A%84%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-02-03T15:09:38.000Z</published>
+    <updated>2023-02-03T15:09:38.579Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在手机上通过Termux搭建黑客平台--Kali Linux</title>
+    <link href="http://example.com/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/"/>
+    <id>http://example.com/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/</id>
+    <published>2023-02-03T15:09:07.000Z</published>
+    <updated>2023-02-03T15:09:07.904Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>利用手机和平板扩展电脑屏幕</title>
+    <link href="http://example.com/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/"/>
+    <id>http://example.com/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/</id>
+    <published>2023-02-03T15:08:24.000Z</published>
+    <updated>2023-02-03T15:08:24.039Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>黑客常用操作系统--Kali Linux的安装与使用</title>
+    <link href="http://example.com/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>http://example.com/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2023-02-03T15:07:43.000Z</published>
+    <updated>2023-02-03T15:07:43.577Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>安装体验国产操作系统--统信UOS</title>
+    <link href="http://example.com/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/"/>
+    <id>http://example.com/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/</id>
+    <published>2023-02-03T15:07:12.000Z</published>
+    <updated>2023-02-03T15:07:12.557Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>搭建一个轻量级NAS</title>
+    <link href="http://example.com/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F%E7%BA%A7NAS/"/>
+    <id>http://example.com/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F%E7%BA%A7NAS/</id>
+    <published>2023-02-03T15:06:23.000Z</published>
+    <updated>2023-02-03T15:06:23.174Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在VMware虚拟机里安装Mac OS系统</title>
+    <link href="http://example.com/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://example.com/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/</id>
+    <published>2023-02-03T15:06:06.000Z</published>
+    <updated>2023-02-03T15:06:06.777Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何安装虚拟机</title>
+    <link href="http://example.com/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    <id>http://example.com/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</id>
+    <published>2023-02-03T15:05:27.000Z</published>
+    <updated>2023-02-03T15:05:27.803Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>破解WiFi常用的几种方法</title>
+    <link href="http://example.com/%E7%A0%B4%E8%A7%A3WiFi%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://example.com/%E7%A0%B4%E8%A7%A3WiFi%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</id>
+    <published>2023-02-03T15:05:10.000Z</published>
+    <updated>2023-02-03T15:05:10.076Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>制作钓鱼WiFi</title>
+    <link href="http://example.com/%E5%88%B6%E4%BD%9C%E9%92%93%E9%B1%BCWiFi/"/>
+    <id>http://example.com/%E5%88%B6%E4%BD%9C%E9%92%93%E9%B1%BCWiFi/</id>
+    <published>2023-02-03T15:04:44.000Z</published>
+    <updated>2023-02-03T15:04:44.496Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>新电脑必做的十几个优化设置</title>
+    <link href="http://example.com/%E6%96%B0%E7%94%B5%E8%84%91%E5%BF%85%E5%81%9A%E7%9A%84%E5%8D%81%E5%87%A0%E4%B8%AA%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://example.com/%E6%96%B0%E7%94%B5%E8%84%91%E5%BF%85%E5%81%9A%E7%9A%84%E5%8D%81%E5%87%A0%E4%B8%AA%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/</id>
+    <published>2023-02-03T15:04:30.000Z</published>
+    <updated>2023-02-03T15:04:30.680Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于CMD和DOS，你真的了解吗？</title>
+    <link href="http://example.com/%E5%85%B3%E4%BA%8ECMD%E5%92%8CDOS%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F/"/>
+    <id>http://example.com/%E5%85%B3%E4%BA%8ECMD%E5%92%8CDOS%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F/</id>
+    <published>2023-02-03T15:03:54.000Z</published>
+    <updated>2023-02-03T15:03:54.360Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>彻底清除电脑里所有的广告</title>
+    <link href="http://example.com/%E5%BD%BB%E5%BA%95%E6%B8%85%E9%99%A4%E7%94%B5%E8%84%91%E9%87%8C%E6%89%80%E6%9C%89%E7%9A%84%E5%B9%BF%E5%91%8A/"/>
+    <id>http://example.com/%E5%BD%BB%E5%BA%95%E6%B8%85%E9%99%A4%E7%94%B5%E8%84%91%E9%87%8C%E6%89%80%E6%9C%89%E7%9A%84%E5%B9%BF%E5%91%8A/</id>
+    <published>2023-02-03T15:03:19.000Z</published>
+    <updated>2023-02-03T15:03:19.120Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微信红包封面最全领取攻略</title>
+    <link href="http://example.com/%E5%BE%AE%E4%BF%A1%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%9C%80%E5%85%A8%E9%A2%86%E5%8F%96%E6%94%BB%E7%95%A5/"/>
+    <id>http://example.com/%E5%BE%AE%E4%BF%A1%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%9C%80%E5%85%A8%E9%A2%86%E5%8F%96%E6%94%BB%E7%95%A5/</id>
+    <published>2023-02-03T15:02:47.000Z</published>
+    <updated>2023-02-03T15:02:48.006Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>制作一个可以随身携带的系统盘</title>
+    <link href="http://example.com/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%98/"/>
+    <id>http://example.com/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%98/</id>
+    <published>2023-02-03T15:01:35.000Z</published>
+    <updated>2023-02-03T15:01:35.725Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>将云盘挂载为本地磁盘</title>
+    <link href="http://example.com/%E5%B0%86%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A3%81%E7%9B%98/"/>
+    <id>http://example.com/%E5%B0%86%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A3%81%E7%9B%98/</id>
+    <published>2023-02-03T15:00:53.000Z</published>
+    <updated>2023-02-03T15:00:53.293Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>NFC功能的妙用</title>
+    <link href="http://example.com/NFC%E5%8A%9F%E8%83%BD%E7%9A%84%E5%A6%99%E7%94%A8/"/>
+    <id>http://example.com/NFC%E5%8A%9F%E8%83%BD%E7%9A%84%E5%A6%99%E7%94%A8/</id>
+    <published>2023-02-03T15:00:26.000Z</published>
+    <updated>2023-02-03T15:00:26.642Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>制作WiFi杀手</title>
+    <link href="http://example.com/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/"/>
+    <id>http://example.com/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/</id>
+    <published>2023-02-03T15:00:06.000Z</published>
+    <updated>2023-02-04T13:13:25.922Z</updated>
+    
+    
+    
+    
+    <category term="原创" scheme="http://example.com/categories/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>这是一则公告</title>
+    <link href="http://example.com/%E8%BF%99%E6%98%AF%E4%B8%80%E5%88%99%E5%85%AC%E5%91%8A/"/>
+    <id>http://example.com/%E8%BF%99%E6%98%AF%E4%B8%80%E5%88%99%E5%85%AC%E5%91%8A/</id>
+    <published>2023-01-30T14:00:00.000Z</published>
+    <updated>2023-01-30T14:00:26.734Z</updated>
+    
+    <content type="html"><![CDATA[<center>经过几天的奋斗，郎哥终于将博客搭建好了<center><center>接下来一段时间，郎哥会先将微信公众号的文章迁移到博客上，因此公众号的更新可能会搁置一段时间，希望大家理解<center><center>如果你对郎哥的博客有什么意见或建议，欢迎随时给郎哥反馈哦<center>  ​            <img src="\img\jkl1.png" alt="jkl1" style="zoom:50%;" />]]></content>
     
     
       
@@ -169,10 +337,70 @@
     
     
     
-    <category term="默认" scheme="http://example.com/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+    <category term="公告" scheme="http://example.com/tags/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速搭建网站（初级篇）</title>
+    <link href="http://example.com/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%88%9D%E7%BA%A7%E7%AF%87%EF%BC%89/"/>
+    <id>http://example.com/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%88%9D%E7%BA%A7%E7%AF%87%EF%BC%89/</id>
+    <published>2022-01-02T06:13:33.000Z</published>
+    <updated>2022-01-02T06:13:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ol><li>一台能联网的电脑（以Windows10系统为例）   </li><li>网站源码</li></ol><h2 id="教程开始"><a href="#教程开始" class="headerlink" title="教程开始"></a>教程开始</h2><center>首先打开Windows设置（直接按快捷键win+i 或者右键左下角‘开始’，点击‘设置’）</center><p><img src="http://a.ximfem.asia/data/2022-01-02-1.png" alt="图片"></p><center>找到 应用→程序和功能→启用或关闭Windows功能</center><p><img src="http://a.ximfem.asia/data/2022-01-02-2.png" alt="图片"></p><p><img src="http://a.ximfem.asia/data/2022-01-02-3.png" alt="图片"></p><p><img src="http://a.ximfem.asia/data/2022-01-02-4.png" alt="图片"></p><center>往上滑找到Internet Information Services，将其所有子项勾选后点击‘确定’</center><p><img src="http://a.ximfem.asia/data/2022-01-02-5.png" alt="图片"></p><center>期间保持网络通畅，静待安装完成</center><p><img src="http://a.ximfem.asia/data/2022-01-02-6.png" alt="图片"></p><center>安装完成后可关闭所有窗口</center><p><img src="http://a.ximfem.asia/data/2022-01-02-7.png" alt="图片"></p><center>点击左下角🔍，搜索‘iis’，直接打开</center><p><img src="http://a.ximfem.asia/data/2022-01-02-8.png" alt="图片"></p><center>展开到子项‘网站’，右键进行添加</center><p><img src="http://a.ximfem.asia/data/2022-01-02-9.png" alt="图片"></p><p>填写‘网站名称’，选择物理路径（源码所在的目录，最好把源码放在C盘以外的磁盘），IP地址选填（不能与其他设备冲突），填写端口（尽量不要填常用的端口号，比如80，3389等，以防产生冲突），主机名选填。填写完成后点击‘确定’</p><p><img src="http://a.ximfem.asia/data/2022-01-02-10.png" alt="图片"></p><center>选中刚刚添加的网站，点击‘默认文档’</center><p><img src="http://a.ximfem.asia/data/2022-01-02-11.png" alt="图片"></p><center>将网站首页文件名称上移到第一位（一般都是index.html，如果列表没有就手动添加）</center><p><img src="http://a.ximfem.asia/data/2022-01-02-12.png" alt="图片"></p><center>回到主页，重新启动网站，然后点击‘浏览’就可以正常打开网站了</center><p><img src="http://a.ximfem.asia/data/2022-01-02-13.png" alt="图片"></p><p><img src="http://a.ximfem.asia/data/2022-01-02-14.png" alt="图片"></p><center>网站的默认地址为‘电脑的IP+英文冒号+端口’，如‘192.168.1.6:8000’。如果在前面的步骤中自己设置了IP，那就把电脑的IP改为你设置的IP</center><center>别人连接了同一个WiFi之后，输入网站地址后就可以进入网站玩耍了</center><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><center>此教程适用于搭建简单的HTML和ASP网页，由于没有进行内网穿透，所以只能在同一个WiFi下访问，如果需要搭建PHP以及其他更高级的公网网站，请看中级篇和高级篇<center><p><img src="/img/123.gif" alt="123"></p><img src="\img\ewm.png" alt="ewm" style="zoom:50%;" /><center><font color="grey">（部分素材来源于网络，如有侵权请联系作者删除）</font></center>]]></content>
     
     
-    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="建站" scheme="http://example.com/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="电脑" scheme="http://example.com/tags/%E7%94%B5%E8%84%91/"/>
+    
+    <category term="iis" scheme="http://example.com/tags/iis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>旧手机的利用</title>
+    <link href="http://example.com/%E6%97%A7%E6%89%8B%E6%9C%BA%E7%9A%84%E5%88%A9%E7%94%A8/"/>
+    <id>http://example.com/%E6%97%A7%E6%89%8B%E6%9C%BA%E7%9A%84%E5%88%A9%E7%94%A8/</id>
+    <published>2021-12-31T16:08:36.000Z</published>
+    <updated>2023-02-03T15:55:54.452Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><center>家里闲置了几部手机，我打算将它们都利用起来。<center><p><img src="http://a.ximfem.asia/data/2022-01-01-1.jpg" alt="图片"></p><h3 id="第一部"><a href="#第一部" class="headerlink" title="第一部"></a>第一部</h3><center>我将它改造成了一个服务器，然后将网站搭建在上面，这样我就有了一个免费的、随身的主机，如果再加上内网穿透，任何人都能够访问我的网站（直接省了购买虚拟主机和域名的💰 ）<center><p><img src="http://a.ximfem.asia/data/2022-01-01-2.jpg" alt="图片"></p><h3 id="第二部"><a href="#第二部" class="headerlink" title="第二部"></a>第二部</h3><center>这是一部苹果5，比较老旧了，我就拿它看小说和听音乐了<center><p><img src="http://a.ximfem.asia/data/2022-01-01-3.jpg" alt="图片"></p><h3 id="第三部"><a href="#第三部" class="headerlink" title="第三部"></a>第三部</h3><center>这部手机内存比较大，我把它改造成了公用U盘，可以在其他设备直接往里面存取文件<center><p><img src="http://a.ximfem.asia/data/2022-01-01-4.jpg" alt="图片"></p><p><img src="http://a.ximfem.asia/data/2022-01-01-5.jpg" alt="图片"></p><h3 id="第四部"><a href="#第四部" class="headerlink" title="第四部"></a>第四部</h3><center>这部用起来比较流畅，我用HDMI线把它连接到电视上，想看什么视频直接在手机上播放就可以享受大屏的观感<center><p><img src="http://a.ximfem.asia/data/2022-01-01-6.jpg" alt="图片"></p><center>旧手机的用途还有哪些？<center><center>欢迎大家留言讨论<center><p>​     </p><p><img src="/%5Cimg%5C123.gif" alt="123"></p><img src="\img\ewm.png" alt="ewm" style="zoom:50%;" />]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="智慧生活" scheme="http://example.com/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="闲置" scheme="http://example.com/tags/%E9%97%B2%E7%BD%AE/"/>
+    
+    <category term="手机" scheme="http://example.com/tags/%E6%89%8B%E6%9C%BA/"/>
     
   </entry>
   
