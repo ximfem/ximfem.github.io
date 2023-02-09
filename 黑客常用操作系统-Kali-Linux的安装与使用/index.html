@@ -5,7 +5,7 @@
 <meta property="og:site_name" content="极客郎">
 <meta property="og:description" content="前言大家可能经常在电影或电视中看到过黑客们各种炫酷的操作，羡慕之余你是否想过自己也可以成为他们呢？让我们从黑客使用的操作系统入手，慢慢进入刺激的黑客世界吧。  身为黑客，肯定要做到知己知彼。相比封闭的Windows系统，黑客更青睐于透明度更高的Linux系统。并且，Linux拥有更高的安全性和更广的控制权，这些都是Windows系统无法匹敌的。在众多Linux发行版中，Kali Linux最受欢迎">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://a.ximfem.asia/data/2022-10-12.jpg">
+<meta property="og:image" content="https://a.ximfem.asia/data/2022-10-12.jpg">
 <meta property="article:published_time" content="2022-10-12T02:18:30.000Z">
 <meta property="article:modified_time" content="2022-10-12T02:18:30.000Z">
 <meta property="article:author" content="郎哥">
@@ -15,7 +15,7 @@
 <meta property="article:tag" content="SSH">
 <meta property="article:tag" content="黑客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://a.ximfem.asia/data/2022-10-12.jpg"><link rel="shortcut icon" href="/img/jkl.png"><link rel="canonical" href="https://ximfem.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://a.ximfem.asia/data/2022-10-12.jpg"><link rel="shortcut icon" href="/img/jkl.png"><link rel="canonical" href="https://ximfem.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -166,282 +166,282 @@
 
 <p align="left"><font color="black" size="3">下面郎哥就教大家进行Kali Linux的安装（在VMware虚拟机上安装）和简单配置。</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-1.jpg" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-1.jpg" alt="图片"></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p align="center"><font color="black" size="3">先去下面的网站下载系统镜像文件</font></p>
 
 <p align="center"><font color="black" size="3"><a href="http://old.kali.org/kali-images/" target="_blank">http://old.kali.org/kali-images</a></font></p>
 
 <p align="center"><font color="black" size="3">这个网站上有kali的所有历史版本</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-2.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-2.png" alt="图片"></p>
 <p align="left"><font color="black" size="3">郎哥建议大家下载2021.2版本，这个版本比较稳定（尽量不要下载最新版本，因为新版本会有很多新bug，而且很难找到解决方法）</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-3.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-3.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">根据自己电脑配置选择相应的镜像包（郎哥的是AMD处理器的64位电脑）</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-4.jpg" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-4.jpg" alt="图片"></p>
 <p align="center"><font color="black" size="3">在镜像下载过程中，我们可以先使用VMware创建虚拟机（还没有安装VMware的<a href="/如何安装虚拟机" target="_blank">点这里</a>）</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-5.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-5.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">默认使用“典型”，下一步</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-6.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-6.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">稍后安装操作系统，下一步</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-7.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-7.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择“Linux”系统，版本选择“Debian 10.x 64 位”，下一步</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-8.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-8.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">自定义虚拟机名称和保存位置，下一步</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-9.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-9.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">分配磁盘大小（不会立即占用磁盘空间，只是相当于使用磁盘的上限），下一步</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-10.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-10.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">完成</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-11.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-11.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">编辑虚拟机</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-12.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-12.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">分配内存和处理器数量</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-13.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-13.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">移除多余的硬件--打印机</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-14.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-14.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">如果前面的镜像文件下载完成的话就可以进行下面的步骤</font></p>
 
 <p align="center"><font color="black" size="3">在“CD/DVD”里面添加镜像文件</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-15.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-15.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择刚刚下载的镜像文件（郎哥很久以前就下载了）</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-16.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-16.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">完成后点击“确定”</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-17.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-17.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">开启虚拟机</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-18.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-18.png" alt="图片"></p>
 <p align="center"><font color="black" size="3"> 由于没有安装VMware tools，所以安装过程的界面很小（后面后自动安装）</font></p>
 
 <p align="center"><font color="black" size="3">选择第一项--图形化安装</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-19.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-19.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择语言（英文好的话尽量选英文），这里郎哥选择中文</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-20.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-20.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">地区选择“中国”</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-21.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-21.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择汉语键盘</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-22.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-22.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">自定义主机名</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-23.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-23.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">域名可以不填，直接跳过</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-24.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-24.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">自定义用户名</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-25.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-25.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">直接回车即可</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-26.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-26.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">设置密码（一定要牢记）</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-27.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-27.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择第一项</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-28.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-28.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择唯一的硬盘</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-29.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-29.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择第一项</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-30.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-30.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">结束分区</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-31.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-31.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择“是”</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-32.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-32.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">这里是选择需要安装的软件，直接默认就可以了</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-33.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-33.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">经过漫长的等待会进入以下界面</font></p>
 
 <p align="center"><font color="black" size="3">选择“是”</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-34.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-34.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">选择唯一的设备</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-35.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-35.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">完成安装，点击“继续”会重启虚拟机</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-36.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-36.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">重启后选择第一项进入系统</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-37.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-37.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入账号和密码，登录</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-38.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-38.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">成功进入桌面</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-39.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-39.png" alt="图片"></p>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p align="center"><font color="black" size="3">要想高效地使用kali，还需要进行一些简单的配置</font></p>
 
 <h3 id="激活root账户"><a href="#激活root账户" class="headerlink" title="激活root账户"></a>激活root账户</h3><p align="left"><font color="black" size="3">kali默认创建的为普通账户，这样在使用很多命令的时候会有限制。而root账户拥有最高权限，可以执行所有操作，但是root账户在默认情况下处于未激活状态，因此需要进行激活</font></p>
 
 <p align="center"><font color="black" size="3">点击左上角最后一个图标，打开终端模拟器</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-40.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-40.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入以下命令然后回车</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-41.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-41.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入登录密码（为了保护用户隐私，kali终端在所有输入密码的时候都不会显示密码），回车</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-42.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-42.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">按要求输入两次root账户的密码</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-43.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-43.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">激活成功</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-44.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-44.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入以下命令然后输入密码即可切换为root用户</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-45.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-45.png" alt="图片"></p>
 <h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><p align="left"><font color="black" size="3">*系统默认使用的是kali官方的镜像源，但由于其服务器在国外，因此在下载速度上会有很大影响。我们可以更换国内的镜像源来解决。*</font></p>
 
 <p align="center"><font color="black" size="3">使用vim编辑器打开源文件</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-46.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-46.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">按下i键进入编辑模式</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-47.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-47.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">将原有内容全部注释掉（在前面加#号），然后将下面两行加进去（这是中科大的镜像源）</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-48.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-48.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">编辑完成后按下ESC键退出编辑模式，然后按下shift+：(冒号)进入末行模式，输入wq或x，回车后即可保存退出</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-49.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-49.png" alt="图片"></p>
 <h3 id="更新软件"><a href="#更新软件" class="headerlink" title="更新软件"></a>更新软件</h3><p align="center"><font color="black" size="3">完成换源后需要进行一次全盘更新，以保证系统功能的完整性</font></p>
 
 <p align="left"><font color="black" size="3">可以直接输入下面这行命令然后回车（这行命令由3个命令组成，&&是命令的连接符，可以让多个命令连续执行），也可以分别执行3个命令</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get update&amp;&amp;apt-get upgrade&amp;&amp;apt-get dist-upgrade</span><br><span class="line">注释：</span><br><span class="line">apt-get update -- 检查软件更新</span><br><span class="line">apt-get upgrade -- 升级所有软件</span><br><span class="line">apt-get dist-upgrade -- 在升级软件包时自动处理依赖关系</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-50.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-50.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">遇到需要确认的地方直接输入y，然后回车即可</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-51.png" alt="图片"></p>
-<p><img src="http://a.ximfem.asia/data/2022-10-12-52.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-51.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-52.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">这里选择“是”，回车</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-53.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-53.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">确定，回车</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-54.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-54.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">到这里就完成了</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-55.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-55.png" alt="图片"></p>
 <h3 id="安装中文输入法"><a href="#安装中文输入法" class="headerlink" title="安装中文输入法"></a>安装中文输入法</h3><p align="center"><font color="black" size="3">系统内置的输入法只有英文，但是很多时候我们仍需要用到中文，因此安装一个中文输入法很有必要</font></p>
 
 <p align="center"><font color="black" size="3">首先输入以下命令，安装输入法框架</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install fcitx</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-56.png" alt="图片"></p>
-<p><img src="http://a.ximfem.asia/data/2022-10-12-57.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-56.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-57.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">然后输入以下命令，安装谷歌拼音</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install fcitx-googlepinyin</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-58.png" alt="图片"></p>
-<p><img src="http://a.ximfem.asia/data/2022-10-12-59.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-58.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-59.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">最后输入reboot重启系统</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-60.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-60.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">重启后按下CTRL+空格键切换输入法就可以输入中文了</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-61.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-61.png" alt="图片"></p>
 <h3 id="开启SSH"><a href="#开启SSH" class="headerlink" title="开启SSH"></a>开启SSH</h3><p align="center"><font color="black" size="3">使用ssh可以在别的系统上使用命令行访问kali以及执行shell命令</font></p>
 
 <p align="center"><font color="black" size="3">首先切换到root账户</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-62.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-62.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入以下命令开启ssh服务</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh start</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-63.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-63.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入以下命令查看ssh服务运行状态</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh status</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-64.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-64.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">如果有running字样就表示服务已经成功运行了</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-65.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-65.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入以下命令将ssh服务设为开机自启</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable ssh</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-66.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-66.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">可以重启一下，然后查看服务的运行状态，如果正常运行就表示成功设置开机自启</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-67.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-67.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入以下命令查看kali的ip地址</font></p>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-68.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-68.png" alt="图片"></p>
 <p align="left"><font color="black" size="3">回到Windows系统，使用SSH客户端（郎哥使用的是FinalShell，免费好用，直接在官网就可以下载）进行ssh连接（kali系统需要一直运行）</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-69.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-69.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">添加连接</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-70.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-70.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">自定义名称，主机填刚刚查到的ip地址，用户名和密码为kali的用户名和密码，确定</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-71.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-71.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">点击进行连接</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-72.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-72.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">接受并保存</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-73.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-73.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">连接成功</font></p>
 
 <p align="center"><font color="black" size="3">可以查看到kali的所有信息</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-74.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-74.png" alt="图片"></p>
 <h3 id="拍摄快照"><a href="#拍摄快照" class="headerlink" title="拍摄快照"></a>拍摄快照</h3><p align="left"><font color="black" size="3">为了以后系统出现难以修复的故障时能够快速恢复到初始状态而不用重装系统，提前给系统拍个快照是个不错的选择</font></p>
 
 <p align="center"><font color="black" size="3">先将虚拟机关闭</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-75.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-75.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">输入名称和描述，拍摄快照</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-76.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-76.png" alt="图片"></p>
 <p align="center"><font color="black" size="3">在这里可以管理所有快照，也可以恢复到以前的快照节点</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-77.png" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-77.png" alt="图片"></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p align="center"><font color="black" size="3">郎哥给大家准备了一个小礼物——kali命令集</font></p>
 
 <p align="center"><font color="black" size="3">这些全部都是郎哥入门以来所使用频率较高的命令，而且都是郎哥一个个手打出来的。全文两千多字，一百多个命令，有基础的，也有高级的，希望大家能够快速上手kali。但是，俗话说得好：kali学得好，局子进得早。希望大家在学习技术的过程中，严格遵守法律法规，不要触碰法律底线。互联网的和谐安全，需要大家共同维护！</font></p>
 
-<p><img src="http://a.ximfem.asia/data/2022-10-12-78.jpg" alt="图片"></p>
+<p><img src="https://a.ximfem.asia/data/2022-10-12-78.jpg" alt="图片"></p>
 <img src="\img\123.gif" />
 
 <h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left" style="line-height:15px;"><font color="black" size="3">本期配套资源：<font color="blue"><ins>kali命令.txt</ins></font></font></p>
@@ -451,7 +451,7 @@
 <img src="\img\ewm.png" style="zoom:50%;" />
 
 <p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ximfem.asia">郎哥</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ximfem.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">https://ximfem.asia/黑客常用操作系统-Kali-Linux的安装与使用/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ximfem.asia" target="_blank">极客郎</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%B3%BB%E7%BB%9F/">系统</a><a class="post-meta__tags" href="/tags/VMware/">VMware</a><a class="post-meta__tags" href="/tags/Kali/">Kali</a><a class="post-meta__tags" href="/tags/SSH/">SSH</a><a class="post-meta__tags" href="/tags/%E9%BB%91%E5%AE%A2/">黑客</a></div><div class="post_share"><div class="social-share" data-image="http://a.ximfem.asia/data/2022-10-12.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/" title="利用手机和平板扩展电脑屏幕"><img class="cover" src="http://a.ximfem.asia/data/2022-10-21.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">利用手机和平板扩展电脑屏幕</div></div></a></div><div class="next-post pull-right"><a href="/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/" title="安装体验国产操作系统--统信UOS"><img class="cover" src="http://a.ximfem.asia/data/2022-10-04.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">安装体验国产操作系统--统信UOS</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/" title="在手机上通过Termux搭建黑客平台--Kali Linux"><img class="cover" src="http://a.ximfem.asia/data/2022-12-01.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-01</div><div class="title">在手机上通过Termux搭建黑客平台--Kali Linux</div></div></a></div><div><a href="/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/" title="在VMware虚拟机里安装Mac OS系统"><img class="cover" src="http://a.ximfem.asia/data/2022-09-05.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-05</div><div class="title">在VMware虚拟机里安装Mac OS系统</div></div></a></div><div><a href="/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/" title="安装体验国产操作系统--统信UOS"><img class="cover" src="http://a.ximfem.asia/data/2022-10-04.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-04</div><div class="title">安装体验国产操作系统--统信UOS</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/jkl.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">郎哥</div><div class="author-info__description">将科技玩到极致！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">53</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" href="/img/ewm.png"><i class="fab fa-weixin"></i><span>微信公众号</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=2744184711&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="mailto:liangsper@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎光临极客郎博客！</div></div><div class="card-widget" id="newYear"><div class="item-headline"><i></i><span></span></div><div class="item-content"><div id="newYear-main"><div class="mask"></div> <p class="title"></p> <div class="newYear-time"></div> <p class="today" style="text-align: right;"></p> </div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BF%80%E6%B4%BBroot%E8%B4%A6%E6%88%B7"><span class="toc-number">3.1.</span> <span class="toc-text">激活root账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E6%BA%90"><span class="toc-number">3.2.</span> <span class="toc-text">换源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">更新软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">3.4.</span> <span class="toc-text">安装中文输入法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%90%AFSSH"><span class="toc-number">3.5.</span> <span class="toc-text">开启SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%8D%E6%91%84%E5%BF%AB%E7%85%A7"><span class="toc-number">3.6.</span> <span class="toc-text">拍摄快照</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">4.</span> <span class="toc-text">最后</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E5%A5%97%E8%B5%84%E6%BA%90"><span class="toc-number">5.</span> <span class="toc-text">配套资源</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/" title="在Windows上使用宝塔面板搭建网站"><img src="http://a.ximfem.asia/data/2023-01-29.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在Windows上使用宝塔面板搭建网站"/></a><div class="content"><a class="title" href="/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/" title="在Windows上使用宝塔面板搭建网站">在Windows上使用宝塔面板搭建网站</a><time datetime="2023-01-29T07:02:16.000Z" title="发表于 2023-01-29 15:02:16">2023-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/" title="快来领取郎粉专属红包封面啦~"><img src="http://a.ximfem.asia/data/2023-01-18.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="快来领取郎粉专属红包封面啦~"/></a><div class="content"><a class="title" href="/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/" title="快来领取郎粉专属红包封面啦~">快来领取郎粉专属红包封面啦~</a><time datetime="2023-01-18T09:05:09.000Z" title="发表于 2023-01-18 17:05:09">2023-01-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" title="如何下载并运行Github上面的开源项目"><img src="http://a.ximfem.asia/data/2023-01-17.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何下载并运行Github上面的开源项目"/></a><div class="content"><a class="title" href="/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" title="如何下载并运行Github上面的开源项目">如何下载并运行Github上面的开源项目</a><time datetime="2023-01-17T00:30:56.000Z" title="发表于 2023-01-17 08:30:56">2023-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/" title="郎粉专属红包封面发放预通知"><img src="http://a.ximfem.asia/data/2023-01-10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="郎粉专属红包封面发放预通知"/></a><div class="content"><a class="title" href="/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/" title="郎粉专属红包封面发放预通知">郎粉专属红包封面发放预通知</a><time datetime="2023-01-09T23:54:10.000Z" title="发表于 2023-01-10 07:54:10">2023-01-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/bg1.jpg')"><div id="footer-wrap"><div class="copyright">Copyright &copy; 2023 极客郎. All rights reserved.</div><div id="running-time"></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ximfem.asia">郎哥</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ximfem.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">https://ximfem.asia/黑客常用操作系统-Kali-Linux的安装与使用/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ximfem.asia" target="_blank">极客郎</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%B3%BB%E7%BB%9F/">系统</a><a class="post-meta__tags" href="/tags/VMware/">VMware</a><a class="post-meta__tags" href="/tags/Kali/">Kali</a><a class="post-meta__tags" href="/tags/SSH/">SSH</a><a class="post-meta__tags" href="/tags/%E9%BB%91%E5%AE%A2/">黑客</a></div><div class="post_share"><div class="social-share" data-image="https://a.ximfem.asia/data/2022-10-12.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/" title="利用手机和平板扩展电脑屏幕"><img class="cover" src="https://a.ximfem.asia/data/2022-10-21.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">利用手机和平板扩展电脑屏幕</div></div></a></div><div class="next-post pull-right"><a href="/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/" title="安装体验国产操作系统--统信UOS"><img class="cover" src="https://a.ximfem.asia/data/2022-10-04.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">安装体验国产操作系统--统信UOS</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/" title="在手机上通过Termux搭建黑客平台--Kali Linux"><img class="cover" src="https://a.ximfem.asia/data/2022-12-01.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-01</div><div class="title">在手机上通过Termux搭建黑客平台--Kali Linux</div></div></a></div><div><a href="/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/" title="在VMware虚拟机里安装Mac OS系统"><img class="cover" src="https://a.ximfem.asia/data/2022-09-05.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-05</div><div class="title">在VMware虚拟机里安装Mac OS系统</div></div></a></div><div><a href="/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/" title="安装体验国产操作系统--统信UOS"><img class="cover" src="https://a.ximfem.asia/data/2022-10-04.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-04</div><div class="title">安装体验国产操作系统--统信UOS</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/jkl.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">郎哥</div><div class="author-info__description">将科技玩到极致！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">53</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" href="/img/ewm.png"><i class="fab fa-weixin"></i><span>微信公众号</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=2744184711&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="mailto:liangsper@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎光临极客郎博客！</div></div><div class="card-widget" id="newYear"><div class="item-headline"><i></i><span></span></div><div class="item-content"><div id="newYear-main"><div class="mask"></div> <p class="title"></p> <div class="newYear-time"></div> <p class="today" style="text-align: right;"></p> </div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BF%80%E6%B4%BBroot%E8%B4%A6%E6%88%B7"><span class="toc-number">3.1.</span> <span class="toc-text">激活root账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E6%BA%90"><span class="toc-number">3.2.</span> <span class="toc-text">换源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E8%BD%AF%E4%BB%B6"><span class="toc-number">3.3.</span> <span class="toc-text">更新软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">3.4.</span> <span class="toc-text">安装中文输入法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%90%AFSSH"><span class="toc-number">3.5.</span> <span class="toc-text">开启SSH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%8D%E6%91%84%E5%BF%AB%E7%85%A7"><span class="toc-number">3.6.</span> <span class="toc-text">拍摄快照</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-number">4.</span> <span class="toc-text">最后</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E5%A5%97%E8%B5%84%E6%BA%90"><span class="toc-number">5.</span> <span class="toc-text">配套资源</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/" title="在Windows上使用宝塔面板搭建网站"><img src="https://a.ximfem.asia/data/2023-01-29.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在Windows上使用宝塔面板搭建网站"/></a><div class="content"><a class="title" href="/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/" title="在Windows上使用宝塔面板搭建网站">在Windows上使用宝塔面板搭建网站</a><time datetime="2023-01-29T07:02:16.000Z" title="发表于 2023-01-29 15:02:16">2023-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/" title="快来领取郎粉专属红包封面啦~"><img src="https://a.ximfem.asia/data/2023-01-18.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="快来领取郎粉专属红包封面啦~"/></a><div class="content"><a class="title" href="/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/" title="快来领取郎粉专属红包封面啦~">快来领取郎粉专属红包封面啦~</a><time datetime="2023-01-18T09:05:09.000Z" title="发表于 2023-01-18 17:05:09">2023-01-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" title="如何下载并运行Github上面的开源项目"><img src="https://a.ximfem.asia/data/2023-01-17.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何下载并运行Github上面的开源项目"/></a><div class="content"><a class="title" href="/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" title="如何下载并运行Github上面的开源项目">如何下载并运行Github上面的开源项目</a><time datetime="2023-01-17T00:30:56.000Z" title="发表于 2023-01-17 08:30:56">2023-01-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/" title="郎粉专属红包封面发放预通知"><img src="https://a.ximfem.asia/data/2023-01-10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="郎粉专属红包封面发放预通知"/></a><div class="content"><a class="title" href="/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/" title="郎粉专属红包封面发放预通知">郎粉专属红包封面发放预通知</a><time datetime="2023-01-09T23:54:10.000Z" title="发表于 2023-01-10 07:54:10">2023-01-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/bg1.jpg')"><div id="footer-wrap"><div class="copyright">Copyright &copy; 2023 极客郎. All rights reserved.</div><div id="running-time"></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
   function initValine () {
     const valine = new Valine(Object.assign({
       el: '#vcomment',
