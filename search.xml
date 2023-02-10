@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>推荐一款非常好用的装机工具--Ventoy</title>
+      <link href="/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/"/>
+      <url>/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/</url>
+      
+        <content type="html"><![CDATA[<p align="left"><font color="black" size="3">给大家推荐一下郎哥发现的一个宝藏装机工具，它就是大名鼎鼎的 Ventoy 。郎哥已经用了两年多，用它装系统的次数也有几十次了。软件的具体介绍在它的<a href="https://www.ventoy.net/" target="_blank">官网</a>已经描述得很清楚了，大家可以直接去官网了解。郎哥主要给大家介绍软件的用法。</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-1.png" alt="img"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-2.png" alt="img"></p><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p align="center"><font color="black" size="3">首先准备好一个U盘，建议是USB3.0、8G以上的U盘</font></p><p align="center"><font color="black" size="3">然后去<a href="https://www.ventoy.net/cn/download.html" target="_blank">官网</a>下载软件，建议下载最新版</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-3.png" alt="img"></p><p align="center"><font color="black" size="3">下载后解压得到下面的文件，打开Ventoy2Disk.exe运行软件</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-4.png" alt="img"></p><p align="center"><font color="black" size="3">打开后会自动识别U盘，确认无误后直接点击安装</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-5.png" alt="img"></p><p align="center"><font color="black" size="3">U盘会被格式化，所以要提前备份好U盘的资料。点击“是”之后还会让你再次确认一遍</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-6.png" alt="img"></p><p align="center"><font color="black" size="3">这样就算安装好了，可以关掉软件</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-7.png" alt="img"></p><p align="center"><font color="black" size="3">打开文件管理器，进入U盘</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-8.png" alt="img"></p><p align="center"><font color="black" size="3">将需要用到的ISO镜像文件放进去</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-9.png" alt="img"></p><p align="center"><font color="black" size="3">需要装机时，进行U盘启动后选择对应的系统镜像就可以开始安装系统了</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-10.png" alt="img"></p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p align="left"><font color="black" size="3">相较于市面上很多的启动盘制作软件来说，这款软件最大的优点就是无需反复格式化U盘，想要装一个新系统时，只需要将系统的ISO镜像文件拷贝至U盘中，即可在U盘启动后的Ventoy界面中选择自己想要的ISO镜像文件来装机了（有些镜像还能直接运行系统）。</font></p><img src="\img\123.gif" /><img src="\img\ewm.png" style="zoom:50%;" /><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 科普推荐 </category>
+          
+          <category> 原创 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 装机 </tag>
+            
+            <tag> Ventoy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在Windows上使用宝塔面板搭建网站</title>
       <link href="/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/"/>
       <url>/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</url>
@@ -256,13 +285,13 @@
             
             <tag> 系统 </tag>
             
-            <tag> VMware </tag>
-            
             <tag> Kali </tag>
             
             <tag> SSH </tag>
             
             <tag> 黑客 </tag>
+            
+            <tag> VMware </tag>
             
         </tags>
       

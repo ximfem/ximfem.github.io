@@ -6,7 +6,7 @@
   <link href="https://ximfem.asia/atom.xml" rel="self"/>
   
   <link href="https://ximfem.asia/"/>
-  <updated>2023-01-29T07:02:16.000Z</updated>
+  <updated>2023-02-10T04:44:57.557Z</updated>
   <id>https://ximfem.asia/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>推荐一款非常好用的装机工具--Ventoy</title>
+    <link href="https://ximfem.asia/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/"/>
+    <id>https://ximfem.asia/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/</id>
+    <published>2023-02-10T04:34:55.000Z</published>
+    <updated>2023-02-10T04:44:57.557Z</updated>
+    
+    <content type="html"><![CDATA[<p align="left"><font color="black" size="3">给大家推荐一下郎哥发现的一个宝藏装机工具，它就是大名鼎鼎的 Ventoy 。郎哥已经用了两年多，用它装系统的次数也有几十次了。软件的具体介绍在它的<a href="https://www.ventoy.net/" target="_blank">官网</a>已经描述得很清楚了，大家可以直接去官网了解。郎哥主要给大家介绍软件的用法。</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-1.png" alt="img"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-2.png" alt="img"></p><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p align="center"><font color="black" size="3">首先准备好一个U盘，建议是USB3.0、8G以上的U盘</font></p><p align="center"><font color="black" size="3">然后去<a href="https://www.ventoy.net/cn/download.html" target="_blank">官网</a>下载软件，建议下载最新版</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-3.png" alt="img"></p><p align="center"><font color="black" size="3">下载后解压得到下面的文件，打开Ventoy2Disk.exe运行软件</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-4.png" alt="img"></p><p align="center"><font color="black" size="3">打开后会自动识别U盘，确认无误后直接点击安装</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-5.png" alt="img"></p><p align="center"><font color="black" size="3">U盘会被格式化，所以要提前备份好U盘的资料。点击“是”之后还会让你再次确认一遍</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-6.png" alt="img"></p><p align="center"><font color="black" size="3">这样就算安装好了，可以关掉软件</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-7.png" alt="img"></p><p align="center"><font color="black" size="3">打开文件管理器，进入U盘</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-8.png" alt="img"></p><p align="center"><font color="black" size="3">将需要用到的ISO镜像文件放进去</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-9.png" alt="img"></p><p align="center"><font color="black" size="3">需要装机时，进行U盘启动后选择对应的系统镜像就可以开始安装系统了</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-10-10.png" alt="img"></p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p align="left"><font color="black" size="3">相较于市面上很多的启动盘制作软件来说，这款软件最大的优点就是无需反复格式化U盘，想要装一个新系统时，只需要将系统的ISO镜像文件拷贝至U盘中，即可在U盘启动后的Ventoy界面中选择自己想要的ISO镜像文件来装机了（有些镜像还能直接运行系统）。</font></p><img src="\img\123.gif" /><img src="\img\ewm.png" style="zoom:50%;" /><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="科普推荐" scheme="https://ximfem.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="原创" scheme="https://ximfem.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="装机" scheme="https://ximfem.asia/tags/%E8%A3%85%E6%9C%BA/"/>
+    
+    <category term="Ventoy" scheme="https://ximfem.asia/tags/Ventoy/"/>
+    
+  </entry>
   
   <entry>
     <title>在Windows上使用宝塔面板搭建网站</title>
@@ -299,13 +330,13 @@
     
     <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
-    
     <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
     
     <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
     <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
+    
+    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
     
   </entry>
   
