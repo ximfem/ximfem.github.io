@@ -6,7 +6,7 @@
   <link href="https://ximfem.asia/atom.xml" rel="self"/>
   
   <link href="https://ximfem.asia/"/>
-  <updated>2023-04-16T05:14:03.000Z</updated>
+  <updated>2023-05-06T06:43:48.700Z</updated>
   <id>https://ximfem.asia/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建和使用OpenVPN</title>
+    <link href="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/"/>
+    <id>https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/</id>
+    <published>2023-05-06T06:20:03.000Z</published>
+    <updated>2023-05-06T06:43:48.700Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left"><font color="black" size="3">在当今信息时代，网络安全问题越来越受到人们的关注。为了保护个人隐私和数据安全，VPN技术应运而生。VPN是虚拟专用网络的缩写形式，它通过公共互联网为我们提供了具有匿名性和安全性的数据传输。VPN服务屏蔽了我们的ISP IP，因此我们的在线操作几乎无法被追踪。VPN 还可用于通过使用 Internet 或其他中间网络将计算机连接到通常无法访问的隔离的远程计算机网络，简单来说就是通过一条虚拟的线路将两个局域网连通起来，让我们可以轻松访问另一个局域网内部的资源。OpenVPN是一个功能齐全的VPN开源项目，它可以在不同的操作系统上运行。本文将介绍如何搭建和使用OpenVPN。</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-0.png" alt="图片"></p><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p align="center"><font color="black" size="3">一台电脑（Windows系统）</font></p><p align="center"><font color="black" size="3">一台云服务器（以阿里云服务器为例，服务器的系统是Ubuntu）</font></p><p align="center"><font color="black" size="3">本文配套资源（<b><span style="color:blue;">获取方式在文末</span></b>）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-1.png" alt="图片"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-01.png" alt="图片"></p><h2 id="在服务器搭建OpenVPN"><a href="#在服务器搭建OpenVPN" class="headerlink" title="在服务器搭建OpenVPN"></a>在服务器搭建OpenVPN</h2><p align="center"><font color="black" size="3">首先需要开启服务器的443和1194端口</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-2.png" alt="图片"></p><p align="center"><font color="black" size="3">输入以下命令，下载OpenVPN压缩包</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.28-9669-beta/softether-vpnserver-v4.28-9669-beta-2018.09.11-linux-x64-64bit.tar.gz</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-3.png" alt="图片"></p><p align="center"><font color="black" size="3">解压文件</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf softether-vpnserver-v4.28-9669-beta-2018.09.11-linux-x64-64bit.tar.gz</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-4.png" alt="图片"></p><p align="center"><font color="black" size="3">切换到解压后的文件目录</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd vpnserver</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-5.png" alt="图片"></p><p align="center"><font color="black" size="3">编译文件（这里会有几个需要手动确认的步骤，一路输入1就行了）</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-6.png" alt="图片"></p><p align="center"><font color="black" size="3">启动服务</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./vpnserver start</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-7.png" alt="图片"></p><p align="center"><font color="black" size="3">运行脚本（选择1之后再回车两次，即不用输入其他内容）</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./vpncmd</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-8.png" alt="图片"></p><p align="center"><font color="black" size="3">设置密码，提示successfully就是设置成功了</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerPasswordSet</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-9.png" alt="图片"></p><h2 id="在电脑上使用"><a href="#在电脑上使用" class="headerlink" title="在电脑上使用"></a>在电脑上使用</h2><p align="center"><font color="black" size="3">先安装配套资源提供的两个软件（根据步骤安装即可）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-10.png" alt="图片"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-11.png" alt="图片"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-12.png" alt="图片"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-13.png" alt="图片"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-14.png" alt="图片"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-15.png" alt="图片"></p><p align="center"><font color="black" size="3">安装完成</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-16.png" alt="图片"></p><p align="center"><font color="black" size="3">打开SE-VPN Server Manager>新设置</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-17.png" alt="图片"></p><p align="center"><font color="black" size="3">主机名填写服务器的公网IP，填写服务器上最后那步设置的密码</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-18.png" alt="图片"></p><p align="center"><font color="black" size="3">连接服务器</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-19.png" alt="图片"></p><p align="center"><font color="black" size="3">勾选“远程访问 VPN Server”，下一步</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-20.png" alt="图片"></p><p align="center"><font color="black" size="3">点击“是”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-21.png" alt="图片"></p><p align="center"><font color="black" size="3">随便填写一个名称，确定</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-22.png" alt="图片"></p><p align="center"><font color="black" size="3">这一步选做，设置了DNS主机名后可以用DNS主机名代替IP</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-23.png" alt="图片"></p><p align="center"><font color="black" size="3">勾选“启用 L2TP 服务器功能”，这样就可以通过其他设备连接这个VPN服务器，确定</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-24.png" alt="图片"></p><p align="center"><font color="black" size="3">勾选“禁用 VPN Azure”，确定</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-25.png" alt="图片"></p><p align="center"><font color="black" size="3">创建用户</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-26.png" alt="图片"></p><p align="center"><font color="black" size="3">自定义用户名和密码，确定</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-27.png" alt="图片"></p><p align="center"><font color="black" size="3">关闭其他页面，选中刚才添加的虚拟HUB，管理虚拟HUB</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-28.png" alt="图片"></p><p align="center"><font color="black" size="3">点击“虚拟 NAT 和虚拟 DHCP 服务器”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-29.png" alt="图片"></p><p align="center"><font color="black" size="3">启用 SecureNAT，关闭页面</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-30.png" alt="图片"></p><p align="center"><font color="black" size="3">回到这个页面，点击“OpenVPN / MS-SSTP 设置”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-31.png" alt="图片"></p><p align="center"><font color="black" size="3">端口默认即可，生成配置样本文件（样本文件是一个压缩包，保存到自己容易找到的地方）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-32.png" alt="图片"></p><p align="center"><font color="black" size="3">打开压缩包，取出配置文件（只需要l3那个）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-33.png" alt="图片"></p><p align="left"><font color="black" size="3">用记事本打开配置文件，修改remote那行，格式为“remote+服务器公网IP或动态DNS主机名+端口”，中间用空格隔开，然后在下面添加以下三行，保存文件</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">;ns-cert-type server</span><br><span class="line">remote-cert-tls server</span><br><span class="line">auth-nocache</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-34.png" alt="图片"></p><p align="center"><font color="black" size="3">打开OpenVPN GUI，鼠标右键点击右下角的软件图标，导入配置文件</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-35.png" alt="图片"></p><p align="center"><font color="black" size="3">选择刚刚修改的配置文件将其导入</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-36.png" alt="图片"></p><p align="center"><font color="black" size="3">鼠标右键点击右下角的软件图标，选择刚添加的节点，连接</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-37.png" alt="图片"></p><p align="center"><font color="black" size="3">输入前面设置的用户名和密码，确定</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-38.png" alt="图片"></p><p align="center"><font color="black" size="3">连接成功</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-39.png" alt="图片"></p><p align="center"><font color="black" size="3">查看IP，已经成功进入服务器所在的局域网并且分配了专属的虚拟局域网IP</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-40.png" alt="图片"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506-41.png" alt="图片"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p align="left"><font color="black" size="3">通过以上教程可以成功在阿里云的Ubuntu服务器上搭建OpenVPN，并且在Windows电脑上连接后进入服务器的局域网。通过研究发现，将端口改为53、67、68或69的UDP端口的话，有一定几率可以绕过校园网认证，实现免认证上网。最后，如果想要访问国外的网站，只需要把服务器换成国外的服务器即可。</font></p><img src="\img\123.gif" /><h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left" style="line-height:15px;"><font color="black" size="3">本期配套资源：<font color="blue"><ins>OpenVPN GUI.exe 、 SoftEther-VPN.exe</ins></font></font></p><p align="left" style="line-height:15px;"><font color="black" size="3">扫描下面的二维码关注极客郎公众号，回复暗号 <font color="blue"><ins>20230506</ins></font> 进行获取</font></p></div><img src="\img\ewm.png" style="zoom:50%;" /><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="OpenVPN" scheme="https://ximfem.asia/tags/OpenVPN/"/>
+    
+    <category term="服务器" scheme="https://ximfem.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="Ubuntu" scheme="https://ximfem.asia/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>快速搭建极客郎同款博客网站--基于Hexo框架</title>
@@ -82,9 +115,9 @@
     
     <category term="服务器" scheme="https://ximfem.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="主机" scheme="https://ximfem.asia/tags/%E4%B8%BB%E6%9C%BA/"/>
-    
     <category term="Ubuntu" scheme="https://ximfem.asia/tags/Ubuntu/"/>
+    
+    <category term="主机" scheme="https://ximfem.asia/tags/%E4%B8%BB%E6%9C%BA/"/>
     
     <category term="花生壳" scheme="https://ximfem.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
     
@@ -408,13 +441,13 @@
     
     <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
-    
     <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
     
     <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
     <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
+    
+    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
     
   </entry>
   
