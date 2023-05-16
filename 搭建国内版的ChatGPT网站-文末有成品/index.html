@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>搭建国内版的ChatGPT网站(文末有成品) | 极客郎</title><meta name="author" content="郎哥"><meta name="copyright" content="郎哥"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言ChatGPT是由OpenAI研发的聊天机器人程序，也可能是当前互联网中最强大的自然语言处理模型，它不仅可以模拟人类的对话方式，甚至可以进行一些创造性的表达。但受大环境的影响，在国内使用起来比较困难。为了解决国内无法使用的问题，GitHub上出现了许多自建ChatGPT的项目。经过多方面对比，郎哥选择了一个比较大众的项目--ChatGPT-Next-Web。下面就跟着郎哥的步伐一起动手搭建吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建国内版的ChatGPT网站(文末有成品)">
+<meta property="og:url" content="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/index.html">
+<meta property="og:site_name" content="极客郎">
+<meta property="og:description" content="前言ChatGPT是由OpenAI研发的聊天机器人程序，也可能是当前互联网中最强大的自然语言处理模型，它不仅可以模拟人类的对话方式，甚至可以进行一些创造性的表达。但受大环境的影响，在国内使用起来比较困难。为了解决国内无法使用的问题，GitHub上出现了许多自建ChatGPT的项目。经过多方面对比，郎哥选择了一个比较大众的项目--ChatGPT-Next-Web。下面就跟着郎哥的步伐一起动手搭建吧。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516.jpg">
+<meta property="article:published_time" content="2023-05-16T07:48:33.000Z">
+<meta property="article:modified_time" content="2023-05-16T13:01:44.609Z">
+<meta property="article:author" content="郎哥">
+<meta property="article:tag" content="ChatGPT">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Vercel">
+<meta property="article:tag" content="网站">
+<meta property="article:tag" content="Cloudflare">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516.jpg"><link rel="shortcut icon" href="/img/jkl.png"><link rel="canonical" href="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":730,"position":"top","messagePrev":"该文章自从上次更新后已经超过","messageNext":"天了，文章的内容可能会过时，请知悉。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 郎哥","link":"链接: ","source":"来源: 极客郎","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '搭建国内版的ChatGPT网站(文末有成品)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-05-16 21:01:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/gray.css"><link rel="stylesheet" href="/css/gundong.css"><link rel="stylesheet" href="/css/new-year.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/light.css"><link rel="stylesheet" href="/css/cardlistpost.css"><!--灯笼--><!--<div class="deng-box">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">新</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>
+<div class="deng-box1">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">春</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>--><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/carousel-touch.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/mindmap.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="极客郎" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/jkl.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">70</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-gamepad"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%83%9F%E8%8A%B1/"><span> 烟花</span></a></li><li><a class="site-page child" href="/%E6%97%B6%E9%92%9F/"><span> 时钟</span></a></li><li><a class="site-page child" href="/%E4%BB%A3%E7%A0%81%E9%9B%A8/"><span> 代码雨</span></a></li><li><a class="site-page child" href="/%E7%89%9B%E9%A1%BF%E6%91%86/"><span> 牛顿摆</span></a></li><li><a class="site-page child" href="/%E5%9C%88%E4%BD%8F%E5%B0%8F%E7%8C%AB/"><span> 圈住小猫</span></a></li><li><a class="site-page child" href="/%E7%B2%92%E5%AD%90%E6%BC%A9%E6%B6%A1/"><span> 粒子漩涡</span></a></li><li><a class="site-page child" href="/%E5%8A%A8%E6%84%9F%E9%9F%B3%E4%B9%90"><span> 动感音乐</span></a></li><li><a class="site-page child" href="/%E6%92%95%E6%89%AF%E6%B8%94%E7%BD%91/"><span> 撕扯渔网</span></a></li><li><a class="site-page child" href="/%E7%89%A9%E7%90%86%E7%A2%B0%E6%92%9E%E7%90%83/"><span> 物理碰撞球</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="极客郎"><span class="site-name">极客郎</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-gamepad"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/%E7%83%9F%E8%8A%B1/"><span> 烟花</span></a></li><li><a class="site-page child" href="/%E6%97%B6%E9%92%9F/"><span> 时钟</span></a></li><li><a class="site-page child" href="/%E4%BB%A3%E7%A0%81%E9%9B%A8/"><span> 代码雨</span></a></li><li><a class="site-page child" href="/%E7%89%9B%E9%A1%BF%E6%91%86/"><span> 牛顿摆</span></a></li><li><a class="site-page child" href="/%E5%9C%88%E4%BD%8F%E5%B0%8F%E7%8C%AB/"><span> 圈住小猫</span></a></li><li><a class="site-page child" href="/%E7%B2%92%E5%AD%90%E6%BC%A9%E6%B6%A1/"><span> 粒子漩涡</span></a></li><li><a class="site-page child" href="/%E5%8A%A8%E6%84%9F%E9%9F%B3%E4%B9%90"><span> 动感音乐</span></a></li><li><a class="site-page child" href="/%E6%92%95%E6%89%AF%E6%B8%94%E7%BD%91/"><span> 撕扯渔网</span></a></li><li><a class="site-page child" href="/%E7%89%A9%E7%90%86%E7%A2%B0%E6%92%9E%E7%90%83/"><span> 物理碰撞球</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">搭建国内版的ChatGPT网站(文末有成品)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-16T07:48:33.000Z" title="发表于 2023-05-16 15:48:33">2023-05-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-16T13:01:44.609Z" title="更新于 2023-05-16 21:01:44">2023-05-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/">原创</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">896</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/" data-flag-title="搭建国内版的ChatGPT网站(文末有成品)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left"><font color="black" size="3">ChatGPT是由OpenAI研发的聊天机器人程序，也可能是当前互联网中最强大的自然语言处理模型，它不仅可以模拟人类的对话方式，甚至可以进行一些创造性的表达。但受大环境的影响，在国内使用起来比较困难。为了解决国内无法使用的问题，GitHub上出现了许多自建ChatGPT的项目。经过多方面对比，郎哥选择了一个比较大众的项目--ChatGPT-Next-Web。下面就跟着郎哥的步伐一起动手搭建吧。</font></p>
+
+
+
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>ChatGPT账号</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>GitHub账号</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>网站域名</p>
+            </div>
+<h2 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h2><h3 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h3><p align="center"><font color="black" size="3">打开这个项目→<a href="https://github.com/Yidadaa/ChatGPT-Next-Web" target="_blank">ChatGPT-Next-Web</a>，Fork到自己的仓库里（先登录GitHub账号）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-1.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">点击“Create fork”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-2.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">可以看到项目已经同步到了自己的仓库里</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-3.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">点击“Actions”，配置项目自动更新</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-4.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">点击“Upstream Sync”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-5.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">点击“Enable workflow”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-6.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">手动执行一次更新，不然可能不会工作</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-7.png" alt="图片"></p>
+<h3 id="Vercel配置"><a href="#Vercel配置" class="headerlink" title="Vercel配置"></a>Vercel配置</h3><p align="center"><font color="black" size="3">打开<a href="https://vercel.com" target="_blank">Vercel官网</a>，注册账号（如有账号可直接登录）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-8.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">选择“Hobby”，填写昵称，Continue</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-9.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">绑定GitHub</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-10.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">授权</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-11.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">绑定手机号</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-12.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">新建项目</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-13.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">第一次使用需要添加GitHub账号</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-14.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">授权将Vercel安装到你的GitHub仓库里</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-15.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">导入刚刚Fork的项目</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-16.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">可以先去获取OpenAI的<a href="https://platform.openai.com/account/api-keys" target="_blank">API key</a></font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-170.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">回到项目的导入步骤。自定义项目名称，添加以下两个环境变量（先添加一个，点击Add之后才能添加下一个）</font></p>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OPENAI_API_KEY 内容是你的API key</span><br><span class="line">CODE 内容是你要设置的访问密码</span><br></pre></td></tr></table></figure>
+<p align="center"><font color="black" size="3">填写完成后点击“Deploy”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-17.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">等待部署完成</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-18.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">部署成功，前往管理项目</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-19.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">点击“Visit”就可以访问站点了（这里需要科学上网）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-20.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">使用之前需要在设置里面填写访问密码或自己的API key</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-21.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">填写完成后关闭窗口</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-22.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">然后就可以开始聊天了</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-23.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">目前网站已经算是搭建完成了。但是如果要在国内访问也能轻松访问的话，还需要绑定自己的域名。</font></p>
+
+<p align="center"><font color="black" size="3">准备好一个闲置的顶级域名（没有的话直接买一个便宜的就可以了）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-24.png" alt="图片"></p>
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p align="center"><font color="black" size="3">打开<a href="https://dash.cloudflare.com/" target="_blank">Cloudflare官网</a>（可以切换为中文），注册账号（如有账号可以直接登录）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-25.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">输入电子邮箱和密码，注册</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-26.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">管理网站</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-27.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">添加站点</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-28.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">输入你的域名，添加</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-29.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">选择免费的，继续</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-30.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">添加以下两条解析记录，关闭代理</font></p>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">类型：A  名称：@  IPv4地址：76.76.21.98</span><br><span class="line">类型：CNAME  名称：www  目标：cname-china.vercel-dns.com</span><br></pre></td></tr></table></figure>
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-31.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">填写完成后点击“继续“</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-32.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">复制这两个名称服务器</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-33.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">将域名的DNS服务器修改为上面两个</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-34.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">修改完成后检查</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-35.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">收到以下邮件表明站点添加成功</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-36.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">同时在主页也可以看到站点“有效”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-37.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">回到Vercel，点击“Setting”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-38.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">Domains→填写域名→Add</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-39.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">选第二项，Add</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-40.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">如下显示就是绑定成功</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-41.png" alt="图片"></p>
+<p align="center"><font color="black" size="3">现在不用科学上网也可以直接输入域名打开网站了</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-42.png" alt="图片"></p>
+<h2 id="福利"><a href="#福利" class="headerlink" title="福利"></a>福利</h2><p align="left"><font color="black" size="3">如果不方便搭建或者懒得搭建，也可以使用郎哥搭建好的ChatGPT网站。可以使用自己的API key（推荐），也可以使用郎哥的key。关注“极客郎”公众号，后台发送关键词“<b><i><ins>gpt</ins></i></b>”就可以得到网站和访问密码，在网站的设置里面输入访问密码即可使用（余额有限，先到先用）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516-43.png" alt="图片"></p>
+<p><img src="\img\123.gif" /></p>
+<p><img src="\img\ewm.png" style="zoom:50%;" /></p>
+<p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ximfem.asia">郎哥</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/">https://ximfem.asia/搭建国内版的ChatGPT网站-文末有成品/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ximfem.asia" target="_blank">极客郎</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ChatGPT/">ChatGPT</a><a class="post-meta__tags" href="/tags/GitHub/">GitHub</a><a class="post-meta__tags" href="/tags/Vercel/">Vercel</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99/">网站</a><a class="post-meta__tags" href="/tags/Cloudflare/">Cloudflare</a></div><div class="post_share"><div class="social-share" data-image="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/" title="搭建和使用OpenVPN"><img class="cover" src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">搭建和使用OpenVPN</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/jkl.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">郎哥</div><div class="author-info__description">将科技玩到极致！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">70</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" href="/img/ewm.png"><i class="fab fa-weixin"></i><span>微信公众号</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=2744184711&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="mailto:liangsper@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">最近在疯狂搞项目，更新可能不会那么及时，见谅哦。</div></div><div class="card-widget" id="newYear"><div class="item-headline"><i></i><span></span></div><div class="item-content"><div id="newYear-main"><div class="mask"></div> <p class="title"></p> <div class="newYear-time"></div> <p class="today" style="text-align: right;"></p> </div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">前期准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">部署项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">GitHub配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vercel%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">Vercel配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-number">3.3.</span> <span class="toc-text">绑定域名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%8F%E5%88%A9"><span class="toc-number">4.</span> <span class="toc-text">福利</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/" title="搭建国内版的ChatGPT网站(文末有成品)"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230516.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建国内版的ChatGPT网站(文末有成品)"/></a><div class="content"><a class="title" href="/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/" title="搭建国内版的ChatGPT网站(文末有成品)">搭建国内版的ChatGPT网站(文末有成品)</a><time datetime="2023-05-16T07:48:33.000Z" title="发表于 2023-05-16 15:48:33">2023-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/" title="搭建和使用OpenVPN"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230506.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建和使用OpenVPN"/></a><div class="content"><a class="title" href="/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/" title="搭建和使用OpenVPN">搭建和使用OpenVPN</a><time datetime="2023-05-06T06:20:03.000Z" title="发表于 2023-05-06 14:20:03">2023-05-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E6%9E%81%E5%AE%A2%E9%83%8E%E5%90%8C%E6%AC%BE%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99-%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6/" title="快速搭建极客郎同款博客网站--基于Hexo框架"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-04-9.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="快速搭建极客郎同款博客网站--基于Hexo框架"/></a><div class="content"><a class="title" href="/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E6%9E%81%E5%AE%A2%E9%83%8E%E5%90%8C%E6%AC%BE%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99-%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6/" title="快速搭建极客郎同款博客网站--基于Hexo框架">快速搭建极客郎同款博客网站--基于Hexo框架</a><time datetime="2023-04-09T00:14:03.000Z" title="发表于 2023-04-09 08:14:03">2023-04-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%A7%81%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/" title="记录一次私人服务器的搭建过程"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2023-02-12.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记录一次私人服务器的搭建过程"/></a><div class="content"><a class="title" href="/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%A7%81%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/" title="记录一次私人服务器的搭建过程">记录一次私人服务器的搭建过程</a><time datetime="2023-02-12T06:00:19.000Z" title="发表于 2023-02-12 14:00:19">2023-02-12</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/bg1.jpg')"><div id="footer-wrap"><div id="running-time"></div><div class="copyright">Copyright &copy; 2023 极客郎. All Rights Reserved.</div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://www.netlify.com/ "><img src="https://img.shields.io/badge/Hosted-Netlify-0cedbe?style=flat&logo=Netlify" title="本站部署于Netlify"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站源码由Github托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div><!--备案信息--><!--.framework-info--><!--  img(src = '/img/icp.png')--><!--  span= ' '--><!--  a(href='https://beian.miit.gov.cn/')= '黔ICP备2022002429号-1'--></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'obHBPjeLu5l8MNIDFks6mhRo-gzGzoHsz',
+      appKey: 'MOXxh3mErcbQFJ54w9VnKUzG',
+      avatar: 'wavatar',
+      serverURLs: '',
+      emojiMaps: "",
+      master: '2c94e6293e144ae205e1fe95729d4b8b',
+      tagMeta: ["博主","伙伴","访客"],     //标识字段名
+      friends: '',  //小伙伴邮箱Md5
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('/js/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="/js/gundong.js"></script><script src="/js/jquery.min.js" type="application/javascript"></script><script src="/js/Gold-ingot.js"></script><script src="/js/djs.js"></script><script>setInterval(()=>{let create_time=Math.round(new Date("2023-1-28-00:00:00").getTime()/1000);let timestamp=Math.round((new Date().getTime()+8*60*60*1000)/1000);let second=timestamp-create_time;let time=new Array(0,0,0,0,0);if(second>=365*24*3600){time[0]=parseInt(second/(365*24*3600));second%=365*24*3600}if(second>=24*3600){time[1]=parseInt(second/(24*3600));second%=24*3600}if(second>=3600){time[2]=parseInt(second/3600);second%=3600}if(second>=60){time[3]=parseInt(second/60);second%=60}if(second>0){time[4]=second}currentTimeHtml='本站已经安全运行 '+time[0]+' 年 '+time[1]+' 天 '+time[2]+' 时 '+time[3]+' 分 '+time[4]+' 秒';var elementById=document.getElementById('running-time');if(elementById){elementById.innerHTML=currentTimeHtml}},1000);</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?717a99f1494c3f08b0a1972eec77ca87";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/canvas-nest.min.js"></script><script src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>window.$crisp = [];
+window.CRISP_WEBSITE_ID = "d7621d39-33cc-40c9-a8a4-6c3ab0cf47bb";
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+$crisp.push(["safe", true])
+
+if (false) {
+  $crisp.push(["do", "chat:hide"])
+  $crisp.push(["on", "chat:closed", function() {
+    $crisp.push(["do", "chat:hide"])
+  }])
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      $crisp.push(["do", "chat:hide"])
+    }
+    function chatBtnShow () {
+      $crisp.push(["do", "chat:show"])
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kity@2.0.4/dist/kity.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/hexo-tag-plugins@latest/lib/mindmap.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
