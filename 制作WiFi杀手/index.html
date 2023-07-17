@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>制作WiFi杀手 | 极客郎</title><meta name="author" content="郎哥"><meta name="copyright" content="郎哥"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="准备工具一台能上网的电脑、两个ESP8266WiFi模块、一根(或两根)数据线、一部智能手机、配套资源（获取方式在文末）、一个聪明的大脑、一双灵巧的手    环境搭建首先安装CH340驱动   根据自己的电脑配置进行选择   进行安装   安装完成   接下来将WiFi模块用数据线连接到电脑，打开烧写工具    如果有端口，并且右下角显示Ready，证明驱动已经正常安装，模块也已经正常连接   这">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>制作WiFi杀手 | 极客郎</title><meta name="author" content="郎哥"><meta name="copyright" content="郎哥"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="准备工具             一台能上网的电脑                           两个ESP8266WiFi模块                           一根(或两根)数据线                           一部智能手机                           配套资源（获取方式在文末）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="制作WiFi杀手">
 <meta property="og:url" content="https://ximfem.asia/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/index.html">
 <meta property="og:site_name" content="极客郎">
-<meta property="og:description" content="准备工具一台能上网的电脑、两个ESP8266WiFi模块、一根(或两根)数据线、一部智能手机、配套资源（获取方式在文末）、一个聪明的大脑、一双灵巧的手    环境搭建首先安装CH340驱动   根据自己的电脑配置进行选择   进行安装   安装完成   接下来将WiFi模块用数据线连接到电脑，打开烧写工具    如果有端口，并且右下角显示Ready，证明驱动已经正常安装，模块也已经正常连接   这">
+<meta property="og:description" content="准备工具             一台能上网的电脑                           两个ESP8266WiFi模块                           一根(或两根)数据线                           一部智能手机                           配套资源（获取方式在文末）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08.jpg">
 <meta property="article:published_time" content="2022-01-08T15:49:25.000Z">
@@ -175,88 +175,107 @@
 <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
 </div>
 </div>--><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/tag_plugins.min.css" media="defer" onload="this.media='all'"><script src="/js/carousel-touch.min.js"></script><link rel="stylesheet" href="/css/mindmap.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="极客郎" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/jkl.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">75</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ximfem.top/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="极客郎"><span class="site-name">极客郎</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ximfem.top/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">制作WiFi杀手</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-08T15:49:25.000Z" title="发表于 2022-01-08 23:49:25">2022-01-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-08T15:49:25.000Z" title="更新于 2022-01-08 23:49:25">2022-01-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/">原创</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">674</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/" data-flag-title="制作WiFi杀手"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container"><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><p align="center"><font color="black" size="3">一台能上网的电脑、两个ESP8266WiFi模块、一根(或两根)数据线、一部智能手机、配套资源（<b><span style="color:blue;">获取方式在文末</span></b>）、一个聪明的大脑、一双灵巧的手</font></p>
-
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/jkl.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">75</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ximfem.top/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="极客郎"><span class="site-name">极客郎</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ximfem.top/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">制作WiFi杀手</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-08T15:49:25.000Z" title="发表于 2022-01-08 23:49:25">2022-01-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-08T15:49:25.000Z" title="更新于 2022-01-08 23:49:25">2022-01-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/">原创</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">674</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/" data-flag-title="制作WiFi杀手"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container"><h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>一台能上网的电脑</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>两个ESP8266WiFi模块</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>一根(或两根)数据线</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>一部智能手机</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>配套资源（<b><span style=color:blue;>获取方式在文末</span></b>）</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>一个聪明的大脑</p>
+            </div>
+<div class='checkbox green checked'><input type="checkbox" checked="checked"/>
+            <p>一双灵巧的手</p>
+            </div>
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-1.jpg" alt="图片"></p>
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-2.png" alt="图片"></p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p align="center"><font color="black" size="3">首先安装CH340驱动</font></p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p align="center"><font size="3">首先安装CH340驱动</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-3.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">根据自己的电脑配置进行选择</font></p>
+<p align="center"><font size="3">根据自己的电脑配置进行选择</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-4.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">进行安装</font></p>
+<p align="center"><font size="3">进行安装</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-5.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">安装完成</font></p>
+<p align="center"><font size="3">安装完成</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-6.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">接下来将WiFi模块用数据线连接到电脑，打开烧写工具</font></p>
+<p align="center"><font size="3">接下来将WiFi模块用数据线连接到电脑，打开烧写工具</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-7.png" alt="图片"></p>
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-8.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">如果有端口，并且右下角显示Ready，证明驱动已经正常安装，模块也已经正常连接</font></p>
+<p align="center"><font size="3">如果有端口，并且右下角显示Ready，证明驱动已经正常安装，模块也已经正常连接</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-9.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">这里选择攻击固件（显示绿色说明已经选择正确），后面的参数默认即可</font></p>
+<p align="center"><font size="3">这里选择攻击固件（显示绿色说明已经选择正确），后面的参数默认即可</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-10.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">Advanced的参数按照以下图片进行配置</font></p>
+<p align="center"><font size="3">Advanced的参数按照以下图片进行配置</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-11.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">配置完成后回到第一页，点击Flash进行烧录</font></p>
+<p align="center"><font size="3">配置完成后回到第一页，点击Flash进行烧录</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-12.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">烧录完成</font></p>
+<p align="center"><font size="3">烧录完成</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-13.png" alt="图片"></p>
-<p align="left"><font color="black" size="3">重新插拔连接WiFi模块的数据线（或者直接将其插在充电宝上），使用手机连接名称为‘pwned’的WiFi（如果电脑有网卡的话也可以用电脑连接），密码为‘deauther’</font></p>
+<p align="left"><font size="3">重新插拔连接WiFi模块的数据线（或者直接将其插在充电宝上），使用手机连接名称为‘pwned’的WiFi（如果电脑有网卡的话也可以用电脑连接），密码为‘deauther’</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-14.jpg" alt="图片"></p>
-<p align="center"><font color="black" size="3">打开浏览器，输入‘192.168.4.1’，进入管理后台</font></p>
+<p align="center"><font size="3">打开浏览器，输入‘192.168.4.1’，进入管理后台</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-15.jpg" alt="图片"></p>
-<p align="center"><font color="black" size="3">下面进行显示语言的修改：进入Settings，往上划，找到LANG，将它的值由‘en’改为‘cn’，然后划到最底下，点击SAVE</font></p>
+<p align="center"><font size="3">下面进行显示语言的修改：进入Settings，往上划，找到LANG，将它的值由‘en’改为‘cn’，然后划到最底下，点击SAVE</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-16.jpg" alt="图片"></p>
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-17.jpg" alt="图片"></p>
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-18.jpg" alt="图片"></p>
-<p align="center"><font color="black" size="3">清除浏览器缓存，重新进入页面即可显示中文</font></p>
+<p align="center"><font size="3">清除浏览器缓存，重新进入页面即可显示中文</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-19.jpg" alt="图片"></p>
-<h2 id="进行攻击"><a href="#进行攻击" class="headerlink" title="进行攻击"></a>进行攻击</h2><h3 id="1、断网攻击（洪水攻击）"><a href="#1、断网攻击（洪水攻击）" class="headerlink" title="1、断网攻击（洪水攻击）"></a>1、断网攻击（洪水攻击）</h3><p align="left"><font color="black" size="3">首先扫描周围所有WiFi，然后选定需要攻击的WiFi，在其后面打勾，进入‘攻击’页面，点击‘Deauth’后面的‘开始’进行攻击，攻击一段时间后该WiFi的所有连接设备都会断网</font></p>
+<h2 id="进行攻击"><a href="#进行攻击" class="headerlink" title="进行攻击"></a>进行攻击</h2><h3 id="1、断网攻击（洪水攻击）"><a href="#1、断网攻击（洪水攻击）" class="headerlink" title="1、断网攻击（洪水攻击）"></a>1、断网攻击（洪水攻击）</h3><p align="left"><font size="3">首先扫描周围所有WiFi，然后选定需要攻击的WiFi，在其后面打勾，进入‘攻击’页面，点击‘Deauth’后面的‘开始’进行攻击，攻击一段时间后该WiFi的所有连接设备都会断网</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-20.jpg" alt="图片"></p>
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-21.jpg" alt="图片"></p>
-<h3 id="2、伪造WiFi"><a href="#2、伪造WiFi" class="headerlink" title="2、伪造WiFi"></a>2、伪造WiFi</h3><p align="left"><font color="black" size="4"><b>方法有三种</b></font></p>
+<h3 id="2、伪造WiFi"><a href="#2、伪造WiFi" class="headerlink" title="2、伪造WiFi"></a>2、伪造WiFi</h3><p align="left"><font size="4"><b>方法有三种</b></font></p>
 
-<p align="left"><font color="black" size="3">（1）自己配置WiFi信息：SSID填WiFi名称；WPA2可选；数量自己定。配置完成后点击‘添加’
+<p align="left"><font size="3">（1）自己配置WiFi信息：SSID填WiFi名称；WPA2可选；数量自己定。配置完成后点击‘添加’
 
 （2）复制周围的WiFi：在扫描页面将需要复制的WiFi打勾，回到SSIDs页面，SSID项留空，WPA2可选，填写数量，点击‘克隆所选接入点’
 
 （3）随机生成：直接点击‘开启随机模式’</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-22.jpg" alt="图片"></p>
-<p align="center"><font color="black" size="3"><b>下面以随机模式为例</b></font></p>
+<p align="center"><font size="3"><b>下面以随机模式为例</b></font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-23.jpg" alt="图片"></p>
-<p align="center"><font color="black" size="3">配置完成后进入攻击页面，点击‘Beacon’后面的‘开始’进行攻击</font></p>
+<p align="center"><font size="3">配置完成后进入攻击页面，点击‘Beacon’后面的‘开始’进行攻击</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-24.jpg" alt="图片"></p>
-<p align="center"><font color="black" size="3">攻击后周围会出现一大堆伪造的WiFi，对周围正常的WiFi进行干扰（同时也可以作为一个新的聊天途径和表白、祝福方法）</font></p>
+<p align="center"><font size="3">攻击后周围会出现一大堆伪造的WiFi，对周围正常的WiFi进行干扰（同时也可以作为一个新的聊天途径和表白、祝福方法）</font></p>
 
 <p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/2022-01-08-25.png" alt="图片"></p>
-<p align="center"><font color="black" size="3">你学废了吗？</font></p>
+<p align="center"><font size="3">你学废了吗？</font></p>
 
 
 
-<p align="center"><font color="black" size="3">本教程仅供教学，严禁用于非法用途</font></p>
+<p align="center"><font size="3">本教程仅供教学，严禁用于非法用途</font></p>
 
 
 
 <p><img src="\img\123.gif" /></p>
-<h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left" style="line-height:15px;"><font color="black" size="3">本期配套资源：<font color="blue"><ins>ESP8266_WiFi攻击干扰.zip</ins></font></font></p>
-<p align="left" style="line-height:15px;"><font color="black" size="3">扫描下面的二维码关注极客郎公众号，回复暗号 <font color="blue"><ins>ESP8266</ins></font> 进行获取</font></p>
+<h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left" style="line-height:15px;"><font size="3">本期配套资源：<font color="blue"><ins>ESP8266_WiFi攻击干扰.zip</ins></font></font></p>
+<p align="left" style="line-height:15px;"><font size="3">扫描下面的二维码关注极客郎公众号，回复暗号 <font color="blue"><ins>ESP8266</ins></font> 进行获取</font></p>
 </div>
 <p><img src="\img\ewm.png" style="zoom:50%;" /></p>
 <p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>
