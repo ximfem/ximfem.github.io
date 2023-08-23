@@ -6,7 +6,7 @@
   <link href="https://ximfem.asia/atom.xml" rel="self"/>
   
   <link href="https://ximfem.asia/"/>
-  <updated>2023-07-17T16:26:19.580Z</updated>
+  <updated>2023-08-23T11:32:26.000Z</updated>
   <id>https://ximfem.asia/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>注册ChatGPT账号最新完整流程</title>
+    <link href="https://ximfem.asia/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/"/>
+    <id>https://ximfem.asia/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/</id>
+    <published>2023-08-23T11:32:26.000Z</published>
+    <updated>2023-08-23T11:32:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left"><font size="3">ChatGPT依然是目前较火的大语言模型。ChatGPT在国内的镜像站已经成千上万，之前郎哥也有写过镜像站的搭建教程（<a href="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84chatgpt%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/" target="_blank">点此回顾</a>），然而镜像站是通过API key来对接ChatGPT服务，每一次提问都是需要收费的，但如果直接在ChatGPT官网提问的话就是免费（不过官网对网络环境要求比较苛刻，如果没有一定的技术，建议还是放弃），所以这时候注册一个ChatGPT官网账号就能体验到白嫖聊天的乐趣。关于注册ChatGPT账号的文章，网上也有很多，但很多内容都过时了，所以郎哥写下这篇教程，教大家用最新的方式注册ChatGPT账号。</font></p><h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h2><p align="center"><font size="3">注册账号之前首先要确保你已经科学上网了，并且节点最好是美国的，亚洲的基本都不行</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-1.png" alt="img"></p><p align="center"><font size="3">打开<a href="https://chat.openai.com/" target="_blank">ChatGPT官网</a>，点击“Sign up”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-2.png" alt="img"></p><p align="center"><font size="3">输入邮箱(现在不能用QQ邮箱了，最好用谷歌邮箱)，或者使用下面三个快捷授权登录，点击“Continue”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-3.png" alt="img"></p><p align="center"><font size="3">设置一个容易记得住的密码，点击“Continue”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-4.png" alt="img"></p><p align="center"><font size="3">需要验证邮箱</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-5.png" alt="img"></p><p align="center"><font size="3">登录邮箱，会看到一封验证的邮件，点击绿色的按钮打开验证链接</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-6.png" alt="img"></p><p align="center"><font size="3">完成验证后会让你填写信息（姓名和出生日期），随便填就行，然后点击“Continue”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-7.png" alt="img"></p><p align="center"><font size="3">到这里需要验证手机号（国内的手机号不行，所以需要去接码平台租国外的手机号来验证）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-8.png" alt="img"></p><h2 id="接码"><a href="#接码" class="headerlink" title="接码"></a>接码</h2><p align="center"><font size="3">目前用得最多的就是俄罗斯的接码平台SMS-Activate.org（网址就是这个）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-9.png" alt="img"></p><p align="center"><font size="3">点击右上角的“登录注册”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-10.png" alt="img"></p><p align="center"><font size="3">注册账号</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-11.png" alt="img"></p><p align="center"><font size="3">填写信息，点击注册</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-12.png" alt="img"></p><p align="center"><font size="3">完成人机验证后再点一次注册</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-13.png" alt="img"></p><p align="center"><font size="3">需要验证邮箱，在邮箱里找到这封邮件，点击“确认”即可</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-14.png" alt="img"></p><p align="center"><font size="3">确认之后就可以登录账号了。登录后点击右上角的+号进行充值</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-15.png" alt="img"></p><p align="center"><font size="3">充值方式选择支付宝</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-16.png" alt="img"></p><p align="center"><font size="3">最低充值2美元，大概15块钱左右，点击“支付”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-17.png" alt="img"></p><p align="center"><font size="3">支付宝扫码</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-18.png" alt="img"></p><p align="center"><font size="3">完成支付</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-19.png" alt="img"></p><p align="center"><font size="3">搜索openai，点击第一个结果</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-20.png" alt="img"></p><p align="center"><font size="3">选择便宜一点的地区号码</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-21.png" alt="img"></p><p align="center"><font size="3">复制号码（如果二十分钟内没有收到短信，可以随时点击右边的X号取消租用，费用会全部返还）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-22.png" alt="img"></p><p align="center"><font size="3">选择对应的国家，填入刚刚的号码，点击“Send code”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-23.png" alt="img"></p><p align="center"><font size="3">收到验证码，将验证码填入框内即可</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-24.png" alt="img"></p><p align="center"><font size="3">注册成功</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-25.png" alt="img"></p><h2 id="登录ChatGPT"><a href="#登录ChatGPT" class="headerlink" title="登录ChatGPT"></a>登录ChatGPT</h2><p align="center"><font size="3">点击右上角的头像→Visit ChatGPT</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-26.png" alt="img"></p><p align="center"><font size="3">点击“Log in”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-27.png" alt="img"></p><p align="center"><font size="3">输入账号和密码，点击“Continue”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-28.png" alt="img"></p><p align="center"><font size="3">登录成功</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-30.png" alt="img"></p><p align="center"><font size="3">可以开始聊天了</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-31.png" alt="img"></p><h2 id="查看API-key"><a href="#查看API-key" class="headerlink" title="查看API key"></a>查看API key</h2><p align="left"><font size="3">每个新注册的账号都会赠送5美元的API额度(有效期一般是四个月)，通过API key可以将自己的服务接入OpenAI，或者在ChatGPT镜像站直接使用ChatGPT，无需科学上网。</font></p><p align="center"><font size="3">点击右上角的头像→View API key</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-32.png" alt="img"></p><p align="center"><font size="3">在Usage页面可以看到额度的使用情况和有效期等信息</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-33.png" alt="img"></p><p align="center"><font size="3">进入API key页面，创建一个key</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-34.png" alt="img"></p><p align="center"><font size="3">自定义名称，然后点击创建</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-35.png" alt="img"></p><p align="left"><font size="3">创建完成后赶紧复制下来保存好，因为这个密钥之后显示一次，后面就没法查看了。如果你没有保存，只能重新创建一个新的密钥</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823-36.png" alt="img"></p><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><div class='checkbox red checked'><input type="checkbox" checked="checked"/>            <p>1、全程不要随便换节点，不然很容易被封号。</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>2、API key自己保存好，不要泄露，不然就相当于把自己的账号让给别人了</p>            </div><div class='checkbox red checked'><input type="checkbox" checked="checked"/>            <p>3、使用接码平台接码时如果当前手机号收不到验证码就换一个手机号，不会扣费的</p>            </div><p><img src="\img\123.gif" /></p><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="ChatGPT" scheme="https://ximfem.asia/tags/ChatGPT/"/>
+    
+    <category term="OpenAI" scheme="https://ximfem.asia/tags/OpenAI/"/>
+    
+    <category term="接码" scheme="https://ximfem.asia/tags/%E6%8E%A5%E7%A0%81/"/>
+    
+    <category term="API" scheme="https://ximfem.asia/tags/API/"/>
+    
+  </entry>
   
   <entry>
     <title>禁用Windows更新的最新解决方案</title>
@@ -445,13 +480,13 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
-    
     <category term="Github" scheme="https://ximfem.asia/tags/Github/"/>
     
     <category term="开源" scheme="https://ximfem.asia/tags/%E5%BC%80%E6%BA%90/"/>
     
     <category term="项目" scheme="https://ximfem.asia/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
   </entry>
   
@@ -571,13 +606,13 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    
     <category term="Termux" scheme="https://ximfem.asia/tags/Termux/"/>
     
     <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
     
     <category term="Linux" scheme="https://ximfem.asia/tags/Linux/"/>
-    
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
     <category term="VNC" scheme="https://ximfem.asia/tags/VNC/"/>
     
@@ -641,13 +676,13 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
-    
     <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
+    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
     
     <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    
+    <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
     
     <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
@@ -678,9 +713,9 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
-    
     <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
     
     <category term="UOS" scheme="https://ximfem.asia/tags/UOS/"/>
     
@@ -744,11 +779,11 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
     <category term="Mac" scheme="https://ximfem.asia/tags/Mac/"/>
     
     <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
-    
-    <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -839,9 +874,9 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="wifi" scheme="https://ximfem.asia/tags/wifi/"/>
-    
     <category term="钓鱼" scheme="https://ximfem.asia/tags/%E9%92%93%E9%B1%BC/"/>
+    
+    <category term="wifi" scheme="https://ximfem.asia/tags/wifi/"/>
     
   </entry>
   
