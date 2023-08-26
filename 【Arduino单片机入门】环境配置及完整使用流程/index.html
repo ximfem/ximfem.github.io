@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>【Arduino单片机入门】环境配置及完整使用流程 | 极客郎</title><meta name="author" content="郎哥"><meta name="copyright" content="郎哥"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言Arduino单片机是一款开源的单片机开发平台，可以用于创建各种互动的物理设备和原型。它基于简单易学的编程语言和开发环境，使得初学者也能轻松上手。本文将介绍Arduino单片机的环境配置及完整使用流程，帮助大家快速入门并开始进行自己的创造和实验。   下载Arduino安装包打开Arduino官网，进入SOFTWARE页面   选择合适的版本下载（尽量选择exe格式的安装包，不要直接下载压缩包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Arduino单片机入门】环境配置及完整使用流程">
+<meta property="og:url" content="https://ximfem.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/index.html">
+<meta property="og:site_name" content="极客郎">
+<meta property="og:description" content="前言Arduino单片机是一款开源的单片机开发平台，可以用于创建各种互动的物理设备和原型。它基于简单易学的编程语言和开发环境，使得初学者也能轻松上手。本文将介绍Arduino单片机的环境配置及完整使用流程，帮助大家快速入门并开始进行自己的创造和实验。   下载Arduino安装包打开Arduino官网，进入SOFTWARE页面   选择合适的版本下载（尽量选择exe格式的安装包，不要直接下载压缩包">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826.jpg">
+<meta property="article:published_time" content="2023-08-26T00:37:33.000Z">
+<meta property="article:modified_time" content="2023-08-25T18:47:41.198Z">
+<meta property="article:author" content="郎哥">
+<meta property="article:tag" content="Arduino">
+<meta property="article:tag" content="单片机">
+<meta property="article:tag" content="Mind+">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826.jpg"><link rel="shortcut icon" href="/img/jkl.png"><link rel="canonical" href="https://ximfem.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":730,"position":"top","messagePrev":"该文章自从上次更新后已经超过","messageNext":"天了，文章的内容可能会过时，请知悉。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 郎哥","link":"链接: ","source":"来源: 极客郎","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【Arduino单片机入门】环境配置及完整使用流程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-26 02:47:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/gray.css"><link rel="stylesheet" href="/css/newpage.css"><link rel="stylesheet" href="/css/new-year.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/light.css"><link rel="stylesheet" href="/css/cardlistpost.css"><link rel="stylesheet" href="https://cdn.chuqis.com/gh/zhheo/Post-Abstract-AI@0.12/tianli_gpt.css"><!--灯笼--><!--<div class="deng-box">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">新</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>
+<div class="deng-box1">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">春</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>--><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/tag_plugins.min.css" media="defer" onload="this.media='all'"><script src="/js/carousel-touch.min.js"></script><link rel="stylesheet" href="/css/mindmap.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="极客郎" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/jkl.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li><li><a class="site-page child" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"><span> 单片机系列</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-clipboard"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ximfem.top/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fa fa-subway"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="javascript:toRandomPost()"><i class="fa-fw fa fa-sync"></i><span> 随机文章</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="极客郎"><span class="site-name">极客郎</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li><li><a class="site-page child" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"><span> 单片机系列</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-clipboard"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://ximfem.top/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fa fa-subway"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" href="javascript:toRandomPost()"><i class="fa-fw fa fa-sync"></i><span> 随机文章</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">【Arduino单片机入门】环境配置及完整使用流程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-08-26T00:37:33.000Z" title="发表于 2023-08-26 08:37:33">2023-08-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-25T18:47:41.198Z" title="更新于 2023-08-26 02:47:41">2023-08-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/">单片机</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/%E5%8E%9F%E5%88%9B/">原创</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">840</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="leancloud_visitors" id="/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/" data-flag-title="【Arduino单片机入门】环境配置及完整使用流程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span class="leancloud-visitors-count"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left"><font size="3">Arduino单片机是一款开源的单片机开发平台，可以用于创建各种互动的物理设备和原型。它基于简单易学的编程语言和开发环境，使得初学者也能轻松上手。本文将介绍Arduino单片机的环境配置及完整使用流程，帮助大家快速入门并开始进行自己的创造和实验。</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-1.jpg" alt="img"></p>
+<h2 id="下载Arduino安装包"><a href="#下载Arduino安装包" class="headerlink" title="下载Arduino安装包"></a>下载Arduino安装包</h2><p align="center"><font size="3">打开<a href="https://www.arduino.cc/" target="_self">Arduino官网</a>，进入SOFTWARE页面</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-2.png" alt="img"></p>
+<p align="center"><font size="3">选择合适的版本下载（尽量选择exe格式的安装包，不要直接下载压缩包，不然环境可能配置不完整）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-3.png" alt="img"></p>
+<p align="center"><font size="3">点击“JUST DOWNLOAD”即可下载</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-4.png" alt="img"></p>
+<h2 id="安装Arduino"><a href="#安装Arduino" class="headerlink" title="安装Arduino"></a>安装Arduino</h2><p align="center"><font size="3">下载完成后运行安装程序，点击“I Agree”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-5.png" alt="img"></p>
+<p align="center"><font size="3">点击“NEXT”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-6.png" alt="img"></p>
+<p align="center"><font size="3">选择安装位置（尽量选择C盘以外的地方），点击“Install”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-7.png" alt="img"></p>
+<p align="center"><font size="3">安装过程会提示安装驱动，安装即可</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-8.png" alt="img"></p>
+<p align="center"><font size="3">安装完成后点击“Close”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-9.png" alt="img"></p>
+<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><p align="center"><font size="3">打开软件后可以看到这个页面，这是软件的主页面</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-10.png" alt="img"></p>
+<p align="left"><font size="3">上面是菜单区，</font></p>
+
+<p align="left"><font size="3">第二个是常用功能区，从左至右依次是“验证”、“上传”、“新建”、“打开”、“保存”和“串口监视器”，比较常用的是前两个。</font></p>
+
+<p align="left"><font size="3">中间最大的区域是代码编写区，主要用来编写代码</font></p>
+
+<p align="left"><font size="3">最下面的是提示/结果输出区，用来输出编译和上传的结果，或者显示错误信息</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-11.png" alt="img"></p>
+<p align="left"><font size="3">在代码区里，有两个默认的函数，第一个函数是setup()，在这个函数里的代码只会执行一遍，通常我们会在这个函数中完成Arduino的初始化设置，如配置I/O口状态，初始化串口等。第二个函数是loop()，loop()函数是一个死循环，其中的程序会不断地重复运行，通常我们会在loop()函数中放置程序的主要功能代码，如驱动各种模块，采集数据等。</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-12.png" alt="img"></p>
+<p align="center"><font size="3">在左上角的 文件→示例 中可以找到各模块的示例程序</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-13.png" alt="img"></p>
+<p align="center"><font size="3">在“工具”中可以切换不同的开发板，并且选定相应的端口</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-14.png" alt="img"></p>
+<h2 id="示例：点亮LED灯"><a href="#示例：点亮LED灯" class="headerlink" title="示例：点亮LED灯"></a>示例：点亮LED灯</h2><p align="center"><font size="3">下面我们将用一个简单的例子来演示代码的烧录过程</font></p>
+
+<p align="left"><font size="3">首先将Arduino开发板接到电脑的USB接口，在Arduino软件上选中对应的端口；按照下图将LED灯与开发板用导线连接起来</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-15.png" alt="img"></p>
+<p align="center"><font size="3">开始编写代码并验证代码是否正确</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-16.png" alt="img"></p>
+<p align="center"><font size="3">点击“验证”后会让你将文件进行保存，选择一个熟悉的位置，自定义文件名，点击“保存”</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-17.png" alt="img"></p>
+<p align="center"><font size="3">验证完成后如果代码没有错误就会出现这些信息</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-18.png" alt="img"></p>
+<p align="center"><font size="3">点击“上传”，将程序烧录进开发板内</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-19.png" alt="img"></p>
+<p align="center"><font size="3">上传成功，这时可以看到LED灯以一秒的间隔一亮一灭（除非你没有正确操作）</font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-20.png" alt="img"></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left"><font size="3">以上便是Arduino的环境配置及完整使用流程。除了使用官方的Arduino软件写程序，还可以使用下面这款Mind+。使用Mind+，你甚至不需要知道代码也能写出一个正确的程序，只是简单的积木式编程。大家感兴趣的话可以自己去了解一下。</font></p>
+
+<p align="left"><font size="3">官网：<a href="https://mindplus.cc/" target="_blank">https://mindplus.cc</a></font></p>
+
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-21.png" alt="img"></p>
+<p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-22.png" alt="img"></p>
+<p><img src="\img\123.gif" /></p>
+<p><img src="\img\ewm.png" style="zoom:50%;" /></p>
+<p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://ximfem.asia">郎哥</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://ximfem.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/">https://ximfem.asia/【Arduino单片机入门】环境配置及完整使用流程/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ximfem.asia" target="_blank">极客郎</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Arduino/">Arduino</a><a class="post-meta__tags" href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">单片机</a><a class="post-meta__tags" href="/tags/Mind/">Mind+</a></div><div class="post_share"><div class="social-share" data-image="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/" title="注册ChatGPT账号最新完整流程"><img class="cover" src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">注册ChatGPT账号最新完整流程</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/jkl.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">郎哥</div><div class="author-info__description">将科技玩到极致！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ximfem"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=2744184711&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/ewm.png" target="_blank" title="微信公众号"><i class="fab fa-weixin"></i></a><a class="social-icon" href="mailto:liangsper@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">今天抽点时间整理了一下CDN资源，优化了网站访问速度......</div></div><div class="card-widget" id="newYear"><div class="item-headline"><i></i><span></span></div><div class="item-content"><div id="newYear-main"><div class="mask"></div> <p class="title"></p> <div class="newYear-time"></div> <p class="today" style="text-align: right;"></p> </div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDArduino%E5%AE%89%E8%A3%85%E5%8C%85"><span class="toc-number">2.</span> <span class="toc-text">下载Arduino安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Arduino"><span class="toc-number">3.</span> <span class="toc-text">安装Arduino</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.</span> <span class="toc-text">功能介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9A%E7%82%B9%E4%BA%AELED%E7%81%AF"><span class="toc-number">5.</span> <span class="toc-text">示例：点亮LED灯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">6.</span> <span class="toc-text">结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/" title="【Arduino单片机入门】环境配置及完整使用流程"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【Arduino单片机入门】环境配置及完整使用流程"/></a><div class="content"><a class="title" href="/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/" title="【Arduino单片机入门】环境配置及完整使用流程">【Arduino单片机入门】环境配置及完整使用流程</a><time datetime="2023-08-26T00:37:33.000Z" title="发表于 2023-08-26 08:37:33">2023-08-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/" title="注册ChatGPT账号最新完整流程"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230823.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="注册ChatGPT账号最新完整流程"/></a><div class="content"><a class="title" href="/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/" title="注册ChatGPT账号最新完整流程">注册ChatGPT账号最新完整流程</a><time datetime="2023-08-23T11:32:26.000Z" title="发表于 2023-08-23 19:32:26">2023-08-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%A6%81%E7%94%A8Windows%E6%9B%B4%E6%96%B0%E7%9A%84%E6%9C%80%E6%96%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="禁用Windows更新的最新解决方案"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230713.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="禁用Windows更新的最新解决方案"/></a><div class="content"><a class="title" href="/%E7%A6%81%E7%94%A8Windows%E6%9B%B4%E6%96%B0%E7%9A%84%E6%9C%80%E6%96%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="禁用Windows更新的最新解决方案">禁用Windows更新的最新解决方案</a><time datetime="2023-07-13T09:22:03.000Z" title="发表于 2023-07-13 17:22:03">2023-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E7%A1%AC%E7%9B%98%E6%B8%85%E7%90%86%E6%96%B9%E6%B3%95-%E6%8B%AF%E6%95%91%E7%88%86%E7%BA%A2%E7%9A%84C%E7%9B%98/" title="硬盘清理方法--拯救爆红的C盘"><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230623.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="硬盘清理方法--拯救爆红的C盘"/></a><div class="content"><a class="title" href="/%E7%A1%AC%E7%9B%98%E6%B8%85%E7%90%86%E6%96%B9%E6%B3%95-%E6%8B%AF%E6%95%91%E7%88%86%E7%BA%A2%E7%9A%84C%E7%9B%98/" title="硬盘清理方法--拯救爆红的C盘">硬盘清理方法--拯救爆红的C盘</a><time datetime="2023-06-22T16:16:28.000Z" title="发表于 2023-06-23 00:16:28">2023-06-23</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/bg1.jpg')"><div id="footer-wrap"><div id="running-time"></div><div class="copyright">Copyright &copy; 2023 极客郎 All Rights Reserved.</div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://www.netlify.com/ "><img src="https://img.shields.io/badge/Hosted-Netlify-0cedbe?style=flat&logo=Netlify" title="本站部署于Netlify"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站源码由Github托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div><!--备案信息--><!--.framework-info--><!--  img(src = '/img/icp.png')--><!--  span= ' '--><!--  a(href='https://beian.miit.gov.cn/')= '黔ICP备2022002429号-1'--></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script><script src="https://cdn.staticfile.org/node-snackbar/0.1.16/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'obHBPjeLu5l8MNIDFks6mhRo-gzGzoHsz',
+      appKey: 'MOXxh3mErcbQFJ54w9VnKUzG',
+      avatar: 'wavatar',
+      serverURLs: '',
+      emojiMaps: "",
+      master: '2c94e6293e144ae205e1fe95729d4b8b',
+      tagMeta: ["博主","伙伴","访客"],     //标识字段名
+      friends: '',  //小伙伴邮箱Md5
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('/js/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="/zhheo/random.js"></script><script>let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'DSUNwwxaHRvgLOX29m9I';</script><script src="https://cdn.chuqis.com/gh/zhheo/Post-Abstract-AI@0.12/tianli_gpt.js"></script><script src="/js/jquery.min.js" type="application/javascript"></script><script src="/js/Gold-ingot.js"></script><script src="/js/djs.js"></script><script>setInterval(()=>{let create_time=Math.round(new Date("2023-1-28-00:00:00").getTime()/1000);let timestamp=Math.round((new Date().getTime()+8*60*60*1000)/1000);let second=timestamp-create_time;let time=new Array(0,0,0,0,0);if(second>=365*24*3600){time[0]=parseInt(second/(365*24*3600));second%=365*24*3600}if(second>=24*3600){time[1]=parseInt(second/(24*3600));second%=24*3600}if(second>=3600){time[2]=parseInt(second/3600);second%=3600}if(second>=60){time[3]=parseInt(second/60);second%=60}if(second>0){time[4]=second}currentTimeHtml='本站已经安全运行 '+time[0]+' 年 '+time[1]+' 天 '+time[2]+' 时 '+time[3]+' 分 '+time[4]+' 秒';var elementById=document.getElementById('running-time');if(elementById){elementById.innerHTML=currentTimeHtml}},1000);</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?717a99f1494c3f08b0a1972eec77ca87";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/canvas-nest.min.js"></script><script src="https://cdn.staticfile.org/butterfly-extsrc/1.1.3/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script>window.$crisp = [];
+window.CRISP_WEBSITE_ID = "d7621d39-33cc-40c9-a8a4-6c3ab0cf47bb";
+(function () {
+  d = document;
+  s = d.createElement("script");
+  s.src = "https://client.crisp.chat/l.js";
+  s.async = 1;
+  d.getElementsByTagName("head")[0].appendChild(s);
+})();
+$crisp.push(["safe", true])
+
+if (false) {
+  $crisp.push(["do", "chat:hide"])
+  $crisp.push(["on", "chat:closed", function() {
+    $crisp.push(["do", "chat:hide"])
+  }])
+  var chatBtnFn = () => {
+    var chatBtn = document.getElementById("chat_btn")
+    chatBtn.addEventListener("click", function(){
+      $crisp.push(["do", "chat:show"])
+      $crisp.push(["do", "chat:open"])
+
+    });
+  }
+  chatBtnFn()
+} else {
+  if (false) {
+    function chatBtnHide () {
+      $crisp.push(["do", "chat:hide"])
+    }
+    function chatBtnShow () {
+      $crisp.push(["do", "chat:show"])
+    }
+  }
+}</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script defer src="/js/jquery.min.js"></script><script defer src="/js/kity.min.js"></script><script defer src="/js/kityminder.core.min.js"></script><script defer src="/js/mindmap.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

@@ -6,7 +6,7 @@
   <link href="https://ximfem.asia/atom.xml" rel="self"/>
   
   <link href="https://ximfem.asia/"/>
-  <updated>2023-08-23T11:32:26.000Z</updated>
+  <updated>2023-08-25T18:47:41.198Z</updated>
   <id>https://ximfem.asia/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Arduino单片机入门】环境配置及完整使用流程</title>
+    <link href="https://ximfem.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
+    <id>https://ximfem.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/</id>
+    <published>2023-08-26T00:37:33.000Z</published>
+    <updated>2023-08-25T18:47:41.198Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left"><font size="3">Arduino单片机是一款开源的单片机开发平台，可以用于创建各种互动的物理设备和原型。它基于简单易学的编程语言和开发环境，使得初学者也能轻松上手。本文将介绍Arduino单片机的环境配置及完整使用流程，帮助大家快速入门并开始进行自己的创造和实验。</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-1.jpg" alt="img"></p><h2 id="下载Arduino安装包"><a href="#下载Arduino安装包" class="headerlink" title="下载Arduino安装包"></a>下载Arduino安装包</h2><p align="center"><font size="3">打开<a href="https://www.arduino.cc/" target="_self">Arduino官网</a>，进入SOFTWARE页面</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-2.png" alt="img"></p><p align="center"><font size="3">选择合适的版本下载（尽量选择exe格式的安装包，不要直接下载压缩包，不然环境可能配置不完整）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-3.png" alt="img"></p><p align="center"><font size="3">点击“JUST DOWNLOAD”即可下载</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-4.png" alt="img"></p><h2 id="安装Arduino"><a href="#安装Arduino" class="headerlink" title="安装Arduino"></a>安装Arduino</h2><p align="center"><font size="3">下载完成后运行安装程序，点击“I Agree”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-5.png" alt="img"></p><p align="center"><font size="3">点击“NEXT”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-6.png" alt="img"></p><p align="center"><font size="3">选择安装位置（尽量选择C盘以外的地方），点击“Install”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-7.png" alt="img"></p><p align="center"><font size="3">安装过程会提示安装驱动，安装即可</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-8.png" alt="img"></p><p align="center"><font size="3">安装完成后点击“Close”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-9.png" alt="img"></p><h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><p align="center"><font size="3">打开软件后可以看到这个页面，这是软件的主页面</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-10.png" alt="img"></p><p align="left"><font size="3">上面是菜单区，</font></p><p align="left"><font size="3">第二个是常用功能区，从左至右依次是“验证”、“上传”、“新建”、“打开”、“保存”和“串口监视器”，比较常用的是前两个。</font></p><p align="left"><font size="3">中间最大的区域是代码编写区，主要用来编写代码</font></p><p align="left"><font size="3">最下面的是提示/结果输出区，用来输出编译和上传的结果，或者显示错误信息</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-11.png" alt="img"></p><p align="left"><font size="3">在代码区里，有两个默认的函数，第一个函数是setup()，在这个函数里的代码只会执行一遍，通常我们会在这个函数中完成Arduino的初始化设置，如配置I/O口状态，初始化串口等。第二个函数是loop()，loop()函数是一个死循环，其中的程序会不断地重复运行，通常我们会在loop()函数中放置程序的主要功能代码，如驱动各种模块，采集数据等。</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-12.png" alt="img"></p><p align="center"><font size="3">在左上角的 文件→示例 中可以找到各模块的示例程序</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-13.png" alt="img"></p><p align="center"><font size="3">在“工具”中可以切换不同的开发板，并且选定相应的端口</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-14.png" alt="img"></p><h2 id="示例：点亮LED灯"><a href="#示例：点亮LED灯" class="headerlink" title="示例：点亮LED灯"></a>示例：点亮LED灯</h2><p align="center"><font size="3">下面我们将用一个简单的例子来演示代码的烧录过程</font></p><p align="left"><font size="3">首先将Arduino开发板接到电脑的USB接口，在Arduino软件上选中对应的端口；按照下图将LED灯与开发板用导线连接起来</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-15.png" alt="img"></p><p align="center"><font size="3">开始编写代码并验证代码是否正确</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-16.png" alt="img"></p><p align="center"><font size="3">点击“验证”后会让你将文件进行保存，选择一个熟悉的位置，自定义文件名，点击“保存”</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-17.png" alt="img"></p><p align="center"><font size="3">验证完成后如果代码没有错误就会出现这些信息</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-18.png" alt="img"></p><p align="center"><font size="3">点击“上传”，将程序烧录进开发板内</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-19.png" alt="img"></p><p align="center"><font size="3">上传成功，这时可以看到LED灯以一秒的间隔一亮一灭（除非你没有正确操作）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-20.png" alt="img"></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left"><font size="3">以上便是Arduino的环境配置及完整使用流程。除了使用官方的Arduino软件写程序，还可以使用下面这款Mind+。使用Mind+，你甚至不需要知道代码也能写出一个正确的程序，只是简单的积木式编程。大家感兴趣的话可以自己去了解一下。</font></p><p align="left"><font size="3">官网：<a href="https://mindplus.cc/" target="_blank">https://mindplus.cc</a></font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-21.png" alt="img"></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20230826-22.png" alt="img"></p><p><img src="\img\123.gif" /></p><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="单片机" scheme="https://ximfem.asia/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    
+    <category term="原创" scheme="https://ximfem.asia/categories/%E5%8D%95%E7%89%87%E6%9C%BA/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="Arduino" scheme="https://ximfem.asia/tags/Arduino/"/>
+    
+    <category term="单片机" scheme="https://ximfem.asia/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    
+    <category term="Mind+" scheme="https://ximfem.asia/tags/Mind/"/>
+    
+  </entry>
   
   <entry>
     <title>注册ChatGPT账号最新完整流程</title>
@@ -480,13 +513,13 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    
     <category term="Github" scheme="https://ximfem.asia/tags/Github/"/>
     
     <category term="开源" scheme="https://ximfem.asia/tags/%E5%BC%80%E6%BA%90/"/>
     
     <category term="项目" scheme="https://ximfem.asia/tags/%E9%A1%B9%E7%9B%AE/"/>
-    
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
   </entry>
   
@@ -606,13 +639,13 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
-    
     <category term="Termux" scheme="https://ximfem.asia/tags/Termux/"/>
     
     <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
     
     <category term="Linux" scheme="https://ximfem.asia/tags/Linux/"/>
+    
+    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
     <category term="VNC" scheme="https://ximfem.asia/tags/VNC/"/>
     
@@ -680,9 +713,9 @@
     
     <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
     
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
-    
     <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
+    
+    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
     <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
@@ -874,9 +907,9 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="钓鱼" scheme="https://ximfem.asia/tags/%E9%92%93%E9%B1%BC/"/>
-    
     <category term="wifi" scheme="https://ximfem.asia/tags/wifi/"/>
+    
+    <category term="钓鱼" scheme="https://ximfem.asia/tags/%E9%92%93%E9%B1%BC/"/>
     
   </entry>
   
