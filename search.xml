@@ -266,9 +266,9 @@
       
         <tags>
             
-            <tag> Github </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> Github </tag>
             
             <tag> Netlify </tag>
             
@@ -698,6 +698,8 @@
       
         <tags>
             
+            <tag> VMware </tag>
+            
             <tag> 系统 </tag>
             
             <tag> Kali </tag>
@@ -705,8 +707,6 @@
             <tag> SSH </tag>
             
             <tag> 黑客 </tag>
-            
-            <tag> VMware </tag>
             
         </tags>
       
@@ -733,9 +733,9 @@
       
         <tags>
             
-            <tag> 系统 </tag>
-            
             <tag> VMware </tag>
+            
+            <tag> 系统 </tag>
             
             <tag> UOS </tag>
             
@@ -795,11 +795,11 @@
       
         <tags>
             
-            <tag> 系统 </tag>
-            
             <tag> Mac </tag>
             
             <tag> VMware </tag>
+            
+            <tag> 系统 </tag>
             
         </tags>
       
