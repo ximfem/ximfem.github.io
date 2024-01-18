@@ -577,13 +577,13 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
-    
     <category term="Github" scheme="https://ximfem.asia/tags/Github/"/>
     
     <category term="开源" scheme="https://ximfem.asia/tags/%E5%BC%80%E6%BA%90/"/>
     
     <category term="项目" scheme="https://ximfem.asia/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
   </entry>
   
@@ -703,13 +703,13 @@
     <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    
     <category term="Termux" scheme="https://ximfem.asia/tags/Termux/"/>
     
     <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
     
     <category term="Linux" scheme="https://ximfem.asia/tags/Linux/"/>
-    
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
     
     <category term="VNC" scheme="https://ximfem.asia/tags/VNC/"/>
     
@@ -777,9 +777,9 @@
     
     <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
     
-    <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
-    
     <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    
+    <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
     
     <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
