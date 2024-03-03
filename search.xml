@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>钉钉远程打卡方案</title>
+      <link href="/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/"/>
+      <url>/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">随着钉钉打卡成为众多企业或组织的考勤方式，如何实现远程打卡也成为许多打工人想要解决的问题。网上也有许多解决方案，但大多数都是通过在手机上安装一些黑科技软件来解决，不仅使用门槛高，而且root之后的手机还会有很大安全隐患。因此，郎哥为大家提供一个更简单安全的方案。这个方案不仅只适用于钉钉打卡，还能扩展很多其他的功能。</font></p><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="下载安装Todesk"><a href="#下载安装Todesk" class="headerlink" title="下载安装Todesk"></a>下载安装Todesk</h3><p align="center"><font size="3">在打卡点(一般是公司)的固定电脑上下载Todesk软件</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">官网：https://www.todesk.com</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240304-1.png" alt="img"></p><p align="center"><font size="3">选择电脑系统对应的版本下载</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-2.png" alt="img"></p><p align="center"><font size="3">下载后安装并打开软件，登录账号</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-3.png" alt="img"></p><p align="center"><font size="3">设置一个安全密码</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-4.png" alt="img"></p><h3 id="下载安装QtScrcpy"><a href="#下载安装QtScrcpy" class="headerlink" title="下载安装QtScrcpy"></a>下载安装QtScrcpy</h3><p align="left"><font size="3">在同一台电脑上下载QtScrcpy软件。QtScrcpy是开源软件，直接在GitHub或Gitee下载，以下是Gitee仓库地址，选择对应系统版本下载即可</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://gitee.com/Barryda/QtScrcpy</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240304-5.png" alt="img"></p><p align="center"><font size="3">Windows系统下载之后是一个压缩包，把它解压</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-6.png" alt="img"></p><p align="center"><font size="3">进入解压出来的文件夹，双击“QtScrcpy.exe”即可运行软件</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-7.png" alt="img"></p><h3 id="手机设置"><a href="#手机设置" class="headerlink" title="手机设置"></a>手机设置</h3><p align="left"><font size="3">把手机通过数据线连接到电脑，进入手机系统设置，找到手机版本号页面（一般在“关于手机”里面），连续点击5~6下，开启开发者模式</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-8.jpg" alt="img"></p><p align="center"><font size="3">找到并进入“开发人员选项”（一般在“系统和更新”里面，如果找不到的话直接搜索），打开“USB调试”功能</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-9.jpg" alt="img"></p><h3 id="连接手机"><a href="#连接手机" class="headerlink" title="连接手机"></a>连接手机</h3><p align="center"><font size="3">在电脑的QtScrcpy上点击“一键USB连接”</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-10.png" alt="img"></p><p align="center"><font size="3">在手机上允许USB调试</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-11.jpg" alt="img"></p><p align="left"><font size="3">如果没有弹出上面的请求弹窗或者允许后依旧连接不上，可以试着切换一下USB配置，然后重新开关USB调试功能，比如郎哥的荣耀70需要将USB配置切换成“音频来源”才能正常连接</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-12.jpg" alt="img"></p><p align="center"><font size="3">连接成功后会自动添加设备，双击即可打开屏幕共享</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-13.png" alt="img"></p><p align="center"><font size="3">这样就可以看到并操控手机屏幕了（右边的功能都很简单，大家自行摸索）</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-14.png" alt="img"></p><h3 id="远程打卡"><a href="#远程打卡" class="headerlink" title="远程打卡"></a>远程打卡</h3><p align="center"><font size="3">在其他电脑或手机上也下载Todesk并登录相同的账号，连接到打卡点的电脑</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-15.png" alt="img"></p><p align="center" style="margin-top:-22px; margin-bottom:15px;"><font color="grey" size="3">（电脑）</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-16.jpg" alt="img"></p><p align="center" style="margin-top:-22px; margin-bottom:15px;"><font color="grey" size="3">（手机）</font></p><p align="center"><font size="3">最后将打卡点的电脑设置从不进入睡眠状态，并且关闭手机的锁屏密码，这样只要不把电脑关机就随时可以远程操控打卡了</font></p><p><img src="https://cdn.jkl.asia/blog/20240304-17.png" alt="img"></p><p><img src="\img\123.gif" /></p><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+          <category> 原创 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 远程 </tag>
+            
+            <tag> 钉钉 </tag>
+            
+            <tag> 打卡 </tag>
+            
+            <tag> Todesk </tag>
+            
+            <tag> QtScrcpy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2024红包封面正在派送中...</title>
       <link href="/2024%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%AD%A3%E5%9C%A8%E6%B4%BE%E9%80%81%E4%B8%AD/"/>
       <url>/2024%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%AD%A3%E5%9C%A8%E6%B4%BE%E9%80%81%E4%B8%AD/</url>

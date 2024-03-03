@@ -3,7 +3,7 @@ var newYear = () => {
     clearTimeout(newYearTimer);
     if (!document.querySelector('#newYear')) return;
     // 新年时间戳 and 星期对象
-    let newYear = new Date('2024-02-10 00:00:00').getTime() / 1000,
+    let newYear = new Date('2025-01-29 00:00:00').getTime() / 1000,
         week = { 0: '周日', 1: '周一', 2: '周二', 3: '周三', 4: '周四', 5: '周五', 6: '周六' }
 
     time();
@@ -31,10 +31,10 @@ var newYear = () => {
 
             // 大于一天则直接渲染天数
             if (second > 86400) {
-                document.querySelector('#newYear .title').innerHTML = '距离2024年春节还有：'
+                document.querySelector('#newYear .title').innerHTML = '距离2025年春节还有：'
                 document.querySelector('#newYear .newYear-time').innerHTML = `<span class="day">${Math.ceil(second / 86400)}<span class="unit">天</span></span>`
             } else {
-                document.querySelector('#newYear .title').innerHTML = '2024年春节倒计时：'
+                document.querySelector('#newYear .title').innerHTML = '2025年春节倒计时：'
                 // 小于一天则使用时分秒计时。
                 let h = nol(parseInt(second / 3600));
                 second %= 3600;
