@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>极客郎</title>
-  <icon>https://ximfem.asia/icon.png</icon>
+  <icon>https://blog.jkl.asia/icon.png</icon>
   
-  <link href="https://ximfem.asia/atom.xml" rel="self"/>
+  <link href="https://blog.jkl.asia/atom.xml" rel="self"/>
   
-  <link href="https://ximfem.asia/"/>
+  <link href="https://blog.jkl.asia/"/>
   <updated>2024-03-03T18:12:13.705Z</updated>
-  <id>https://ximfem.asia/</id>
+  <id>https://blog.jkl.asia/</id>
   
   <author>
     <name>郎哥</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>钉钉远程打卡方案</title>
-    <link href="https://ximfem.asia/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/"/>
-    <id>https://ximfem.asia/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/</id>
+    <link href="https://blog.jkl.asia/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/"/>
+    <id>https://blog.jkl.asia/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/</id>
     <published>2024-03-04T03:22:43.000Z</published>
     <updated>2024-03-03T18:12:13.705Z</updated>
     
@@ -36,27 +36,27 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="远程" scheme="https://ximfem.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
+    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
     
-    <category term="钉钉" scheme="https://ximfem.asia/tags/%E9%92%89%E9%92%89/"/>
+    <category term="钉钉" scheme="https://blog.jkl.asia/tags/%E9%92%89%E9%92%89/"/>
     
-    <category term="打卡" scheme="https://ximfem.asia/tags/%E6%89%93%E5%8D%A1/"/>
+    <category term="打卡" scheme="https://blog.jkl.asia/tags/%E6%89%93%E5%8D%A1/"/>
     
-    <category term="Todesk" scheme="https://ximfem.asia/tags/Todesk/"/>
+    <category term="Todesk" scheme="https://blog.jkl.asia/tags/Todesk/"/>
     
-    <category term="QtScrcpy" scheme="https://ximfem.asia/tags/QtScrcpy/"/>
+    <category term="QtScrcpy" scheme="https://blog.jkl.asia/tags/QtScrcpy/"/>
     
   </entry>
   
   <entry>
     <title>2024红包封面正在派送中...</title>
-    <link href="https://ximfem.asia/2024%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%AD%A3%E5%9C%A8%E6%B4%BE%E9%80%81%E4%B8%AD/"/>
-    <id>https://ximfem.asia/2024%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%AD%A3%E5%9C%A8%E6%B4%BE%E9%80%81%E4%B8%AD/</id>
+    <link href="https://blog.jkl.asia/2024%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%AD%A3%E5%9C%A8%E6%B4%BE%E9%80%81%E4%B8%AD/"/>
+    <id>https://blog.jkl.asia/2024%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%AD%A3%E5%9C%A8%E6%B4%BE%E9%80%81%E4%B8%AD/</id>
     <published>2024-02-08T08:56:44.000Z</published>
     <updated>2024-02-16T08:18:32.611Z</updated>
     
@@ -74,18 +74,18 @@
     
     
     
-    <category term="红包" scheme="https://ximfem.asia/tags/%E7%BA%A2%E5%8C%85/"/>
+    <category term="红包" scheme="https://blog.jkl.asia/tags/%E7%BA%A2%E5%8C%85/"/>
     
-    <category term="封面" scheme="https://ximfem.asia/tags/%E5%B0%81%E9%9D%A2/"/>
+    <category term="封面" scheme="https://blog.jkl.asia/tags/%E5%B0%81%E9%9D%A2/"/>
     
-    <category term="福利" scheme="https://ximfem.asia/tags/%E7%A6%8F%E5%88%A9/"/>
+    <category term="福利" scheme="https://blog.jkl.asia/tags/%E7%A6%8F%E5%88%A9/"/>
     
   </entry>
   
   <entry>
     <title>年度总结--红包封面发放预通知</title>
-    <link href="https://ximfem.asia/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93-%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/"/>
-    <id>https://ximfem.asia/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93-%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/</id>
+    <link href="https://blog.jkl.asia/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93-%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/"/>
+    <id>https://blog.jkl.asia/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93-%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/</id>
     <published>2024-01-18T14:22:45.000Z</published>
     <updated>2024-02-16T08:49:24.052Z</updated>
     
@@ -103,18 +103,18 @@
     
     
     
-    <category term="红包" scheme="https://ximfem.asia/tags/%E7%BA%A2%E5%8C%85/"/>
+    <category term="红包" scheme="https://blog.jkl.asia/tags/%E7%BA%A2%E5%8C%85/"/>
     
-    <category term="封面" scheme="https://ximfem.asia/tags/%E5%B0%81%E9%9D%A2/"/>
+    <category term="封面" scheme="https://blog.jkl.asia/tags/%E5%B0%81%E9%9D%A2/"/>
     
-    <category term="通知" scheme="https://ximfem.asia/tags/%E9%80%9A%E7%9F%A5/"/>
+    <category term="通知" scheme="https://blog.jkl.asia/tags/%E9%80%9A%E7%9F%A5/"/>
     
   </entry>
   
   <entry>
     <title>两种常见的U盘攻击手段</title>
-    <link href="https://ximfem.asia/%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84U%E7%9B%98%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/"/>
-    <id>https://ximfem.asia/%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84U%E7%9B%98%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/</id>
+    <link href="https://blog.jkl.asia/%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84U%E7%9B%98%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/"/>
+    <id>https://blog.jkl.asia/%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84U%E7%9B%98%E6%94%BB%E5%87%BB%E6%89%8B%E6%AE%B5/</id>
     <published>2023-10-06T16:20:01.000Z</published>
     <updated>2024-02-16T08:49:11.723Z</updated>
     
@@ -131,23 +131,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="U盘" scheme="https://ximfem.asia/tags/U%E7%9B%98/"/>
+    <category term="U盘" scheme="https://blog.jkl.asia/tags/U%E7%9B%98/"/>
     
-    <category term="BadUSB" scheme="https://ximfem.asia/tags/BadUSB/"/>
+    <category term="BadUSB" scheme="https://blog.jkl.asia/tags/BadUSB/"/>
     
-    <category term="攻击" scheme="https://ximfem.asia/tags/%E6%94%BB%E5%87%BB/"/>
+    <category term="攻击" scheme="https://blog.jkl.asia/tags/%E6%94%BB%E5%87%BB/"/>
     
   </entry>
   
   <entry>
     <title>我们的Ai集合站 — TPAI正式上线运营</title>
-    <link href="https://ximfem.asia/%E6%88%91%E4%BB%AC%E7%9A%84Ai%E9%9B%86%E5%90%88%E7%AB%99-%E2%80%94-TPAI%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%90%A5/"/>
-    <id>https://ximfem.asia/%E6%88%91%E4%BB%AC%E7%9A%84Ai%E9%9B%86%E5%90%88%E7%AB%99-%E2%80%94-TPAI%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%90%A5/</id>
+    <link href="https://blog.jkl.asia/%E6%88%91%E4%BB%AC%E7%9A%84Ai%E9%9B%86%E5%90%88%E7%AB%99-%E2%80%94-TPAI%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%90%A5/"/>
+    <id>https://blog.jkl.asia/%E6%88%91%E4%BB%AC%E7%9A%84Ai%E9%9B%86%E5%90%88%E7%AB%99-%E2%80%94-TPAI%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%BA%BF%E8%BF%90%E8%90%A5/</id>
     <published>2023-09-17T16:34:48.000Z</published>
     <updated>2024-02-16T08:50:30.468Z</updated>
     
@@ -165,20 +165,20 @@
     
     
     
-    <category term="ChatGPT" scheme="https://ximfem.asia/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog.jkl.asia/tags/ChatGPT/"/>
     
-    <category term="TPAI" scheme="https://ximfem.asia/tags/TPAI/"/>
+    <category term="TPAI" scheme="https://blog.jkl.asia/tags/TPAI/"/>
     
-    <category term="Ai" scheme="https://ximfem.asia/tags/Ai/"/>
+    <category term="Ai" scheme="https://blog.jkl.asia/tags/Ai/"/>
     
-    <category term="Midjourney" scheme="https://ximfem.asia/tags/Midjourney/"/>
+    <category term="Midjourney" scheme="https://blog.jkl.asia/tags/Midjourney/"/>
     
   </entry>
   
   <entry>
     <title>【Arduino单片机入门】环境配置及完整使用流程</title>
-    <link href="https://ximfem.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
-    <id>https://ximfem.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/</id>
+    <link href="https://blog.jkl.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/"/>
+    <id>https://blog.jkl.asia/%E3%80%90Arduino%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8%E3%80%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/</id>
     <published>2023-08-26T00:37:33.000Z</published>
     <updated>2024-02-16T08:34:30.332Z</updated>
     
@@ -195,23 +195,23 @@
     
     
     
-    <category term="单片机" scheme="https://ximfem.asia/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    <category term="单片机" scheme="https://blog.jkl.asia/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E5%8D%95%E7%89%87%E6%9C%BA/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E5%8D%95%E7%89%87%E6%9C%BA/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="Arduino" scheme="https://ximfem.asia/tags/Arduino/"/>
+    <category term="Arduino" scheme="https://blog.jkl.asia/tags/Arduino/"/>
     
-    <category term="单片机" scheme="https://ximfem.asia/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
+    <category term="单片机" scheme="https://blog.jkl.asia/tags/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
     
-    <category term="Mind+" scheme="https://ximfem.asia/tags/Mind/"/>
+    <category term="Mind+" scheme="https://blog.jkl.asia/tags/Mind/"/>
     
   </entry>
   
   <entry>
     <title>注册ChatGPT账号最新完整流程</title>
-    <link href="https://ximfem.asia/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/"/>
-    <id>https://ximfem.asia/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/</id>
+    <link href="https://blog.jkl.asia/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/"/>
+    <id>https://blog.jkl.asia/%E6%B3%A8%E5%86%8CChatGPT%E8%B4%A6%E5%8F%B7%E6%9C%80%E6%96%B0%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B/</id>
     <published>2023-08-23T11:32:26.000Z</published>
     <updated>2023-08-23T11:32:26.000Z</updated>
     
@@ -228,25 +228,25 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="ChatGPT" scheme="https://ximfem.asia/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog.jkl.asia/tags/ChatGPT/"/>
     
-    <category term="OpenAI" scheme="https://ximfem.asia/tags/OpenAI/"/>
+    <category term="OpenAI" scheme="https://blog.jkl.asia/tags/OpenAI/"/>
     
-    <category term="接码" scheme="https://ximfem.asia/tags/%E6%8E%A5%E7%A0%81/"/>
+    <category term="接码" scheme="https://blog.jkl.asia/tags/%E6%8E%A5%E7%A0%81/"/>
     
-    <category term="API" scheme="https://ximfem.asia/tags/API/"/>
+    <category term="API" scheme="https://blog.jkl.asia/tags/API/"/>
     
   </entry>
   
   <entry>
     <title>禁用Windows更新的最新解决方案</title>
-    <link href="https://ximfem.asia/%E7%A6%81%E7%94%A8Windows%E6%9B%B4%E6%96%B0%E7%9A%84%E6%9C%80%E6%96%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://ximfem.asia/%E7%A6%81%E7%94%A8Windows%E6%9B%B4%E6%96%B0%E7%9A%84%E6%9C%80%E6%96%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <link href="https://blog.jkl.asia/%E7%A6%81%E7%94%A8Windows%E6%9B%B4%E6%96%B0%E7%9A%84%E6%9C%80%E6%96%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://blog.jkl.asia/%E7%A6%81%E7%94%A8Windows%E6%9B%B4%E6%96%B0%E7%9A%84%E6%9C%80%E6%96%B0%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <published>2023-07-13T09:22:03.000Z</published>
     <updated>2024-02-16T08:40:56.653Z</updated>
     
@@ -263,21 +263,21 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="电脑" scheme="https://ximfem.asia/tags/%E7%94%B5%E8%84%91/"/>
+    <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="更新" scheme="https://ximfem.asia/tags/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>硬盘清理方法--拯救爆红的C盘</title>
-    <link href="https://ximfem.asia/%E7%A1%AC%E7%9B%98%E6%B8%85%E7%90%86%E6%96%B9%E6%B3%95-%E6%8B%AF%E6%95%91%E7%88%86%E7%BA%A2%E7%9A%84C%E7%9B%98/"/>
-    <id>https://ximfem.asia/%E7%A1%AC%E7%9B%98%E6%B8%85%E7%90%86%E6%96%B9%E6%B3%95-%E6%8B%AF%E6%95%91%E7%88%86%E7%BA%A2%E7%9A%84C%E7%9B%98/</id>
+    <link href="https://blog.jkl.asia/%E7%A1%AC%E7%9B%98%E6%B8%85%E7%90%86%E6%96%B9%E6%B3%95-%E6%8B%AF%E6%95%91%E7%88%86%E7%BA%A2%E7%9A%84C%E7%9B%98/"/>
+    <id>https://blog.jkl.asia/%E7%A1%AC%E7%9B%98%E6%B8%85%E7%90%86%E6%96%B9%E6%B3%95-%E6%8B%AF%E6%95%91%E7%88%86%E7%BA%A2%E7%9A%84C%E7%9B%98/</id>
     <published>2023-06-22T16:16:28.000Z</published>
     <updated>2024-02-16T08:50:51.060Z</updated>
     
@@ -294,23 +294,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="清理" scheme="https://ximfem.asia/tags/%E6%B8%85%E7%90%86/"/>
+    <category term="清理" scheme="https://blog.jkl.asia/tags/%E6%B8%85%E7%90%86/"/>
     
-    <category term="电脑" scheme="https://ximfem.asia/tags/%E7%94%B5%E8%84%91/"/>
+    <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="硬盘" scheme="https://ximfem.asia/tags/%E7%A1%AC%E7%9B%98/"/>
+    <category term="硬盘" scheme="https://blog.jkl.asia/tags/%E7%A1%AC%E7%9B%98/"/>
     
   </entry>
   
   <entry>
     <title>实现内网穿透的方法</title>
-    <link href="https://ximfem.asia/%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>https://ximfem.asia/%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E6%96%B9%E6%B3%95/</id>
+    <link href="https://blog.jkl.asia/%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://blog.jkl.asia/%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E7%9A%84%E6%96%B9%E6%B3%95/</id>
     <published>2023-06-14T11:53:35.000Z</published>
     <updated>2024-02-16T08:50:02.940Z</updated>
     
@@ -327,25 +327,25 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="内网穿透" scheme="https://ximfem.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    <category term="内网穿透" scheme="https://blog.jkl.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
-    <category term="NATAPP" scheme="https://ximfem.asia/tags/NATAPP/"/>
+    <category term="NATAPP" scheme="https://blog.jkl.asia/tags/NATAPP/"/>
     
-    <category term="花生壳" scheme="https://ximfem.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
+    <category term="花生壳" scheme="https://blog.jkl.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
     
-    <category term="网站" scheme="https://ximfem.asia/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>Windows本地搭建ChatGPT网站</title>
-    <link href="https://ximfem.asia/Windows%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAChatGPT%E7%BD%91%E7%AB%99/"/>
-    <id>https://ximfem.asia/Windows%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAChatGPT%E7%BD%91%E7%AB%99/</id>
+    <link href="https://blog.jkl.asia/Windows%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAChatGPT%E7%BD%91%E7%AB%99/"/>
+    <id>https://blog.jkl.asia/Windows%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BAChatGPT%E7%BD%91%E7%AB%99/</id>
     <published>2023-06-04T10:56:25.000Z</published>
     <updated>2024-02-16T08:35:25.221Z</updated>
     
@@ -362,23 +362,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="ChatGPT" scheme="https://ximfem.asia/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog.jkl.asia/tags/ChatGPT/"/>
     
-    <category term="Pandora" scheme="https://ximfem.asia/tags/Pandora/"/>
+    <category term="Pandora" scheme="https://blog.jkl.asia/tags/Pandora/"/>
     
-    <category term="Docker" scheme="https://ximfem.asia/tags/Docker/"/>
+    <category term="Docker" scheme="https://blog.jkl.asia/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>将本地网站源码上传到Github并使用Netlify搭建静态网站</title>
-    <link href="https://ximfem.asia/%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0Github%E5%B9%B6%E4%BD%BF%E7%94%A8Netlify%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
-    <id>https://ximfem.asia/%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0Github%E5%B9%B6%E4%BD%BF%E7%94%A8Netlify%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</id>
+    <link href="https://blog.jkl.asia/%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0Github%E5%B9%B6%E4%BD%BF%E7%94%A8Netlify%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/"/>
+    <id>https://blog.jkl.asia/%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%B8%8A%E4%BC%A0%E5%88%B0Github%E5%B9%B6%E4%BD%BF%E7%94%A8Netlify%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/</id>
     <published>2023-06-02T11:47:40.000Z</published>
     <updated>2024-02-16T08:40:19.864Z</updated>
     
@@ -395,23 +395,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="Github" scheme="https://ximfem.asia/tags/Github/"/>
+    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
     
-    <category term="网站" scheme="https://ximfem.asia/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="Github" scheme="https://blog.jkl.asia/tags/Github/"/>
     
-    <category term="Netlify" scheme="https://ximfem.asia/tags/Netlify/"/>
+    <category term="Netlify" scheme="https://blog.jkl.asia/tags/Netlify/"/>
     
   </entry>
   
   <entry>
     <title>搭建国内版的ChatGPT网站(文末有成品)</title>
-    <link href="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/"/>
-    <id>https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/</id>
+    <link href="https://blog.jkl.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/"/>
+    <id>https://blog.jkl.asia/%E6%90%AD%E5%BB%BA%E5%9B%BD%E5%86%85%E7%89%88%E7%9A%84ChatGPT%E7%BD%91%E7%AB%99-%E6%96%87%E6%9C%AB%E6%9C%89%E6%88%90%E5%93%81/</id>
     <published>2023-05-16T07:48:33.000Z</published>
     <updated>2024-02-16T08:37:35.443Z</updated>
     
@@ -428,27 +428,27 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="ChatGPT" scheme="https://ximfem.asia/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://blog.jkl.asia/tags/ChatGPT/"/>
     
-    <category term="网站" scheme="https://ximfem.asia/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
     
-    <category term="GitHub" scheme="https://ximfem.asia/tags/GitHub/"/>
+    <category term="GitHub" scheme="https://blog.jkl.asia/tags/GitHub/"/>
     
-    <category term="Vercel" scheme="https://ximfem.asia/tags/Vercel/"/>
+    <category term="Vercel" scheme="https://blog.jkl.asia/tags/Vercel/"/>
     
-    <category term="Cloudflare" scheme="https://ximfem.asia/tags/Cloudflare/"/>
+    <category term="Cloudflare" scheme="https://blog.jkl.asia/tags/Cloudflare/"/>
     
   </entry>
   
   <entry>
     <title>搭建和使用OpenVPN</title>
-    <link href="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/"/>
-    <id>https://ximfem.asia/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/</id>
+    <link href="https://blog.jkl.asia/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/"/>
+    <id>https://blog.jkl.asia/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/</id>
     <published>2023-05-06T06:20:03.000Z</published>
     <updated>2024-02-16T08:38:08.032Z</updated>
     
@@ -465,23 +465,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="OpenVPN" scheme="https://ximfem.asia/tags/OpenVPN/"/>
+    <category term="OpenVPN" scheme="https://blog.jkl.asia/tags/OpenVPN/"/>
     
-    <category term="服务器" scheme="https://ximfem.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog.jkl.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Ubuntu" scheme="https://ximfem.asia/tags/Ubuntu/"/>
+    <category term="Ubuntu" scheme="https://blog.jkl.asia/tags/Ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>快速搭建极客郎同款博客网站--基于Hexo框架</title>
-    <link href="https://ximfem.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E6%9E%81%E5%AE%A2%E9%83%8E%E5%90%8C%E6%AC%BE%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99-%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6/"/>
-    <id>https://ximfem.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E6%9E%81%E5%AE%A2%E9%83%8E%E5%90%8C%E6%AC%BE%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99-%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6/</id>
+    <link href="https://blog.jkl.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E6%9E%81%E5%AE%A2%E9%83%8E%E5%90%8C%E6%AC%BE%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99-%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6/"/>
+    <id>https://blog.jkl.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E6%9E%81%E5%AE%A2%E9%83%8E%E5%90%8C%E6%AC%BE%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99-%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6/</id>
     <published>2023-04-09T00:14:03.000Z</published>
     <updated>2023-04-16T05:14:03.000Z</updated>
     
@@ -498,27 +498,27 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="Markdown" scheme="https://ximfem.asia/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://blog.jkl.asia/tags/Markdown/"/>
     
-    <category term="Github" scheme="https://ximfem.asia/tags/Github/"/>
+    <category term="Github" scheme="https://blog.jkl.asia/tags/Github/"/>
     
-    <category term="Hexo" scheme="https://ximfem.asia/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://blog.jkl.asia/tags/Hexo/"/>
     
-    <category term="博客" scheme="https://ximfem.asia/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="https://blog.jkl.asia/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="文章" scheme="https://ximfem.asia/tags/%E6%96%87%E7%AB%A0/"/>
+    <category term="文章" scheme="https://blog.jkl.asia/tags/%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
   <entry>
     <title>记录一次私人服务器的搭建过程</title>
-    <link href="https://ximfem.asia/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%A7%81%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
-    <id>https://ximfem.asia/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%A7%81%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</id>
+    <link href="https://blog.jkl.asia/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%A7%81%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
+    <id>https://blog.jkl.asia/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%A7%81%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</id>
     <published>2023-02-12T06:00:19.000Z</published>
     <updated>2023-02-12T06:00:19.000Z</updated>
     
@@ -535,31 +535,31 @@
     
     
     
-    <category term="智慧生活" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="智慧生活" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="内网穿透" scheme="https://ximfem.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    <category term="内网穿透" scheme="https://blog.jkl.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
-    <category term="花生壳" scheme="https://ximfem.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
+    <category term="花生壳" scheme="https://blog.jkl.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
     
-    <category term="服务器" scheme="https://ximfem.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="服务器" scheme="https://blog.jkl.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="Ubuntu" scheme="https://ximfem.asia/tags/Ubuntu/"/>
+    <category term="Ubuntu" scheme="https://blog.jkl.asia/tags/Ubuntu/"/>
     
-    <category term="主机" scheme="https://ximfem.asia/tags/%E4%B8%BB%E6%9C%BA/"/>
+    <category term="主机" scheme="https://blog.jkl.asia/tags/%E4%B8%BB%E6%9C%BA/"/>
     
-    <category term="远程" scheme="https://ximfem.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
+    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>推荐一款非常好用的装机工具--Ventoy</title>
-    <link href="https://ximfem.asia/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/"/>
-    <id>https://ximfem.asia/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/</id>
+    <link href="https://blog.jkl.asia/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/"/>
+    <id>https://blog.jkl.asia/%E6%8E%A8%E8%8D%90%E4%B8%80%E6%AC%BE%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E8%A3%85%E6%9C%BA%E5%B7%A5%E5%85%B7-Ventoy/</id>
     <published>2023-02-10T04:34:55.000Z</published>
     <updated>2024-02-16T08:50:11.820Z</updated>
     
@@ -576,21 +576,21 @@
     
     
     
-    <category term="科普推荐" scheme="https://ximfem.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"/>
+    <category term="科普推荐" scheme="https://blog.jkl.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="装机" scheme="https://ximfem.asia/tags/%E8%A3%85%E6%9C%BA/"/>
+    <category term="装机" scheme="https://blog.jkl.asia/tags/%E8%A3%85%E6%9C%BA/"/>
     
-    <category term="Ventoy" scheme="https://ximfem.asia/tags/Ventoy/"/>
+    <category term="Ventoy" scheme="https://blog.jkl.asia/tags/Ventoy/"/>
     
   </entry>
   
   <entry>
     <title>在Windows上使用宝塔面板搭建网站</title>
-    <link href="https://ximfem.asia/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/"/>
-    <id>https://ximfem.asia/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</id>
+    <link href="https://blog.jkl.asia/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/"/>
+    <id>https://blog.jkl.asia/%E5%9C%A8Windows%E4%B8%8A%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/</id>
     <published>2023-01-29T07:02:16.000Z</published>
     <updated>2023-01-29T07:02:16.000Z</updated>
     
@@ -607,21 +607,21 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="宝塔" scheme="https://ximfem.asia/tags/%E5%AE%9D%E5%A1%94/"/>
+    <category term="宝塔" scheme="https://blog.jkl.asia/tags/%E5%AE%9D%E5%A1%94/"/>
     
-    <category term="建站" scheme="https://ximfem.asia/tags/%E5%BB%BA%E7%AB%99/"/>
+    <category term="建站" scheme="https://blog.jkl.asia/tags/%E5%BB%BA%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>快来领取郎粉专属红包封面啦~</title>
-    <link href="https://ximfem.asia/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/"/>
-    <id>https://ximfem.asia/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/</id>
+    <link href="https://blog.jkl.asia/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/"/>
+    <id>https://blog.jkl.asia/%E5%BF%AB%E6%9D%A5%E9%A2%86%E5%8F%96%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%95%A6/</id>
     <published>2023-01-18T09:05:09.000Z</published>
     <updated>2023-01-18T09:05:09.000Z</updated>
     
@@ -639,18 +639,18 @@
     
     
     
-    <category term="红包" scheme="https://ximfem.asia/tags/%E7%BA%A2%E5%8C%85/"/>
+    <category term="红包" scheme="https://blog.jkl.asia/tags/%E7%BA%A2%E5%8C%85/"/>
     
-    <category term="封面" scheme="https://ximfem.asia/tags/%E5%B0%81%E9%9D%A2/"/>
+    <category term="封面" scheme="https://blog.jkl.asia/tags/%E5%B0%81%E9%9D%A2/"/>
     
-    <category term="福利" scheme="https://ximfem.asia/tags/%E7%A6%8F%E5%88%A9/"/>
+    <category term="福利" scheme="https://blog.jkl.asia/tags/%E7%A6%8F%E5%88%A9/"/>
     
   </entry>
   
   <entry>
     <title>如何下载并运行Github上面的开源项目</title>
-    <link href="https://ximfem.asia/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://ximfem.asia/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
+    <link href="https://blog.jkl.asia/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://blog.jkl.asia/%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8CGithub%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</id>
     <published>2023-01-17T00:30:56.000Z</published>
     <updated>2023-01-17T00:30:56.000Z</updated>
     
@@ -667,25 +667,25 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
-    <category term="Github" scheme="https://ximfem.asia/tags/Github/"/>
+    <category term="Github" scheme="https://blog.jkl.asia/tags/Github/"/>
     
-    <category term="开源" scheme="https://ximfem.asia/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="开源" scheme="https://blog.jkl.asia/tags/%E5%BC%80%E6%BA%90/"/>
     
-    <category term="项目" scheme="https://ximfem.asia/tags/%E9%A1%B9%E7%9B%AE/"/>
+    <category term="项目" scheme="https://blog.jkl.asia/tags/%E9%A1%B9%E7%9B%AE/"/>
     
   </entry>
   
   <entry>
     <title>郎粉专属红包封面发放预通知</title>
-    <link href="https://ximfem.asia/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/"/>
-    <id>https://ximfem.asia/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/</id>
+    <link href="https://blog.jkl.asia/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/"/>
+    <id>https://blog.jkl.asia/%E9%83%8E%E7%B2%89%E4%B8%93%E5%B1%9E%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E5%8F%91%E6%94%BE%E9%A2%84%E9%80%9A%E7%9F%A5/</id>
     <published>2023-01-09T23:54:10.000Z</published>
     <updated>2023-01-09T23:54:10.000Z</updated>
     
@@ -703,18 +703,18 @@
     
     
     
-    <category term="红包" scheme="https://ximfem.asia/tags/%E7%BA%A2%E5%8C%85/"/>
+    <category term="红包" scheme="https://blog.jkl.asia/tags/%E7%BA%A2%E5%8C%85/"/>
     
-    <category term="封面" scheme="https://ximfem.asia/tags/%E5%B0%81%E9%9D%A2/"/>
+    <category term="封面" scheme="https://blog.jkl.asia/tags/%E5%B0%81%E9%9D%A2/"/>
     
-    <category term="通知" scheme="https://ximfem.asia/tags/%E9%80%9A%E7%9F%A5/"/>
+    <category term="通知" scheme="https://blog.jkl.asia/tags/%E9%80%9A%E7%9F%A5/"/>
     
   </entry>
   
   <entry>
     <title>Markdown编辑器--MarkdownPad和Typora的安装教程</title>
-    <link href="https://ximfem.asia/Markdown%E7%BC%96%E8%BE%91%E5%99%A8-MarkdownPad%E5%92%8CTypora%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <id>https://ximfem.asia/Markdown%E7%BC%96%E8%BE%91%E5%99%A8-MarkdownPad%E5%92%8CTypora%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</id>
+    <link href="https://blog.jkl.asia/Markdown%E7%BC%96%E8%BE%91%E5%99%A8-MarkdownPad%E5%92%8CTypora%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>https://blog.jkl.asia/Markdown%E7%BC%96%E8%BE%91%E5%99%A8-MarkdownPad%E5%92%8CTypora%E7%9A%84%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</id>
     <published>2023-01-05T02:24:50.000Z</published>
     <updated>2023-01-05T02:24:50.000Z</updated>
     
@@ -731,23 +731,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="Markdown" scheme="https://ximfem.asia/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://blog.jkl.asia/tags/Markdown/"/>
     
-    <category term="MarkdownPad" scheme="https://ximfem.asia/tags/MarkdownPad/"/>
+    <category term="MarkdownPad" scheme="https://blog.jkl.asia/tags/MarkdownPad/"/>
     
-    <category term="Typora" scheme="https://ximfem.asia/tags/Typora/"/>
+    <category term="Typora" scheme="https://blog.jkl.asia/tags/Typora/"/>
     
   </entry>
   
   <entry>
     <title>Windows上Git的下载、安装与配置</title>
-    <link href="https://ximfem.asia/Windows%E4%B8%8AGit%E7%9A%84%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>https://ximfem.asia/Windows%E4%B8%8AGit%E7%9A%84%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://blog.jkl.asia/Windows%E4%B8%8AGit%E7%9A%84%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>https://blog.jkl.asia/Windows%E4%B8%8AGit%E7%9A%84%E4%B8%8B%E8%BD%BD%E3%80%81%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</id>
     <published>2023-01-03T23:22:17.000Z</published>
     <updated>2023-01-03T23:22:17.000Z</updated>
     
@@ -764,19 +764,19 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="Git" scheme="https://ximfem.asia/tags/Git/"/>
+    <category term="Git" scheme="https://blog.jkl.asia/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>在手机上通过Termux搭建黑客平台--Kali Linux</title>
-    <link href="https://ximfem.asia/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/"/>
-    <id>https://ximfem.asia/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/</id>
+    <link href="https://blog.jkl.asia/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/"/>
+    <id>https://blog.jkl.asia/%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E9%80%9A%E8%BF%87Termux%E6%90%AD%E5%BB%BA%E9%BB%91%E5%AE%A2%E5%B9%B3%E5%8F%B0-Kali-Linux/</id>
     <published>2022-12-01T03:28:24.000Z</published>
     <updated>2022-12-01T03:28:24.000Z</updated>
     
@@ -793,29 +793,29 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="Termux" scheme="https://ximfem.asia/tags/Termux/"/>
+    <category term="Termux" scheme="https://blog.jkl.asia/tags/Termux/"/>
     
-    <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
+    <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
     
-    <category term="Linux" scheme="https://ximfem.asia/tags/Linux/"/>
+    <category term="Linux" scheme="https://blog.jkl.asia/tags/Linux/"/>
     
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
-    <category term="VNC" scheme="https://ximfem.asia/tags/VNC/"/>
+    <category term="VNC" scheme="https://blog.jkl.asia/tags/VNC/"/>
     
-    <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
+    <category term="黑客" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>利用手机和平板扩展电脑屏幕</title>
-    <link href="https://ximfem.asia/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/"/>
-    <id>https://ximfem.asia/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/</id>
+    <link href="https://blog.jkl.asia/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/"/>
+    <id>https://blog.jkl.asia/%E5%88%A9%E7%94%A8%E6%89%8B%E6%9C%BA%E5%92%8C%E5%B9%B3%E6%9D%BF%E6%89%A9%E5%B1%95%E7%94%B5%E8%84%91%E5%B1%8F%E5%B9%95/</id>
     <published>2022-10-21T05:09:31.000Z</published>
     <updated>2022-10-21T05:09:31.000Z</updated>
     
@@ -832,21 +832,21 @@
     
     
     
-    <category term="智慧生活" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="智慧生活" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="屏幕" scheme="https://ximfem.asia/tags/%E5%B1%8F%E5%B9%95/"/>
+    <category term="屏幕" scheme="https://blog.jkl.asia/tags/%E5%B1%8F%E5%B9%95/"/>
     
-    <category term="spacedesk" scheme="https://ximfem.asia/tags/spacedesk/"/>
+    <category term="spacedesk" scheme="https://blog.jkl.asia/tags/spacedesk/"/>
     
   </entry>
   
   <entry>
     <title>黑客常用操作系统--Kali Linux的安装与使用</title>
-    <link href="https://ximfem.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
-    <id>https://ximfem.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <link href="https://blog.jkl.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>https://blog.jkl.asia/%E9%BB%91%E5%AE%A2%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-Kali-Linux%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
     <published>2022-10-12T02:18:30.000Z</published>
     <updated>2022-10-12T02:18:30.000Z</updated>
     
@@ -863,27 +863,27 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
+    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
-    <category term="Kali" scheme="https://ximfem.asia/tags/Kali/"/>
+    <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
     
-    <category term="SSH" scheme="https://ximfem.asia/tags/SSH/"/>
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
-    <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
+    <category term="黑客" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>安装体验国产操作系统--统信UOS</title>
-    <link href="https://ximfem.asia/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/"/>
-    <id>https://ximfem.asia/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/</id>
+    <link href="https://blog.jkl.asia/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/"/>
+    <id>https://blog.jkl.asia/%E5%AE%89%E8%A3%85%E4%BD%93%E9%AA%8C%E5%9B%BD%E4%BA%A7%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%BB%9F%E4%BF%A1UOS/</id>
     <published>2022-10-04T12:28:38.000Z</published>
     <updated>2022-10-04T12:28:38.000Z</updated>
     
@@ -900,23 +900,23 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
+    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
-    <category term="UOS" scheme="https://ximfem.asia/tags/UOS/"/>
+    <category term="UOS" scheme="https://blog.jkl.asia/tags/UOS/"/>
     
   </entry>
   
   <entry>
     <title>搭建一个轻量级NAS</title>
-    <link href="https://ximfem.asia/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F%E7%BA%A7NAS/"/>
-    <id>https://ximfem.asia/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F%E7%BA%A7NAS/</id>
+    <link href="https://blog.jkl.asia/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F%E7%BA%A7NAS/"/>
+    <id>https://blog.jkl.asia/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F%E7%BA%A7NAS/</id>
     <published>2022-09-10T03:30:28.000Z</published>
     <updated>2022-09-10T03:30:28.000Z</updated>
     
@@ -933,23 +933,23 @@
     
     
     
-    <category term="智慧生活" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="智慧生活" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="NAS" scheme="https://ximfem.asia/tags/NAS/"/>
+    <category term="NAS" scheme="https://blog.jkl.asia/tags/NAS/"/>
     
-    <category term="phpStudy" scheme="https://ximfem.asia/tags/phpStudy/"/>
+    <category term="phpStudy" scheme="https://blog.jkl.asia/tags/phpStudy/"/>
     
-    <category term="Kod" scheme="https://ximfem.asia/tags/Kod/"/>
+    <category term="Kod" scheme="https://blog.jkl.asia/tags/Kod/"/>
     
   </entry>
   
   <entry>
     <title>在VMware虚拟机里安装Mac OS系统</title>
-    <link href="https://ximfem.asia/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/"/>
-    <id>https://ximfem.asia/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/</id>
+    <link href="https://blog.jkl.asia/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://blog.jkl.asia/%E5%9C%A8VMware%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8C%E5%AE%89%E8%A3%85Mac-OS%E7%B3%BB%E7%BB%9F/</id>
     <published>2022-09-05T13:50:02.000Z</published>
     <updated>2022-09-05T13:50:02.000Z</updated>
     
@@ -966,23 +966,23 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="Mac" scheme="https://ximfem.asia/tags/Mac/"/>
+    <category term="Mac" scheme="https://blog.jkl.asia/tags/Mac/"/>
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
+    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
   </entry>
   
   <entry>
     <title>如何安装虚拟机</title>
-    <link href="https://ximfem.asia/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    <id>https://ximfem.asia/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</id>
+    <link href="https://blog.jkl.asia/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    <id>https://blog.jkl.asia/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</id>
     <published>2022-09-03T15:04:48.000Z</published>
     <updated>2022-09-04T16:00:00.000Z</updated>
     
@@ -999,21 +999,21 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="VMware" scheme="https://ximfem.asia/tags/VMware/"/>
+    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
-    <category term="vmos" scheme="https://ximfem.asia/tags/vmos/"/>
+    <category term="vmos" scheme="https://blog.jkl.asia/tags/vmos/"/>
     
   </entry>
   
   <entry>
     <title>破解WiFi常用的几种方法</title>
-    <link href="https://ximfem.asia/%E7%A0%B4%E8%A7%A3WiFi%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
-    <id>https://ximfem.asia/%E7%A0%B4%E8%A7%A3WiFi%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</id>
+    <link href="https://blog.jkl.asia/%E7%A0%B4%E8%A7%A3WiFi%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>https://blog.jkl.asia/%E7%A0%B4%E8%A7%A3WiFi%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</id>
     <published>2022-08-25T16:45:00.000Z</published>
     <updated>2022-08-25T16:45:00.000Z</updated>
     
@@ -1030,21 +1030,21 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="wifi" scheme="https://ximfem.asia/tags/wifi/"/>
+    <category term="wifi" scheme="https://blog.jkl.asia/tags/wifi/"/>
     
-    <category term="黑客" scheme="https://ximfem.asia/tags/%E9%BB%91%E5%AE%A2/"/>
+    <category term="黑客" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>制作钓鱼WiFi</title>
-    <link href="https://ximfem.asia/%E5%88%B6%E4%BD%9C%E9%92%93%E9%B1%BCWiFi/"/>
-    <id>https://ximfem.asia/%E5%88%B6%E4%BD%9C%E9%92%93%E9%B1%BCWiFi/</id>
+    <link href="https://blog.jkl.asia/%E5%88%B6%E4%BD%9C%E9%92%93%E9%B1%BCWiFi/"/>
+    <id>https://blog.jkl.asia/%E5%88%B6%E4%BD%9C%E9%92%93%E9%B1%BCWiFi/</id>
     <published>2022-08-25T14:29:59.000Z</published>
     <updated>2022-08-25T14:29:59.000Z</updated>
     
@@ -1061,21 +1061,21 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="wifi" scheme="https://ximfem.asia/tags/wifi/"/>
+    <category term="wifi" scheme="https://blog.jkl.asia/tags/wifi/"/>
     
-    <category term="钓鱼" scheme="https://ximfem.asia/tags/%E9%92%93%E9%B1%BC/"/>
+    <category term="钓鱼" scheme="https://blog.jkl.asia/tags/%E9%92%93%E9%B1%BC/"/>
     
   </entry>
   
   <entry>
     <title>新电脑必做的十几个优化设置</title>
-    <link href="https://ximfem.asia/%E6%96%B0%E7%94%B5%E8%84%91%E5%BF%85%E5%81%9A%E7%9A%84%E5%8D%81%E5%87%A0%E4%B8%AA%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
-    <id>https://ximfem.asia/%E6%96%B0%E7%94%B5%E8%84%91%E5%BF%85%E5%81%9A%E7%9A%84%E5%8D%81%E5%87%A0%E4%B8%AA%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/</id>
+    <link href="https://blog.jkl.asia/%E6%96%B0%E7%94%B5%E8%84%91%E5%BF%85%E5%81%9A%E7%9A%84%E5%8D%81%E5%87%A0%E4%B8%AA%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://blog.jkl.asia/%E6%96%B0%E7%94%B5%E8%84%91%E5%BF%85%E5%81%9A%E7%9A%84%E5%8D%81%E5%87%A0%E4%B8%AA%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE/</id>
     <published>2022-08-01T15:25:40.000Z</published>
     <updated>2022-08-01T15:25:40.000Z</updated>
     
@@ -1092,29 +1092,29 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="电脑" scheme="https://ximfem.asia/tags/%E7%94%B5%E8%84%91/"/>
+    <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="激活" scheme="https://ximfem.asia/tags/%E6%BF%80%E6%B4%BB/"/>
+    <category term="激活" scheme="https://blog.jkl.asia/tags/%E6%BF%80%E6%B4%BB/"/>
     
-    <category term="优化" scheme="https://ximfem.asia/tags/%E4%BC%98%E5%8C%96/"/>
+    <category term="优化" scheme="https://blog.jkl.asia/tags/%E4%BC%98%E5%8C%96/"/>
     
-    <category term="分区" scheme="https://ximfem.asia/tags/%E5%88%86%E5%8C%BA/"/>
+    <category term="分区" scheme="https://blog.jkl.asia/tags/%E5%88%86%E5%8C%BA/"/>
     
-    <category term="更新" scheme="https://ximfem.asia/tags/%E6%9B%B4%E6%96%B0/"/>
+    <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
     
-    <category term="安全" scheme="https://ximfem.asia/tags/%E5%AE%89%E5%85%A8/"/>
+    <category term="安全" scheme="https://blog.jkl.asia/tags/%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>关于CMD和DOS，你真的了解吗？</title>
-    <link href="https://ximfem.asia/%E5%85%B3%E4%BA%8ECMD%E5%92%8CDOS%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F/"/>
-    <id>https://ximfem.asia/%E5%85%B3%E4%BA%8ECMD%E5%92%8CDOS%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F/</id>
+    <link href="https://blog.jkl.asia/%E5%85%B3%E4%BA%8ECMD%E5%92%8CDOS%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F/"/>
+    <id>https://blog.jkl.asia/%E5%85%B3%E4%BA%8ECMD%E5%92%8CDOS%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%90%97%EF%BC%9F/</id>
     <published>2022-06-16T15:13:54.000Z</published>
     <updated>2022-06-16T15:13:54.000Z</updated>
     
@@ -1131,21 +1131,21 @@
     
     
     
-    <category term="科普推荐" scheme="https://ximfem.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"/>
+    <category term="科普推荐" scheme="https://blog.jkl.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="cmd" scheme="https://ximfem.asia/tags/cmd/"/>
+    <category term="cmd" scheme="https://blog.jkl.asia/tags/cmd/"/>
     
-    <category term="dos" scheme="https://ximfem.asia/tags/dos/"/>
+    <category term="dos" scheme="https://blog.jkl.asia/tags/dos/"/>
     
   </entry>
   
   <entry>
     <title>彻底清除电脑里所有的广告</title>
-    <link href="https://ximfem.asia/%E5%BD%BB%E5%BA%95%E6%B8%85%E9%99%A4%E7%94%B5%E8%84%91%E9%87%8C%E6%89%80%E6%9C%89%E7%9A%84%E5%B9%BF%E5%91%8A/"/>
-    <id>https://ximfem.asia/%E5%BD%BB%E5%BA%95%E6%B8%85%E9%99%A4%E7%94%B5%E8%84%91%E9%87%8C%E6%89%80%E6%9C%89%E7%9A%84%E5%B9%BF%E5%91%8A/</id>
+    <link href="https://blog.jkl.asia/%E5%BD%BB%E5%BA%95%E6%B8%85%E9%99%A4%E7%94%B5%E8%84%91%E9%87%8C%E6%89%80%E6%9C%89%E7%9A%84%E5%B9%BF%E5%91%8A/"/>
+    <id>https://blog.jkl.asia/%E5%BD%BB%E5%BA%95%E6%B8%85%E9%99%A4%E7%94%B5%E8%84%91%E9%87%8C%E6%89%80%E6%9C%89%E7%9A%84%E5%B9%BF%E5%91%8A/</id>
     <published>2022-02-06T16:30:05.000Z</published>
     <updated>2022-02-06T16:30:05.000Z</updated>
     
@@ -1162,25 +1162,25 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="清理" scheme="https://ximfem.asia/tags/%E6%B8%85%E7%90%86/"/>
+    <category term="清理" scheme="https://blog.jkl.asia/tags/%E6%B8%85%E7%90%86/"/>
     
-    <category term="防护" scheme="https://ximfem.asia/tags/%E9%98%B2%E6%8A%A4/"/>
+    <category term="防护" scheme="https://blog.jkl.asia/tags/%E9%98%B2%E6%8A%A4/"/>
     
-    <category term="电脑" scheme="https://ximfem.asia/tags/%E7%94%B5%E8%84%91/"/>
+    <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="广告" scheme="https://ximfem.asia/tags/%E5%B9%BF%E5%91%8A/"/>
+    <category term="广告" scheme="https://blog.jkl.asia/tags/%E5%B9%BF%E5%91%8A/"/>
     
   </entry>
   
   <entry>
     <title>微信红包封面最全领取攻略</title>
-    <link href="https://ximfem.asia/%E5%BE%AE%E4%BF%A1%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%9C%80%E5%85%A8%E9%A2%86%E5%8F%96%E6%94%BB%E7%95%A5/"/>
-    <id>https://ximfem.asia/%E5%BE%AE%E4%BF%A1%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%9C%80%E5%85%A8%E9%A2%86%E5%8F%96%E6%94%BB%E7%95%A5/</id>
+    <link href="https://blog.jkl.asia/%E5%BE%AE%E4%BF%A1%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%9C%80%E5%85%A8%E9%A2%86%E5%8F%96%E6%94%BB%E7%95%A5/"/>
+    <id>https://blog.jkl.asia/%E5%BE%AE%E4%BF%A1%E7%BA%A2%E5%8C%85%E5%B0%81%E9%9D%A2%E6%9C%80%E5%85%A8%E9%A2%86%E5%8F%96%E6%94%BB%E7%95%A5/</id>
     <published>2022-01-29T00:25:21.000Z</published>
     <updated>2022-01-29T00:25:21.000Z</updated>
     
@@ -1198,18 +1198,18 @@
     
     
     
-    <category term="红包" scheme="https://ximfem.asia/tags/%E7%BA%A2%E5%8C%85/"/>
+    <category term="红包" scheme="https://blog.jkl.asia/tags/%E7%BA%A2%E5%8C%85/"/>
     
-    <category term="封面" scheme="https://ximfem.asia/tags/%E5%B0%81%E9%9D%A2/"/>
+    <category term="封面" scheme="https://blog.jkl.asia/tags/%E5%B0%81%E9%9D%A2/"/>
     
-    <category term="攻略" scheme="https://ximfem.asia/tags/%E6%94%BB%E7%95%A5/"/>
+    <category term="攻略" scheme="https://blog.jkl.asia/tags/%E6%94%BB%E7%95%A5/"/>
     
   </entry>
   
   <entry>
     <title>制作一个可以随身携带的系统盘</title>
-    <link href="https://ximfem.asia/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%98/"/>
-    <id>https://ximfem.asia/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%98/</id>
+    <link href="https://blog.jkl.asia/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%98/"/>
+    <id>https://blog.jkl.asia/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%98/</id>
     <published>2022-01-27T08:26:09.000Z</published>
     <updated>2022-01-27T08:26:09.000Z</updated>
     
@@ -1226,21 +1226,21 @@
     
     
     
-    <category term="玩机教程" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://ximfem.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="WinToGo" scheme="https://ximfem.asia/tags/WinToGo/"/>
+    <category term="WinToGo" scheme="https://blog.jkl.asia/tags/WinToGo/"/>
     
   </entry>
   
   <entry>
     <title>将云盘挂载为本地磁盘</title>
-    <link href="https://ximfem.asia/%E5%B0%86%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A3%81%E7%9B%98/"/>
-    <id>https://ximfem.asia/%E5%B0%86%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A3%81%E7%9B%98/</id>
+    <link href="https://blog.jkl.asia/%E5%B0%86%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A3%81%E7%9B%98/"/>
+    <id>https://blog.jkl.asia/%E5%B0%86%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A3%81%E7%9B%98/</id>
     <published>2022-01-26T15:14:04.000Z</published>
     <updated>2022-01-26T15:14:04.000Z</updated>
     
@@ -1257,23 +1257,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="云盘" scheme="https://ximfem.asia/tags/%E4%BA%91%E7%9B%98/"/>
+    <category term="云盘" scheme="https://blog.jkl.asia/tags/%E4%BA%91%E7%9B%98/"/>
     
-    <category term="磁盘" scheme="https://ximfem.asia/tags/%E7%A3%81%E7%9B%98/"/>
+    <category term="磁盘" scheme="https://blog.jkl.asia/tags/%E7%A3%81%E7%9B%98/"/>
     
-    <category term="CloudDrive" scheme="https://ximfem.asia/tags/CloudDrive/"/>
+    <category term="CloudDrive" scheme="https://blog.jkl.asia/tags/CloudDrive/"/>
     
   </entry>
   
   <entry>
     <title>NFC功能的妙用</title>
-    <link href="https://ximfem.asia/NFC%E5%8A%9F%E8%83%BD%E7%9A%84%E5%A6%99%E7%94%A8/"/>
-    <id>https://ximfem.asia/NFC%E5%8A%9F%E8%83%BD%E7%9A%84%E5%A6%99%E7%94%A8/</id>
+    <link href="https://blog.jkl.asia/NFC%E5%8A%9F%E8%83%BD%E7%9A%84%E5%A6%99%E7%94%A8/"/>
+    <id>https://blog.jkl.asia/NFC%E5%8A%9F%E8%83%BD%E7%9A%84%E5%A6%99%E7%94%A8/</id>
     <published>2022-01-15T14:55:22.000Z</published>
     <updated>2022-01-15T14:55:22.000Z</updated>
     
@@ -1290,19 +1290,19 @@
     
     
     
-    <category term="智慧生活" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="智慧生活" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="NFC" scheme="https://ximfem.asia/tags/NFC/"/>
+    <category term="NFC" scheme="https://blog.jkl.asia/tags/NFC/"/>
     
   </entry>
   
   <entry>
     <title>制作WiFi杀手</title>
-    <link href="https://ximfem.asia/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/"/>
-    <id>https://ximfem.asia/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/</id>
+    <link href="https://blog.jkl.asia/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/"/>
+    <id>https://blog.jkl.asia/%E5%88%B6%E4%BD%9CWiFi%E6%9D%80%E6%89%8B/</id>
     <published>2022-01-08T15:49:25.000Z</published>
     <updated>2022-01-08T15:49:25.000Z</updated>
     
@@ -1319,23 +1319,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="wifi" scheme="https://ximfem.asia/tags/wifi/"/>
+    <category term="wifi" scheme="https://blog.jkl.asia/tags/wifi/"/>
     
-    <category term="esp8266" scheme="https://ximfem.asia/tags/esp8266/"/>
+    <category term="esp8266" scheme="https://blog.jkl.asia/tags/esp8266/"/>
     
-    <category term="黑科技" scheme="https://ximfem.asia/tags/%E9%BB%91%E7%A7%91%E6%8A%80/"/>
+    <category term="黑科技" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E7%A7%91%E6%8A%80/"/>
     
   </entry>
   
   <entry>
     <title>快速搭建网站（初级篇）</title>
-    <link href="https://ximfem.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%88%9D%E7%BA%A7%E7%AF%87%EF%BC%89/"/>
-    <id>https://ximfem.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%88%9D%E7%BA%A7%E7%AF%87%EF%BC%89/</id>
+    <link href="https://blog.jkl.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%88%9D%E7%BA%A7%E7%AF%87%EF%BC%89/"/>
+    <id>https://blog.jkl.asia/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99%EF%BC%88%E5%88%9D%E7%BA%A7%E7%AF%87%EF%BC%89/</id>
     <published>2022-01-02T06:13:33.000Z</published>
     <updated>2022-01-02T06:13:33.000Z</updated>
     
@@ -1352,23 +1352,23 @@
     
     
     
-    <category term="技术分享" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="建站" scheme="https://ximfem.asia/tags/%E5%BB%BA%E7%AB%99/"/>
+    <category term="建站" scheme="https://blog.jkl.asia/tags/%E5%BB%BA%E7%AB%99/"/>
     
-    <category term="电脑" scheme="https://ximfem.asia/tags/%E7%94%B5%E8%84%91/"/>
+    <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="iis" scheme="https://ximfem.asia/tags/iis/"/>
+    <category term="iis" scheme="https://blog.jkl.asia/tags/iis/"/>
     
   </entry>
   
   <entry>
     <title>旧手机的利用</title>
-    <link href="https://ximfem.asia/%E6%97%A7%E6%89%8B%E6%9C%BA%E7%9A%84%E5%88%A9%E7%94%A8/"/>
-    <id>https://ximfem.asia/%E6%97%A7%E6%89%8B%E6%9C%BA%E7%9A%84%E5%88%A9%E7%94%A8/</id>
+    <link href="https://blog.jkl.asia/%E6%97%A7%E6%89%8B%E6%9C%BA%E7%9A%84%E5%88%A9%E7%94%A8/"/>
+    <id>https://blog.jkl.asia/%E6%97%A7%E6%89%8B%E6%9C%BA%E7%9A%84%E5%88%A9%E7%94%A8/</id>
     <published>2021-12-31T16:08:36.000Z</published>
     <updated>2021-12-31T16:08:36.000Z</updated>
     
@@ -1385,14 +1385,14 @@
     
     
     
-    <category term="智慧生活" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
+    <category term="智慧生活" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="原创" scheme="https://ximfem.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="闲置" scheme="https://ximfem.asia/tags/%E9%97%B2%E7%BD%AE/"/>
+    <category term="闲置" scheme="https://blog.jkl.asia/tags/%E9%97%B2%E7%BD%AE/"/>
     
-    <category term="手机" scheme="https://ximfem.asia/tags/%E6%89%8B%E6%9C%BA/"/>
+    <category term="手机" scheme="https://blog.jkl.asia/tags/%E6%89%8B%E6%9C%BA/"/>
     
   </entry>
   
