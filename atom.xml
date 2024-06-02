@@ -6,7 +6,7 @@
   <link href="https://blog.jkl.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.jkl.asia/"/>
-  <updated>2024-03-03T18:12:13.705Z</updated>
+  <updated>2024-06-02T13:06:27.960Z</updated>
   <id>https://blog.jkl.asia/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>鸿蒙系统更新时提示设备证书已损坏的解决方法</title>
+    <link href="https://blog.jkl.asia/%E9%B8%BF%E8%92%99%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E6%97%B6%E6%8F%90%E7%A4%BA%E8%AE%BE%E5%A4%87%E8%AF%81%E4%B9%A6%E5%B7%B2%E6%8D%9F%E5%9D%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://blog.jkl.asia/%E9%B8%BF%E8%92%99%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E6%97%B6%E6%8F%90%E7%A4%BA%E8%AE%BE%E5%A4%87%E8%AF%81%E4%B9%A6%E5%B7%B2%E6%8D%9F%E5%9D%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+    <published>2024-06-02T12:03:28.000Z</published>
+    <updated>2024-06-02T13:06:27.960Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">鸿蒙系统部分版本在系统更新或者恢复出厂设置时存在 “设备证书已损坏，无法激活”的问题，但这并不是手机真的损坏了，只是触发了系统bug而已。经过查阅网上相关资料并实际操作后，郎哥选择了两个较为普遍且简单的解决方法，希望能帮到大家！</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-1.jpg" alt="img"></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><p align="center"><font size="3">返回连接网络页面，长按已连接的Wi-Fi</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-2.jpg" alt="img"></p><p align="center"><font size="3">点击“修改网络”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-3.jpg" alt="img"></p><p align="center"><font size="3">代理改为手动</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-4.jpg" alt="img"></p><p align="center"><font size="3">点击“服务器主机名”编辑框</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-5.jpg" alt="img"></p><p align="center"><font size="3">长按键盘上的中/英切换按键，点击“更多语言...”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-6.jpg" alt="img"></p><p align="center"><font size="3">点击“搜索语言...”输入框</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-7.jpg" alt="img"></p><p align="center"><font size="3">点击右下角的输入法切换按键</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-8.jpg" alt="img"></p><p align="center"><font size="3">切换为小艺输入法</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-9.jpg" alt="img"></p><p align="center"><font size="3">回到这个页面，点击输入法左上角的图标</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-10.jpg" alt="img"></p><p align="center"><font size="3">点击“登录账号”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-11.jpg" alt="img"></p><p align="center"><font size="3">点击“设置”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-12.jpg" alt="img"></p><p align="center"><font size="3">点击“关于”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-13.jpg" alt="img"></p><p align="center"><font size="3">点击“客服热线”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-14.jpg" alt="img"></p><p align="center"><font size="3">在拨号页面点击右下角的“畅连”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-15.jpg" alt="img"></p><p align="center"><font size="3">点击“立即激活”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-16.jpg" alt="img"></p><p align="center"><font size="3">立即激活</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-17.jpg" alt="img"></p><p align="center"><font size="3">在登录账号页面点击右上角的问号</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-18.jpg" alt="img"></p><p align="center"><font size="3">选择“帮助与客服”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-19.jpg" alt="img"></p><p align="center"><font size="3">点击“如何获取手机号入网时间证明截图”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-20.jpg" alt="img"></p><p align="center"><font size="3">点击蓝色的超链接</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-21.jpg" alt="img"></p><p align="center"><font size="3">选择“QQ浏览器”打开</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-22.jpg" alt="img"></p><p align="center"><font size="3">浏览器搜索“华为手机助手”，下载安装（尽量下载最新版），安装完成后打开</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-23.jpg" alt="img"></p><p align="center"><font size="3">根据提示进行操作，成功后会显示电脑连接验证码（如果不小心退出了软件需要重新安装才能进入软件页面）</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-24.jpg" alt="img"></p><p align="left"><font size="3">电脑上打开华为手机助手官网，根据自己电脑类型选择合适的版本下载安装（电脑端的版本尽量与手机端保持一致，不然可能无法正常连接）</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网址：https://consumer.huawei.com/cn/support/hisuite/</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240602-25.png" alt="img"></p><p align="center"><font size="3">打开后首页是这样的</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-26.png" alt="img"></p><p align="center"><font size="3">点击“WLAN无线连接”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-27.png" alt="img"></p><p align="center"><font size="3">输入手机上的验证码，点击“立即连接”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-28.png" alt="img"></p><p align="center"><font size="3">等待连接成功</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-29.jpg" alt="img"></p><p align="center"><font size="3">连接成功后在电脑上点击“系统更新”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-30.png" alt="img"></p><p align="center"><font size="3">切换到其他版本</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-31.png" alt="img"></p><p align="center"><font size="3">选择更早的版本，恢复</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-32.png" alt="img"></p><p align="center"><font size="3">点击“版本回退”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-33.png" alt="img"></p><p align="center"><font size="3">回退</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-34.png" alt="img"></p><p align="center"><font size="3">等待完成</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-35.png" alt="img"></p><p align="center"><font size="3">然后等待手机自动重启就可以了</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-36.png" alt="img"></p><h3 id="卡刷"><a href="#卡刷" class="headerlink" title="卡刷"></a>卡刷</h3><p align="center"><font size="3">先准备一张8GB以上的内存卡，也可以用U盘+OTG转接线</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-37.jpg" alt="img"></p><p align="left"><font size="3">在浏览器搜索适用于该手机型号的卡刷包，并将下载好的卡刷包放到内存卡或U盘的根目录下（一般包的结构跟下图差不多）</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-38.png" alt="img"></p><p align="center"><font size="3">把内存卡或U盘插上手机，在关机状态下同时长按“音量+键”和“电源键”，进入如下页面</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-39.jpg" alt="img"></p><p align="center"><font size="3">选择“升级模式”（可以直接用手点，也可以通过音量键选择，电源键确定）</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-40.jpg" alt="img"></p><p align="center"><font size="3">选择“存储卡/OTG升级模式”</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-41.jpg" alt="img"></p><p align="center"><font size="3">然后等待自动完成升级就可以了</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-42.jpg" alt="img"></p><p align="center"><font size="3">最后就可以顺利进入系统啦！</font></p><p><img src="https://cdn.jkl.asia/blog/20240602-43.jpg" alt="img"></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">以上两种方法操作起来都有一定的风险，手机上的数据会被清除，如果手机内有重要的数据，建议还是先通过华为手机助手导出来，或者直接找官方售后，以免造成不可挽回的后果。方法一大体思路是想办法通过浏览器下载华为手机助手与电脑连接，然后回退版本。可能进入浏览器的入口有很多个，但目前貌似只有这个是最通用的。电脑与手机连接的部分可能需要多捣鼓几次，如果连接不上可以试着换个网络或者换个版本，建议都用最新版。回退系统版本后建议不要更新系统，不然还会出现这个问题。手机版的华为手机助手会有点难找，如果需要郎哥帮忙可以直接在后台私信留言。方法二的卡刷包也比较难找，而且大部分都要花钱才能买到。当然，也可以直接找郎哥低价购买。</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="手机" scheme="https://blog.jkl.asia/tags/%E6%89%8B%E6%9C%BA/"/>
+    
+    <category term="鸿蒙" scheme="https://blog.jkl.asia/tags/%E9%B8%BF%E8%92%99/"/>
+    
+    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
+    
+    <category term="Android" scheme="https://blog.jkl.asia/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>钉钉远程打卡方案</title>
@@ -332,13 +367,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
+    
     <category term="内网穿透" scheme="https://blog.jkl.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
     <category term="NATAPP" scheme="https://blog.jkl.asia/tags/NATAPP/"/>
     
     <category term="花生壳" scheme="https://blog.jkl.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
-    
-    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
@@ -868,9 +903,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
@@ -905,9 +940,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="UOS" scheme="https://blog.jkl.asia/tags/UOS/"/>
     
@@ -971,11 +1006,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="Mac" scheme="https://blog.jkl.asia/tags/Mac/"/>
     
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
