@@ -6,7 +6,7 @@
   <link href="https://blog.jkl.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.jkl.asia/"/>
-  <updated>2024-06-02T13:06:27.960Z</updated>
+  <updated>2024-08-21T16:31:28.474Z</updated>
   <id>https://blog.jkl.asia/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>普通机顶盒改造成微服务器</title>
+    <link href="https://blog.jkl.asia/%E6%99%AE%E9%80%9A%E6%9C%BA%E9%A1%B6%E7%9B%92%E6%94%B9%E9%80%A0%E6%88%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://blog.jkl.asia/%E6%99%AE%E9%80%9A%E6%9C%BA%E9%A1%B6%E7%9B%92%E6%94%B9%E9%80%A0%E6%88%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2024-08-21T14:15:36.000Z</published>
+    <updated>2024-08-21T16:31:28.474Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">之前就尝试过捣鼓本地服务器，但是上次用台式主机改装的那台服务器由于噪音大、耗电、部分功能无法使用等缺点，搭建之后没多久就丢在角落吃灰了。前段时间看到几篇用机顶盒做服务器的帖子，顿时又有了继续捣鼓的想法。在某夕夕上买了一个刷好Ubuntu系统的老款机顶盒，开启了我的改造之路。</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-1.jpg" alt="img"> </p><p align="center"><font size="3">这款机顶盒配置不算高，但平时用来搭建一些静态网站或者用来本地调试项目还是足够的。</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-2.jpg" alt="img"> </p><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2> <div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>准备好机顶盒、HDMI线、电源线、网线或无线网卡（要免驱的）、显示器、电脑、键盘</p>            </div><div class='checkbox green checked'><input type="checkbox" checked="checked"/>            <p>给机顶盒插上电源线、网线或无线网卡、键盘，并且通过HDMI线连接到显示器</p>            </div><h2 id="登录账户"><a href="#登录账户" class="headerlink" title="登录账户"></a>登录账户</h2><p align="center"><font size="3">账号密码商家有给，直接登录（登陆后可以自行选择是否更改密码）</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-3.jpg" alt="img"> </p><h2 id="连接Wi-Fi"><a href="#连接Wi-Fi" class="headerlink" title="连接Wi-Fi"></a>连接Wi-Fi</h2><p align="center"><span style="color:red;"><font size="4"><b>直接插网线的话跳过这部分</b></font></span></p><p align="center"><font size="3">查看网络设备列表，找到类型为wifi的设备，记住前面的名称，一般默认是“wlan0”</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmcli dev</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-4.jpg" alt="img"> </p><p align="left"><span style="color:red;"><font size="3">注意，如果列出的设备状态全部是 unmanaged 或者没有看到wifi 类型的设备，尝试重新拔插网卡或者清空 /etc/network/interfaces下的网络设置，然后重启</font></span></p><p align="center"><font size="3">开启WiFi</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmcli r wifi on</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-5.jpg" alt="img"> </p><p align="center"><font size="3">扫描附近的 WiFi 热点</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmcli dev wifi</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-6.jpg" alt="img"> </p><p align="center"><font size="3">连接到指定的 WiFi 热点</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nmcli dev wifi connect &quot;WiFi名称&quot; password &quot;WiFi密码&quot; ifname 网卡名(一般为wlan0)</span><br><span class="line">如：sudo nmcli dev wifi connect &quot;JKL&quot; password &quot;jkl66666&quot; ifname wlan0</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-7.jpg" alt="img"> </p><h2 id="进行系统更新"><a href="#进行系统更新" class="headerlink" title="进行系统更新"></a>进行系统更新</h2><p align="center"><font size="3">对系统进行一次全面更新，防止部分软件源链接失效</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-8.jpg" alt="img"> </p><h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p align="left"><font size="3">安装并配置好SSH后，我们可以在其他设备远程控制该服务器。使用以下命令安装，遇到需要确认的地方输入“y”然后回车即可</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install ssh</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-9.jpg" alt="img"> </p><p align="center"><font size="3">生成密钥，下面三个地方都不需要输入东西，直接回车就可以了</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-10.jpg" alt="img"> </p><p align="center"><font size="3">查看运行状态，如果是“running”的话就没问题了</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd status</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-11.jpg" alt="img"> </p><p align="center"><font size="3">然后就可以通过SSH工具进行连接了（这里使用的是MobaXterm Professional）</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-12.jpg" alt="img"> </p><p align="center"><font size="3">连接成功后就可以将机顶盒外接的键盘和显示屏移除了</font></p><h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><p align="left"><font size="3">后续通过Docker安装软件可以避免很多因环境依赖而产生的问题，所以先把Docker安装上</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install docker.io</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-13.jpg" alt="img"> </p><h2 id="安装1Panel"><a href="#安装1Panel" class="headerlink" title="安装1Panel"></a>安装1Panel</h2><p align="left"><font size="3">1Panel 是一个现代化、开源的 Linux 服务器运维管理面板，与宝塔类似，虽然功能没有那么丰富，但是在这个微服务器上已经足够了。</font></p><p align="left"><font size="3">使用以下命令安装，有些需要填写的信息根据提示进行填写即可（大部分默认就可以了，输入密码的时候不会显示）</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh &amp;&amp; sudo bash quick_start.sh</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-14.jpg" alt="img"> </p><p align="center"><font size="3">安装成功后会看到这些信息，复制出来保存好</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-15.jpg" alt="img"> </p><p align="center"><font size="3">在浏览器打开1Panel面板（地址是上面的内网地址）</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-16.jpg" alt="img"> </p><p align="center"><font size="3">通过刚刚设置的账号和密码登录进后台</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-17.jpg" alt="img"> </p><p align="center"><font size="3">在应用商店安装OpenResty（如果默认的80端口号被占用了改成其他端口号）</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-18.jpg" alt="img"> </p><p align="center"><font size="3">安装完之后就可以新建网站了</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-19.jpg" alt="img"> </p><p align="center"><font size="3">这里先简单创建一个默认的静态网页</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-20.jpg" alt="img"> </p><p align="center"><font size="3">可以直接访问</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-21.jpg" alt="img"> </p><p align="left"><font size="3">到这里基本上就已经配置得差不多了，在内网部署调试项目都可以了，但要想通过互联网访问自己的网站或服务，还得进行下面的内网穿透。</font></p><h2 id="部署SAKURA-FRP"><a href="#部署SAKURA-FRP" class="headerlink" title="部署SAKURA FRP"></a>部署SAKURA FRP</h2><p align="center"><font size="3">打开<a href="https://www.natfrp.com" target="_blank">SAKURA FRP官网</a>注册登录并完成实名验证</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-22.jpg" alt="img"> </p><p align="center"><font size="3">打开隧道列表</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-23.jpg" alt="img"> </p><p align="center"><font size="3">创建隧道</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-24.jpg" alt="img"> </p><p align="center"><font size="3">选一个合适的节点（国内节点对域名备案有要求）</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-25.jpg" alt="img"> </p><p align="center"><font size="3">选TCP隧道，隧道名自定义，端口号要跟上面创建的网站的端口号一致，选上自动HTTPS</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-26.jpg" alt="img"> </p><p align="center"><font size="3">创建完隧道之后，在用户信息页面复制访问密钥</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-27.jpg" alt="img"> </p><p align="center"><font size="3">通过Docker安装SAKURA FRP，访问密钥就粘贴刚刚复制的，远程管理密码自定义</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &quot;. &lt;(curl -sSL https://doc.natfrp.com/launcher.sh)&quot;</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20240821-28.jpg" alt="img"> </p><p align="center"><font size="3">安装完成后需要在1Penal防火墙放行对应端口</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-29.jpg" alt="img"> </p><p align="center"><font size="3">访问后台管理页面，输入webUI密码连接启动器</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-30.jpg" alt="img"> </p><p align="center"><font size="3">进来后就可以看到刚刚创建的隧道，双击它就可以启动了</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-31.jpg" alt="img"> </p><p align="center"><font size="3">启动后可以在右上角的弹窗中看到分配的网址和ip，如果没看到的话也可以在日志中找到</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-32.jpg" alt="img"> </p><p align="center"><font size="3">此时就算不在同一个网络下只要访问这个网址也可以打开我们的网站了</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-33.jpg" alt="img"> </p><p align="center"><font size="3">如果想要绑定自己的域名，需要有域名和公网服务器。先将域名解析至公网服务器</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-34.jpg" alt="img"> </p><p align="center"><font size="3">在公网服务器添加站点</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-35.jpg" alt="img"> </p><p align="center"><font size="3">添加反向代理，目标URL填上面内网穿透分配到的网址+端口号或者IP+端口号</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-36.jpg" alt="img"> </p><p align="center"><font size="3">这样就可以通过自己的域名访问网站了</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-37.jpg" alt="img"> </p><h2 id="安装OpenP2P"><a href="#安装OpenP2P" class="headerlink" title="安装OpenP2P"></a>安装OpenP2P</h2><p align="left" style="text-indent:32.4px;"><font size="3">一些隐私性不强的网站或服务可以通过上面的方法发布到互联网，但是一些隐私性比较强的服务(比如SSH)如果也用上面的方法就会存在很大的安全隐患，而OpenP2P就可以很好地解决这个问题。OpenP2P是一个开源、免费、轻量级的P2P共享网络，加入该网络的设备可以直接访问其它成员，或者通过其它成员转发数据间接访问。如果私有网络无法完成通信，将会到公有P2P网络寻找共享节点协助通信。</font></p><p align="center"><font size="3">在<a href="https://console.openp2p.cn" target="_blank">OpenP2P官网</a>注册登录</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-38.jpg" alt="img"> </p><p align="center"><font size="3">登录后需要先在微服务器上安装服务，使用Docker方式安装，复制安装指令</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-39.jpg" alt="img"> </p><p align="center"><font size="3">粘贴指令回车就自动安装好了</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-40.jpg" alt="img"> </p><p align="center"><font size="3">在1Penal面板的容器里可以看到刚刚部署的服务</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-41.jpg" alt="img"> </p><p align="center"><font size="3">根据指引在另一个设备上也安装OpenP2P服务（这里用的是Windows，下载客户端运行就可以了）</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-42.jpg" alt="img"> </p><p align="center"><font size="3">安装完成之后稍等一会就可以看到在线设备了，然后点击P2P应用</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-43.jpg" alt="img"> </p><p align="center"><font size="3">先创建一个SSH应用，应用名字自定义，本地端口也自定义，尽量不要与已有端口冲突，协议选TCP</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-44.jpg" alt="img"> </p><p align="left"><font size="3">电脑先切换到另一个WiFi（与微服务器不在同一个网络），等到左上角那个圆点显示为绿色就是连接成功了</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-45.jpg" alt="img"> </p><p align="left"><font size="3">在SSH工具创建连接，远程主机输入电脑本地IP（不是微服务器的IP），端口填写上面设置的端口（这里是222）</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-46.jpg" alt="img"> </p><p align="center"><font size="3">成功连接</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-47.jpg" alt="img"> </p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">现在已经完成微服务器的改造，后面可以直接在上面进行项目开发、部署和测试，也可以在上面搭建网站。另外，为了保证每次重新连接WiFi后微服务器的IP不会改变，我直接在路由器里面将目前使用的IP与微服务器的MAC地址绑定了。目前看来，整个微服务器非常迷你，没有任何噪音，功耗也很低，后续计划把现有的项目都移到里面，这样就能省下不少租赁云服务器的费用了。</font></p><p><img src="https://cdn.jkl.asia/blog/20240821-48.jpg" alt="img"> </p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="内网穿透" scheme="https://blog.jkl.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+    <category term="服务器" scheme="https://blog.jkl.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    <category term="Ubuntu" scheme="https://blog.jkl.asia/tags/Ubuntu/"/>
+    
+    <category term="机顶盒" scheme="https://blog.jkl.asia/tags/%E6%9C%BA%E9%A1%B6%E7%9B%92/"/>
+    
+    <category term="OpenP2P" scheme="https://blog.jkl.asia/tags/OpenP2P/"/>
+    
+    <category term="SAKURA FRP" scheme="https://blog.jkl.asia/tags/SAKURA-FRP/"/>
+    
+    <category term="1Panel" scheme="https://blog.jkl.asia/tags/1Panel/"/>
+    
+  </entry>
   
   <entry>
     <title>鸿蒙系统更新时提示设备证书已损坏的解决方法</title>
@@ -76,11 +117,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
+    
     <category term="钉钉" scheme="https://blog.jkl.asia/tags/%E9%92%89%E9%92%89/"/>
     
     <category term="打卡" scheme="https://blog.jkl.asia/tags/%E6%89%93%E5%8D%A1/"/>
-    
-    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
     
     <category term="Todesk" scheme="https://blog.jkl.asia/tags/Todesk/"/>
     
@@ -367,13 +408,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
+    
     <category term="内网穿透" scheme="https://blog.jkl.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
     <category term="NATAPP" scheme="https://blog.jkl.asia/tags/NATAPP/"/>
     
     <category term="花生壳" scheme="https://blog.jkl.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
-    
-    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
@@ -435,9 +476,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
-    
     <category term="Github" scheme="https://blog.jkl.asia/tags/Github/"/>
+    
+    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
     
     <category term="Netlify" scheme="https://blog.jkl.asia/tags/Netlify/"/>
     
@@ -585,9 +626,9 @@
     
     <category term="Ubuntu" scheme="https://blog.jkl.asia/tags/Ubuntu/"/>
     
-    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
-    
     <category term="主机" scheme="https://blog.jkl.asia/tags/%E4%B8%BB%E6%9C%BA/"/>
+    
+    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
     
   </entry>
   
@@ -903,9 +944,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
     
@@ -940,9 +981,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="UOS" scheme="https://blog.jkl.asia/tags/UOS/"/>
     
@@ -1006,11 +1047,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="Mac" scheme="https://blog.jkl.asia/tags/Mac/"/>
     
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
-    <category term="Mac" scheme="https://blog.jkl.asia/tags/Mac/"/>
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -1134,13 +1175,13 @@
     
     <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
-    
     <category term="激活" scheme="https://blog.jkl.asia/tags/%E6%BF%80%E6%B4%BB/"/>
     
     <category term="优化" scheme="https://blog.jkl.asia/tags/%E4%BC%98%E5%8C%96/"/>
     
     <category term="分区" scheme="https://blog.jkl.asia/tags/%E5%88%86%E5%8C%BA/"/>
+    
+    <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
     
     <category term="安全" scheme="https://blog.jkl.asia/tags/%E5%AE%89%E5%85%A8/"/>
     
