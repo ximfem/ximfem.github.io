@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>随身WiFi刷Debian系统 | 极客郎</title><meta name="author" content="郎哥"><meta name="copyright" content="郎哥"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言看上了随身WiFi的便携性以及内置有Android系统，想着能否将其改装成随身携带的mini服务器。找了一堆资料，发现只有高通骁龙410和210的芯片才可以刷机，手上现有的一个是展锐芯片的机子，没法刷，于是连夜下单了两个网友们推荐的410芯片的机子。到手后查看型号，一个是UFI003，另一个是QRZL903，都是可以刷机的，下面就用UFI003的机子演示整个刷机过程。      前期准备查芯片">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随身WiFi刷Debian系统">
+<meta property="og:url" content="https://blog.jkl.asia/%E9%9A%8F%E8%BA%ABWiFi%E5%88%B7Debian%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="极客郎">
+<meta property="og:description" content="前言看上了随身WiFi的便携性以及内置有Android系统，想着能否将其改装成随身携带的mini服务器。找了一堆资料，发现只有高通骁龙410和210的芯片才可以刷机，手上现有的一个是展锐芯片的机子，没法刷，于是连夜下单了两个网友们推荐的410芯片的机子。到手后查看型号，一个是UFI003，另一个是QRZL903，都是可以刷机的，下面就用UFI003的机子演示整个刷机过程。      前期准备查芯片">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jkl.asia/blog/20240825.jpg">
+<meta property="article:published_time" content="2024-08-25T13:48:11.000Z">
+<meta property="article:modified_time" content="2024-08-25T14:36:41.197Z">
+<meta property="article:author" content="郎哥">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="刷机">
+<meta property="article:tag" content="随身WiFi">
+<meta property="article:tag" content="Debian">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jkl.asia/blog/20240825.jpg"><link rel="shortcut icon" href="/img/jkl.png"><link rel="canonical" href="https://blog.jkl.asia/%E9%9A%8F%E8%BA%ABWiFi%E5%88%B7Debian%E7%B3%BB%E7%BB%9F/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.19/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":730,"position":"top","messagePrev":"该文章自从上次更新后已经超过","messageNext":"天了，文章的内容可能会过时，请知悉。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":700,"languages":{"author":"作者: 郎哥","link":"链接: ","source":"来源: 极客郎","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '随身WiFi刷Debian系统',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-25 22:36:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/gray.css"><link rel="stylesheet" href="/css/newpage.css"><link rel="stylesheet" href="/css/new-year.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/light.css"><link rel="stylesheet" href="/css/cardlistpost.css"><link rel="stylesheet" href="/css/tianli_gpt.css"><link rel="stylesheet" href="/css/twikoo.css"><!--//灯笼
+<div class="deng-box">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">新</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>
+<div class="deng-box1">
+<div class="deng">
+<div class="xian"></div>
+<div class="deng-a">
+<div class="deng-b"><div class="deng-t">春</div></div>
+</div>
+<div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+</div>
+</div>--><!-- hexo injector head_end start --><link rel="stylesheet" href="/css/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/tag_plugins.min.css" media="defer" onload="this.media='all'"><script src="/js/carousel-touch.min.js"></script><link rel="stylesheet" href="/css/mindmap.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="极客郎" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/jkl.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">100</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li><li><a class="site-page child" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"><span> 单片机系列</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-clipboard"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://lyb.jkl.asia"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://memos.jkl.asia"><i class="fa-fw fa fa-comments"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fa fa-subway"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.foreverblog.cn/go.html"><i class="fa-fw fa fa-bullseye"></i><span> 虫洞</span></a></div><div class="menus_item"><a class="site-page" href="javascript:toRandomPost()"><i class="fa-fw fa fa-sync"></i><span> 随机文章</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://jkl.asia/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://app.jkl.asia"><i class="fa-fw fa fa-download"></i><span> App下载</span></a></li><li><a class="site-page child" href="/img/weixin.jpg"><i class="fa-fw fab fa-weixin"></i><span> 微信小程序</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="极客郎"><span class="site-name">极客郎</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"><span> 技术分享</span></a></li><li><a class="site-page child" href="/categories/%E6%99%BA%E6%85%A7%E7%94%9F%E6%B4%BB/"><span> 智慧生活</span></a></li><li><a class="site-page child" href="/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"><span> 玩机教程</span></a></li><li><a class="site-page child" href="/categories/%E7%A7%91%E6%99%AE%E6%8E%A8%E8%8D%90/"><span> 科普推荐</span></a></li><li><a class="site-page child" href="/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"><span> 单片机系列</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-clipboard"></i><span> 日志</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://lyb.jkl.asia"><i class="fa-fw fa fa-pencil-square"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://memos.jkl.asia"><i class="fa-fw fa fa-comments"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fa fa-subway"></i><span> 开往</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.foreverblog.cn/go.html"><i class="fa-fw fa fa-bullseye"></i><span> 虫洞</span></a></div><div class="menus_item"><a class="site-page" href="javascript:toRandomPost()"><i class="fa-fw fa fa-sync"></i><span> 随机文章</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://jkl.asia/"><i class="fa-fw fa fa-box"></i><span> 百宝箱</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://app.jkl.asia"><i class="fa-fw fa fa-download"></i><span> App下载</span></a></li><li><a class="site-page child" href="/img/weixin.jpg"><i class="fa-fw fab fa-weixin"></i><span> 微信小程序</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">随身WiFi刷Debian系统</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-25T13:48:11.000Z" title="发表于 2024-08-25 21:48:11">2024-08-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-25T14:36:41.197Z" title="更新于 2024-08-25 22:36:41">2024-08-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/">原创</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="随身WiFi刷Debian系统"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/%E9%9A%8F%E8%BA%ABWiFi%E5%88%B7Debian%E7%B3%BB%E7%BB%9F/#post-comment"><span id="twikoo-count"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div><article class="post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">看上了随身WiFi的便携性以及内置有Android系统，想着能否将其改装成随身携带的mini服务器。找了一堆资料，发现只有高通骁龙410和210的芯片才可以刷机，手上现有的一个是展锐芯片的机子，没法刷，于是连夜下单了两个网友们推荐的410芯片的机子。到手后查看型号，一个是UFI003，另一个是QRZL903，都是可以刷机的，下面就用UFI003的机子演示整个刷机过程。</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-1.png" alt="img"> </p>
+<p><img src="https://cdn.jkl.asia/blog/20240825-2.png" alt="img"> </p>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="查芯片型号"><a href="#查芯片型号" class="headerlink" title="查芯片型号"></a>查芯片型号</h3><p align="center"><font size="3">用螺丝刀将头部两颗螺丝拧下，然后用指甲沿着旁边的缝隙划一下就可以撬开底盖了</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-3.png" alt="img"> </p>
+<p align="center"><font size="3">可以看到丝印为UFI003_MB_V02</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-4.png" alt="img"> </p>
+<p align="left"><span style="color:red;"><font size="3">注意：如果不是这款芯片，需要另外下载对应的Debian刷机包和开启了adb的固件。这款芯片的Debian刷机包和开启了adb的固件在配套资源中分别对应UFI003.zip和UFI003_MB_V02.zip</font></p>
+
+<h3 id="下载配套资源"><a href="#下载配套资源" class="headerlink" title="下载配套资源"></a>下载配套资源</h3><p align="center"><font size="3">下载文末的配套资源，并将三个压缩包都解压出来</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-5.png" alt="img"> </p>
+<h2 id="查看adb是否开启"><a href="#查看adb是否开启" class="headerlink" title="查看adb是否开启"></a>查看adb是否开启</h2><p align="center"><font size="3">在UFI003文件夹的地址栏输入cmd，回车打开命令提示符窗口</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-6.png" alt="img"> </p>
+<p align="center"><font size="3">输入以下命令查看adb设备列表</font></p>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
+<p align="left"><font size="3">可以看到列表为空，证明随身WiFi的adb没有打开（如果已经开启了adb则可以直接跳过后面打开adb那一步）</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-7.png" alt="img"> </p>
+<h2 id="进入9008模式"><a href="#进入9008模式" class="headerlink" title="进入9008模式"></a>进入9008模式</h2><p align="center"><font size="3">运行/9008drivers.exe文件，安装9008驱动</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-8.png" alt="img"> </p>
+<p align="center"><font size="3">安装完成</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-9.png" alt="img"> </p>
+<p align="center"><font size="3">用手一直按住板子上面的按键，同时将设备插入电脑USB口，听到响声后一两秒松开手</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-10.png" alt="img"> </p>
+<p align="left"><font size="3">如果在设备管理器能够看到类似图中的端口设备名称表示成功进入9008模式，否则就需要重复上面的步骤</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-11.png" alt="img"> </p>
+<h2 id="备份原系统固件（重要）"><a href="#备份原系统固件（重要）" class="headerlink" title="备份原系统固件（重要）"></a>备份原系统固件（重要）</h2><p align="center"><font size="3">运行/MiKo_Loder Pro/miko.exe文件，安装Miko</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-12.png" alt="img"> </p>
+<p align="center"><font size="3">Next</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-13.png" alt="img"> </p>
+<p align="center"><font size="3">选择安装目录，Next</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-14.png" alt="img"> </p>
+<p align="center"><font size="3">Next</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-15.png" alt="img"> </p>
+<p align="center"><font size="3">Install</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-16.png" alt="img"> </p>
+<p align="center"><font size="3">取消勾选，Finish</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-17.png" alt="img"> </p>
+<p align="center"><font size="3">安装完成后，把/MiKo_Loder Pro/Loader.exe复制到Miko的安装目录，然后双击运行</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-18.png" alt="img"> </p>
+<p align="center"><font size="3">点击Read>Partition Backup/Erase>Load Partition Structure，等待读取完成</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-19.png" alt="img"> </p>
+<p align="center"><font size="3">读取完成后勾选全部模块，随便选择一个文件夹，点击Read Full Image</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-20.png" alt="img"> </p>
+<p align="center"><font size="3">自定义保存的文件名，保存</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-21.png" alt="img"> </p>
+<p align="center"><font size="3">等待备份完成（这个过程比较久，大概要10分钟左右）</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-22.png" alt="img"> </p>
+<p align="center"><font size="3">成功后就可以得到原系统固件包</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-23.png" alt="img"> </p>
+<h2 id="开启adb"><a href="#开启adb" class="headerlink" title="开启adb"></a>开启adb</h2><p align="center"><font size="3">Miko软件点击Flash>xml flasher>Xml Flasher>Rawprogram</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-24.png" alt="img"> </p>
+<p align="center"><font size="3">选中/UFI003_MB_V02/rawprogram0.xml文件</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-25.png" alt="img"> </p>
+<p align="center"><font size="3">选中system分区，点击FLASH开始刷入</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-26.png" alt="img"> </p>
+<p align="center"><font size="3">等待刷入完成</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-27.png" alt="img"> </p>
+<p align="center"><font size="3">拔插一次随身WiFi，再次查看就可以看到adb设备了</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-28.png" alt="img"> </p>
+<h2 id="刷入Debian包"><a href="#刷入Debian包" class="headerlink" title="刷入Debian包"></a>刷入Debian包</h2><p align="center"><font size="3">重启进入刷机模式（执行命令后会有USB设备拔插的声音）</font></p>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jkl.asia/blog/20240825-29.png" alt="img"> </p>
+<p align="center"><font size="3">双击运行/UFI003/flash.bat脚本</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-30.png" alt="img"> </p>
+<p align="center"><font size="3">期间需要多次按任意键，也会经常出现USB设备插拔的声音</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-31.png" alt="img"> </p>
+<p align="center"><font size="3">直到出现all done就表示完成了</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-32.png" alt="img"> </p>
+<h2 id="配置驱动"><a href="#配置驱动" class="headerlink" title="配置驱动"></a>配置驱动</h2><p align="left"><font size="3">打开设备管理器，会看到一个Android 的ADB设备（如果没看到的话重新拔插一下设备，以前配置过驱动的话可能会直接跳到后面的步骤，继续往后操作就好了）</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-33.png" alt="img"> </p>
+<p align="center"><font size="3">右键点击“更新驱动程序”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-34.png" alt="img"> </p>
+<p align="center"><font size="3">点击“浏览我的电脑以查找驱动程序”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-35.png" alt="img"> </p>
+<p align="center"><font size="3">点击“让我从计算机上的可用驱动程序列表中选取”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-36.png" alt="img"> </p>
+<p align="center"><font size="3">选中第二个型号，下一步</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-37.png" alt="img"> </p>
+<p align="center"><font size="3">更新完成后关闭</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-38.png" alt="img"> </p>
+<p align="center"><font size="3">重新拔插随身WiFi，然后会在其他设备里看到一个RNDIS设备</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-39.png" alt="img"> </p>
+<p align="center"><font size="3">右键点击“更新驱动程序”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-40.png" alt="img"> </p>
+<p align="center"><font size="3">点击“浏览我的电脑以查找驱动程序”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-41.png" alt="img"> </p>
+<p align="center"><font size="3">点击“让我从计算机上的可用驱动程序列表中选取”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-42.png" alt="img"> </p>
+<p align="center"><font size="3">类型选择“网络适配器”，下一步</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-43.png" alt="img"> </p>
+<p align="center"><font size="3">厂商选择“Microsoft”，型号选择“基于远程NDIS的Internet共享设备”，下一步</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-44.png" alt="img"> </p>
+<p align="center"><font size="3">点击“是”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-45.png" alt="img"> </p>
+<p align="center"><font size="3">更新完成点击关闭</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-46.png" alt="img"> </p>
+<p align="center"><font size="3">然后就可以在网络设配器里看到多出来的“基于远程NDIS的Internet共享设备”了</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-47.png" alt="img"> </p>
+<h2 id="SSH连接"><a href="#SSH连接" class="headerlink" title="SSH连接"></a>SSH连接</h2><p align="left"><font size="3">现在就可以使用SSH工具连接到Debian系统了，IP默认是192.168.68.1，用户名是root，密码是1（这里使用的SSH工具是MobaXterm）</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-48.png" alt="img"> </p>
+<p align="center"><font size="3">成功连接</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-49.png" alt="img"> </p>
+<h2 id="连接WiFi"><a href="#连接WiFi" class="headerlink" title="连接WiFi"></a>连接WiFi</h2><p align="center"><font size="3">打开网络管理器</font></p>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jkl.asia/blog/20240825-50.png" alt="img"> </p>
+<p align="center"><font size="3">通过键盘方向键、回车键和ESC键控制，选中“编辑连接”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-51.png" alt="img"> </p>
+<p align="center"><font size="3">编辑bridge</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-52.png" alt="img"> </p>
+<p align="center"><font size="3">将wifi删除</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-53.png" alt="img"> </p>
+<p align="center"><font size="3">删除</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-54.png" alt="img"> </p>
+<p align="center"><font size="3">回到首页，选中“启用连接”</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-55.png" alt="img"> </p>
+<p align="center"><font size="3">选择一个WiFi（只支持2.4GHz频段的WiFi）</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-56.png" alt="img"> </p>
+<p align="center"><font size="3">输入密码</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-57.png" alt="img"> </p>
+<p align="center"><font size="3">前面标星号就表示成功连接</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-58.png" alt="img"> </p>
+<p align="center"><font size="3">可以正常ping通外网</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-59.png" alt="img"> </p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><p align="center"><font size="3">由于系统自带的源已经过期了，无法正常更新软件，需要使用以下命令更换最新的源</font></p>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">echo -e &#x27;nnnnnnnnnn####################################n&#x27;</span><br><span class="line">sudo rm /etc/apt/sources.list</span><br><span class="line">sudo touch /etc/apt/sources.list</span><br><span class="line">sudo echo -e &quot;# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释nndeb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-freenndeb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-freenndeb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-freenndeb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-freen# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free&quot; &gt;&gt; /etc/apt/sources.list</span><br><span class="line">echo -e &#x27;1、默认软件源修改完成！nn&#x27;</span><br><span class="line">sudo sed -i &#x27;1c deb http://mirrors.tuna.tsinghua.edu.cn/Adoptium/deb buster main&#x27; /etc/apt/sources.list.d/AdoptOpenJDK.list</span><br><span class="line">gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 843C48A565F8F04B</span><br><span class="line">sudo gpg --armor --export 843C48A565F8F04B | sudo apt-key add -</span><br><span class="line">echo -e &#x27;nn2、AdoptOpenJDK报错修复完成！nn&#x27;</span><br><span class="line">sudo sed -i &#x27;1c #deb http://repo.mobian-project.org/ bullseye main non-free&#x27;  /etc/apt/sources.list.d/mobian.list</span><br><span class="line">echo -e &#x27;3、Mobian源报已屏蔽！&#x27;</span><br><span class="line">echo -e &#x27;nn####################################nn即将开始更新软件源list......n&#x27;</span><br><span class="line">sleep 5</span><br><span class="line">sudo apt-get update</span><br><span class="line">echo -e &#x27;nn4、更新软件源list更新完成！&#x27;</span><br><span class="line">echo -e &#x27;nn####################################nn即将开始升级系统程序至最新版......&#x27;</span><br><span class="line">sleep 5</span><br><span class="line">sudo apt-mark hold openssh-server</span><br><span class="line">sudo apt-get -y upgrade</span><br><span class="line">sudo apt-mark unhold openssh-server</span><br><span class="line">echo -e &#x27;nn5、系统程序更新完成！nn####################################nnnn&#x27;</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jkl.asia/blog/20240825-60.png" alt="img"> </p>
+<h3 id="救砖"><a href="#救砖" class="headerlink" title="救砖"></a>救砖</h3><p align="left"><font size="3">当随身WiFi被玩废了变成砖的时候（非硬件损坏），只需在Miko点击Flash>emmc block0 flasher，选中之前备份的固件，重新刷回去即可</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-61.png" alt="img"> </p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left"><font size="3">到这里就把Debian在随身WiFi上装好了，以后只需往USB口插上就可以使用这个mini服务器。不过，需要注意的是，在不同的WiFi网络下，它的IP地址也会改变，所以SSH连接的时候记得更改IP。</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-62.png" alt="img"> </p>
+<p align="center"><font size="3">另外，将随身WiFi插在电脑上会通过USB共享网络，所以也可以直接作为电脑网卡使用。</font></p>
+
+<p><img src="https://cdn.jkl.asia/blog/20240825-63.png" alt="img"> </p>
+<p align="left"><font size="3">由于随身WiFi配置比较低，基本上都是四核、1.2GHz CPU、512M内存、4G emmc闪存，一般的用途是刷debian当服务器，或者刷openwrt成为软路由，更多用途大家自行探索！</font></p>
+
+<p><img src="\img\123.gif" /></p>
+<h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left"><font size="3">本期配套资源下载：</font></p>
+
+<p align="left"><font size="3">123云盘：<a href="https://www.123pan.com/s/YzWSVv-fOp7d" target="_blank">点击访问</a></font></p>
+
+<p align="left"><font size="3">百度网盘：<a href="https://pan.baidu.com/s/16AhIPUV6cXBrTd9Us7cbBw?pwd=ijkl" target="_blank">点击访问</a></font></p>
+</div>
+<p><img src="\img\ewm.png" style="zoom:50%;" /></p>
+<p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blog.jkl.asia">郎哥</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.jkl.asia/%E9%9A%8F%E8%BA%ABWiFi%E5%88%B7Debian%E7%B3%BB%E7%BB%9F/">https://blog.jkl.asia/随身WiFi刷Debian系统/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.jkl.asia" target="_blank">极客郎</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><a class="post-meta__tags" href="/tags/%E5%88%B7%E6%9C%BA/">刷机</a><a class="post-meta__tags" href="/tags/%E9%9A%8F%E8%BA%ABWiFi/">随身WiFi</a><a class="post-meta__tags" href="/tags/Debian/">Debian</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jkl.asia/blog/20240825.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/%E6%99%AE%E9%80%9A%E6%9C%BA%E9%A1%B6%E7%9B%92%E6%94%B9%E9%80%A0%E6%88%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="普通机顶盒改造成微服务器"><img class="cover" src="https://cdn.jkl.asia/blog/20240821.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">普通机顶盒改造成微服务器</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/%E6%90%AD%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8OpenVPN/" title="搭建和使用OpenVPN"><img class="cover" src="https://cdn.jkl.asia/blog/20230506.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-05-06</div><div class="title">搭建和使用OpenVPN</div></div></a></div><div><a href="/%E6%99%AE%E9%80%9A%E6%9C%BA%E9%A1%B6%E7%9B%92%E6%94%B9%E9%80%A0%E6%88%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="普通机顶盒改造成微服务器"><img class="cover" src="https://cdn.jkl.asia/blog/20240821.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-08-21</div><div class="title">普通机顶盒改造成微服务器</div></div></a></div><div><a href="/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E7%A7%81%E4%BA%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/" title="记录一次私人服务器的搭建过程"><img class="cover" src="https://cdn.jkl.asia/blog/2023-02-12.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-02-12</div><div class="title">记录一次私人服务器的搭建过程</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/jkl.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">郎哥</div><div class="author-info__description">将科技玩到极致！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">100</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ximfem"><i class="fab fa-github"></i><span>GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=2744184711&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="/img/ewm.png" target="_blank" title="微信公众号"><i class="fab fa-weixin"></i></a><a class="social-icon" href="mailto:liangsper@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">最近在不断扩展业务，博客可能没那么及时更新！博客网址已更换，新网址：https://blog.jkl.asia</div></div><div class="card-widget" id="newYear"><div class="item-headline"><i></i><span></span></div><div class="item-content"><div id="newYear-main"><div class="mask"></div> <p class="title"></p> <div class="newYear-time"></div> <p class="today" style="text-align: right;"></p> </div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">前期准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%8A%AF%E7%89%87%E5%9E%8B%E5%8F%B7"><span class="toc-number">2.1.</span> <span class="toc-text">查芯片型号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%85%8D%E5%A5%97%E8%B5%84%E6%BA%90"><span class="toc-number">2.2.</span> <span class="toc-text">下载配套资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Badb%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AF"><span class="toc-number">3.</span> <span class="toc-text">查看adb是否开启</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A59008%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">进入9008模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E5%8E%9F%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">备份原系统固件（重要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%90%AFadb"><span class="toc-number">6.</span> <span class="toc-text">开启adb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B7%E5%85%A5Debian%E5%8C%85"><span class="toc-number">7.</span> <span class="toc-text">刷入Debian包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%A9%B1%E5%8A%A8"><span class="toc-number">8.</span> <span class="toc-text">配置驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH%E8%BF%9E%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text">SSH连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5WiFi"><span class="toc-number">10.</span> <span class="toc-text">连接WiFi</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">11.</span> <span class="toc-text">其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%A2%E6%BA%90"><span class="toc-number">11.1.</span> <span class="toc-text">换源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%91%E7%A0%96"><span class="toc-number">11.2.</span> <span class="toc-text">救砖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">12.</span> <span class="toc-text">结语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E5%A5%97%E8%B5%84%E6%BA%90"><span class="toc-number">13.</span> <span class="toc-text">配套资源</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E9%9A%8F%E8%BA%ABWiFi%E5%88%B7Debian%E7%B3%BB%E7%BB%9F/" title="随身WiFi刷Debian系统"><img src="https://cdn.jkl.asia/blog/20240825.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随身WiFi刷Debian系统"/></a><div class="content"><a class="title" href="/%E9%9A%8F%E8%BA%ABWiFi%E5%88%B7Debian%E7%B3%BB%E7%BB%9F/" title="随身WiFi刷Debian系统">随身WiFi刷Debian系统</a><time datetime="2024-08-25T13:48:11.000Z" title="发表于 2024-08-25 21:48:11">2024-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%99%AE%E9%80%9A%E6%9C%BA%E9%A1%B6%E7%9B%92%E6%94%B9%E9%80%A0%E6%88%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="普通机顶盒改造成微服务器"><img src="https://cdn.jkl.asia/blog/20240821.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="普通机顶盒改造成微服务器"/></a><div class="content"><a class="title" href="/%E6%99%AE%E9%80%9A%E6%9C%BA%E9%A1%B6%E7%9B%92%E6%94%B9%E9%80%A0%E6%88%90%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="普通机顶盒改造成微服务器">普通机顶盒改造成微服务器</a><time datetime="2024-08-21T14:15:36.000Z" title="发表于 2024-08-21 22:15:36">2024-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E9%B8%BF%E8%92%99%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E6%97%B6%E6%8F%90%E7%A4%BA%E8%AE%BE%E5%A4%87%E8%AF%81%E4%B9%A6%E5%B7%B2%E6%8D%9F%E5%9D%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="鸿蒙系统更新时提示设备证书已损坏的解决方法"><img src="https://cdn.jkl.asia/blog/20240602.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="鸿蒙系统更新时提示设备证书已损坏的解决方法"/></a><div class="content"><a class="title" href="/%E9%B8%BF%E8%92%99%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E6%97%B6%E6%8F%90%E7%A4%BA%E8%AE%BE%E5%A4%87%E8%AF%81%E4%B9%A6%E5%B7%B2%E6%8D%9F%E5%9D%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="鸿蒙系统更新时提示设备证书已损坏的解决方法">鸿蒙系统更新时提示设备证书已损坏的解决方法</a><time datetime="2024-06-02T12:03:28.000Z" title="发表于 2024-06-02 20:03:28">2024-06-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/" title="钉钉远程打卡方案"><img src="https://cdn.jkl.asia/blog/20240304.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="钉钉远程打卡方案"/></a><div class="content"><a class="title" href="/%E9%92%89%E9%92%89%E8%BF%9C%E7%A8%8B%E6%89%93%E5%8D%A1%E6%96%B9%E6%A1%88/" title="钉钉远程打卡方案">钉钉远程打卡方案</a><time datetime="2024-03-04T03:22:43.000Z" title="发表于 2024-03-04 11:22:43">2024-03-04</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/bg1.jpg')"><div id="footer-wrap"><div id="running-time"></div><div class="copyright">Copyright &copy; 2023 - 2024 极客郎. All Rights Reserved.</div><div class="footer_custom_text"><p><a style="margin-inline:5px" target="_blank" href="https://www.netlify.com/ "><img src="/img/Hosted-Netlify-0cedbe.png" title="本站部署于Netlify"></a><a style="margin-inline:5px" target="_blank" href="https://github.com/"><img src="/img/Source-Github-d021d6.png" title="本站源码由Github托管"></a><a style="margin-inline:5px" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="/img/Copyright-BY--NC--SA 4.png" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div><!--备案信息--><!--.framework-info--><!--  img(src = '/img/icp.png')--><!--  span= ' '--><!--  a(href='https://beian.miit.gov.cn/')= '黔ICP备2022002429号-1'--></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.19/fancybox/fancybox.umd.min.js"></script><script src="https://jsdelivr.pai233.top/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://iridescent-dolphin-341126.netlify.app/.netlify/functions/twikoo',
+      region: 'ap-shanghai',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://iridescent-dolphin-341126.netlify.app/.netlify/functions/twikoo',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://npm.elemecdn.com/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="/zhheo/random.js"></script><script>let tianliGPT_postSelector = '\#post \#article-container';let tianliGPT_key = 'DSUNwwxaHRvgLOX29m9I';</script><script src="/js/tianli_gpt.js"></script><script src="/js/jquery.min.js" type="application/javascript"></script><script src="/js/Gold-ingot.js"></script><script src="/js/djs.js"></script><script>setInterval(()=>{let create_time=Math.round(new Date("2023-1-28-00:00:00").getTime()/1000);let timestamp=Math.round((new Date().getTime()+8*60*60*1000)/1000);let second=timestamp-create_time;let time=new Array(0,0,0,0,0);if(second>=365*24*3600){time[0]=parseInt(second/(365*24*3600));second%=365*24*3600}if(second>=24*3600){time[1]=parseInt(second/(24*3600));second%=24*3600}if(second>=3600){time[2]=parseInt(second/3600);second%=3600}if(second>=60){time[3]=parseInt(second/60);second%=60}if(second>0){time[4]=second}currentTimeHtml='本站已经安全运行 '+time[0]+' 年 '+time[1]+' 天 '+time[2]+' 时 '+time[3]+' 分 '+time[4]+' 秒';var elementById=document.getElementById('running-time');if(elementById){elementById.innerHTML=currentTimeHtml}},1000);</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?717a99f1494c3f08b0a1972eec77ca87";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous"><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://npm.elemecdn.com/butterfly-extsrc@1/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://jsdelivr.pai233.top/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://npm.elemecdn.com/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script defer src="/js/jquery.min.js"></script><script defer src="/js/kity.min.js"></script><script defer src="/js/kityminder.core.min.js"></script><script defer src="/js/mindmap.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
