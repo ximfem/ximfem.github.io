@@ -4,37 +4,6 @@
   
     
     <entry>
-      <title>使用Clash进行科学上网</title>
-      <link href="/%E4%BD%BF%E7%94%A8Clash%E8%BF%9B%E8%A1%8C%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-      <url>/%E4%BD%BF%E7%94%A8Clash%E8%BF%9B%E8%A1%8C%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><em>Clash</em>是一款开源的代理软件，它基于规则路由的原理，可以有效地管理网络流量，提供稳定可靠的代理服务。与传统的代理软件相比，Clash具有更强大的功能和更灵活的配置选项，同时支持Shadowsocks、Socks5、Trojan等主流代理协议，可以满足不同用户的需求。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 黑科技 </category>
-          
-          <category> 原创 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Clash </tag>
-            
-            <tag> 代理 </tag>
-            
-            <tag> 科学上网 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>搭建无线打印服务器</title>
       <link href="/%E6%90%AD%E5%BB%BA%E6%97%A0%E7%BA%BF%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
       <url>/%E6%90%AD%E5%BB%BA%E6%97%A0%E7%BA%BF%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
@@ -772,13 +741,13 @@
       
         <tags>
             
-            <tag> SSH </tag>
-            
             <tag> Github </tag>
             
             <tag> 开源 </tag>
             
             <tag> 项目 </tag>
+            
+            <tag> SSH </tag>
             
         </tags>
       
@@ -886,13 +855,13 @@
       
         <tags>
             
+            <tag> SSH </tag>
+            
             <tag> Termux </tag>
             
             <tag> Kali </tag>
             
             <tag> Linux </tag>
-            
-            <tag> SSH </tag>
             
             <tag> VNC </tag>
             
@@ -956,9 +925,9 @@
             
             <tag> VMware </tag>
             
-            <tag> Kali </tag>
-            
             <tag> SSH </tag>
+            
+            <tag> Kali </tag>
             
             <tag> 黑客 </tag>
             
