@@ -6,7 +6,7 @@
   <link href="https://blog.jkl.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.jkl.asia/"/>
-  <updated>2024-08-28T19:16:08.434Z</updated>
+  <updated>2025-02-28T10:33:20.041Z</updated>
   <id>https://blog.jkl.asia/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓软件去除广告和更新弹窗</title>
+    <link href="https://blog.jkl.asia/%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6%E5%8E%BB%E9%99%A4%E5%B9%BF%E5%91%8A%E5%92%8C%E6%9B%B4%E6%96%B0%E5%BC%B9%E7%AA%97/"/>
+    <id>https://blog.jkl.asia/%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6%E5%8E%BB%E9%99%A4%E5%B9%BF%E5%91%8A%E5%92%8C%E6%9B%B4%E6%96%B0%E5%BC%B9%E7%AA%97/</id>
+    <published>2025-02-28T08:31:43.000Z</published>
+    <updated>2025-02-28T10:33:20.041Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">有时候好不容易找到一个实用的软件，打开后却是满屏的广告，或者旧版比新版更好用，但又会不断弹出更新弹窗，这些情况确实令人难受，所以现在就分享常用的软件破解方法——去除广告和更新弹窗。首先说明，这种方法只能针对一般没有加固的软件，如果软件有加固，还要先进行脱壳，此类情况不在本文讨论范围内。本文所用的工具是MT管理器破解版，如果使用正版的话部分功能是需要收费的。</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-1.jpg" alt="img"> </p><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p align="left"><font size="3">下载并安装MT管理器和需要处理的软件。本文为大家提供的配套资源里面有MT管理器的破解版和本文实验用的软件，方便大家练手。</font></p><h2 id="去除广告"><a href="#去除广告" class="headerlink" title="去除广告"></a>去除广告</h2><h3 id="提取安装包"><a href="#提取安装包" class="headerlink" title="提取安装包"></a>提取安装包</h3><p align="center"><font size="3">打开MT管理器，点击左上角三个横杠</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-2.jpg" alt="img"> </p><p align="center"><font size="3">点击“安装包提取”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-3.jpg" alt="img"> </p><p align="center"><font size="3">找到对应的应用</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-4.jpg" alt="img"> </p><p align="center"><font size="3">提取安装包</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-5.jpg" alt="img"> </p><p align="center"><font size="3">提取之后定位到安装包位置</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-6.jpg" alt="img"> </p><p align="center"><font size="3">这里就是提取的安装包</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-7.jpg" alt="img"> </p><h3 id="查找广告SDK包名"><a href="#查找广告SDK包名" class="headerlink" title="查找广告SDK包名"></a>查找广告SDK包名</h3><p align="center"><font size="3">点击MT管理器的“Activity记录”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-8.jpg" alt="img"> </p><p align="center"><font size="3">启动服务</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-9.jpg" alt="img"> </p><p align="center"><font size="3">第一次使用会转跳到无障碍设置，找到Activity记录</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-10.jpg" alt="img"> </p><p align="center"><font size="3">打开开关，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-11.jpg" alt="img"> </p><p align="center"><font size="3">再次启动服务</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-12.jpg" alt="img"> </p><p align="left"><font size="3">然后打开要处理的软件，随便点几个广告，回到MT管理器就可以找到广告所用的SDK包名，找到后就可以停止服务了，点击包名可以复制。可以看到这个软件主要广告是穿山甲和快手联盟提供的，但也不排除还有其他的。</font></p><p align="center"><font size="3">常见的广告SDK包头如下：</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">穿山甲：com.bytedance.sdk.openadsdk</span><br><span class="line">快手联盟：com.kwad.sdk</span><br><span class="line">优量汇：com.qq.e</span><br><span class="line">百青藤：com.baidu.mobads.proxy</span><br><span class="line">Mintegral：com.mbridge.msdk</span><br><span class="line">Sigmob：com.sigmob.sdk</span><br><span class="line">AdScope：com.beizi.fusion</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20250228-13.jpg" alt="img"> </p><p align="center"><font size="3">一般也可以在软件的“隐私政策”→“第三方SDK清单”里面找到所用的广告SDK</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-14.jpg" alt="img"> </p><p><img src="https://cdn.jkl.asia/blog/20250228-15.jpg" alt="img"> </p><h3 id="去除软件签名校验"><a href="#去除软件签名校验" class="headerlink" title="去除软件签名校验"></a>去除软件签名校验</h3><p align="center"><font size="3">有些软件有设置签名校验，重新打包安装后如果签名不一致就会闪退，所以要先去除签名校验</font></p><p align="center"><font size="3">点击提取的软件安装包</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-16.jpg" alt="img"> </p><p align="center"><font size="3">点击“功能”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-17.jpg" alt="img"> </p><p align="center"><font size="3">点击“去除签名校验”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-18.jpg" alt="img"> </p><p align="center"><font size="3">确定即可</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-19.jpg" alt="img"> </p><p align="center"><font size="3">然后会得到一个新的以_kill结尾的安装包，这个就是去除签名校验的软件安装包</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-20.jpg" alt="img"> </p><h3 id="处理广告代码"><a href="#处理广告代码" class="headerlink" title="处理广告代码"></a>处理广告代码</h3><p align="center"><font size="3">点击新的安装包</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-21.jpg" alt="img"> </p><p align="center"><font size="3">点击“查看”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-22.jpg" alt="img"> </p><p align="center"><font size="3">首先处理穿山甲的广告。进入“assets”文件夹</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-23.jpg" alt="img"> </p><p align="center"><font size="3">找到文件名为纯数字的文件，点击</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-24.jpg" alt="img"> </p><p align="center"><font size="3">打开方式选“Apk信息”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-25.jpg" alt="img"> </p><p align="center"><font size="3">找到它的版本号，点击复制</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-26.jpg" alt="img"> </p><p align="center"><font size="3">点击最上面的三个点，返回上一级目录</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-27.jpg" alt="img"> </p><p align="center"><font size="3">找到以dex结尾的文件，随便点一个</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-28.jpg" alt="img"> </p><p align="center"><font size="3">打开方式选“Dex编辑器++”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-29.jpg" alt="img"> </p><p align="center"><font size="3">勾选所有dex文件，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-30.jpg" alt="img"> </p><p align="center"><font size="3">进入“Dex编辑器++”后，点击“常量”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-31.jpg" alt="img"> </p><p align="center"><font size="3">过滤</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-32.jpg" alt="img"> </p><p align="center"><font size="3">粘贴刚刚复制的版本号，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-33.jpg" alt="img"> </p><p align="center"><font size="3">点击“在当前结果中替换”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-34.jpg" alt="img"> </p><p align="center"><font size="3">替换内容随便填，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-35.jpg" alt="img"> </p><p align="center"><font size="3">一定要记得点击“应用修改”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-36.jpg" alt="img"> </p><p align="center"><font size="3">然后处理快手联盟的广告。再次点击过滤</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-37.jpg" alt="img"> </p><p align="center"><font size="3">输入快手联盟广告SDK的包头，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-38.jpg" alt="img"> </p><p align="center"><font size="3">在当前结果中替换</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-39.jpg" alt="img"> </p><p align="center"><font size="3">替换内容也是随便填，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-40.jpg" alt="img"> </p><p align="center"><font size="3">应用修改</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-41.jpg" alt="img"> </p><p align="center"><font size="3">其他广告的一般处理方式如下（以优量汇为例）：点击“搜索”→“发起新搜索”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-42.jpg" alt="img"> </p><p align="center"><font size="3">查找内容输入广告SDK的包头，搜索类型选择“代码”，勾选“搜索子目录”，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-43.jpg" alt="img"> </p><p align="center"><font size="3">在当前结果中替换</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-44.jpg" alt="img"> </p><p align="center"><font size="3">替换内容随便填，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-45.jpg" alt="img"> </p><p align="center"><font size="3">替换完成后按下返回键，保存并退出</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-46.jpg" alt="img"> </p><p align="center"><font size="3">勾选“自动签名”，确定之后就可以完成广告去除</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-47.jpg" alt="img"> </p><h2 id="去除更新弹窗"><a href="#去除更新弹窗" class="headerlink" title="去除更新弹窗"></a>去除更新弹窗</h2><p align="center"><font size="3">点击软件安装包</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-48.jpg" alt="img"> </p><p align="center"><font size="3">查看</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-49.jpg" alt="img"> </p><p align="center"><font size="3">点击后缀为xml的文件</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-50.jpg" alt="img"> </p><p align="center"><font size="3">打开方式选择“反编译”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-51.jpg" alt="img"> </p><p align="center"><font size="3">这两行就是软件的内部版本号和外部版本号</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-52.jpg" alt="img"> </p><p align="left"><font size="3">将它们进行修改，内部版本号只能填数字，尽可能大，外部版本号随便填，改完之后点击上面的保存按钮进行保存</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-53.jpg" alt="img"> </p><p align="center"><font size="3">保存后关闭文件，勾选“自动签名”，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-54.jpg" alt="img"> </p><p align="center"><font size="3">然后打开软件，看一下弹窗都有什么内容</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-55.jpg" alt="img"> </p><p align="center"><font size="3">点击后缀为arsc的文件</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-56.jpg" alt="img"> </p><p align="center"><font size="3">打开方式选择“Arsc编辑器”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-57.jpg" alt="img"> </p><p align="center"><font size="3">点击“搜索资源值”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-58.jpg" alt="img"> </p><p align="center"><font size="3">搜索内容就填弹窗上面的文字，搜索类型选“字符串”，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-59.jpg" alt="img"> </p><p align="center"><font size="3">找到跟弹窗上一致的文字内容</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-60.jpg" alt="img"> </p><p align="center"><font size="3">长按，复制ID</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-61.jpg" alt="img"> </p><p align="center"><font size="3">回到安装包的根目录，随便点一个dex文件</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-62.jpg" alt="img"> </p><p align="center"><font size="3">打开方式选“Dex编辑器++”</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-63.jpg" alt="img"> </p><p align="center"><font size="3">勾选所有dex文件，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-64.jpg" alt="img"> </p><p align="center"><font size="3">搜索→发起新搜索</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-65.jpg" alt="img"> </p><p align="center"><font size="3">查找内容就粘贴刚刚复制的ID，搜索类型选“代码”，勾选“搜索子目录”，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-66.jpg" alt="img"> </p><p align="left"><font size="3">一般只有两个结果，如果有多个结果的话可能是某个页面的内容，要注意辨别，所以前面尽量选长一点的内容进行搜索。这里的第二个结果就是设置界面的内容，不用管。先点开第一个结果</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-67.jpg" alt="img"> </p><p align="center"><font size="3">把包含这个内容的整行都删除</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-68.jpg" alt="img"> </p><p align="center"><font size="3">删除后保存文件，关闭文件</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-69.jpg" alt="img"> </p><p align="center"><font size="3">再点开第三个结果</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-70.jpg" alt="img"> </p><p align="center"><font size="3">这里是定义一个检查更新并弹出弹窗的方法</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-71.jpg" alt="img"> </p><p align="center"><font size="3">需要在前后找到.method和.end method</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-72.jpg" alt="img"> </p><p><img src="https://cdn.jkl.asia/blog/20250228-73.jpg" alt="img"> </p><p align="center"><font size="3">把中间的内容删除，部分内容要保留，如果后面没有return-void的话需要补上，然后保存文件</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-74.jpg" alt="img"> </p><p align="center"><font size="3">关闭文件，按下返回键，保存并退出</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-75.jpg" alt="img"> </p><p align="center"><font size="3">勾选“自动签名”，确定</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-76.jpg" alt="img"> </p><h2 id="重新安装"><a href="#重新安装" class="headerlink" title="重新安装"></a>重新安装</h2><p align="center"><font size="3">卸载原来的软件，打开修改好的安装包进行安装</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-77.jpg" alt="img"> </p><p align="center"><font size="3">可以发现广告和更新弹窗都没有了</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-78.jpg" alt="img"> </p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">通过以上方法就可以去除软件内的广告和更新弹窗。另外，去除更新弹窗的方法不仅局限于更新弹窗，其他弹窗也可以用同样的方法进行去除。如果是一些不需要联网使用的软件，最简单的方法就是禁用联网权限，这样就没办法联网获取数据了。</font></p><p><img src="https://cdn.jkl.asia/blog/20250228-79.jpg" alt="img"> </p><p><img src="\img\123.gif" /></p><h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left"><font size="3">本期配套资源下载：</font></p><p align="left"><font size="3">蓝奏云：<a href="https://ximfem.lanzoul.com/b01ynto5dg">点击访问</a>&nbsp;&nbsp;&nbsp;&nbsp;密码：<span style="color:#3E8EDE;">geek</span></font></p><p align="left"><font size="3">123云盘：<a href="https://www.123684.com/s/YzWSVv-9wB7d">点击访问</a></font></p><p align="left"><font size="3">百度网盘：<a href="https://pan.baidu.com/s/1pxjIk-zkZPZi0VSQfmBYrg?pwd=geek">点击访问</a></font></p></div><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="玩机教程" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="破解" scheme="https://blog.jkl.asia/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+    <category term="广告" scheme="https://blog.jkl.asia/tags/%E5%B9%BF%E5%91%8A/"/>
+    
+    <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
+    
+    <category term="MT管理器" scheme="https://blog.jkl.asia/tags/MT%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>搭建无线打印服务器</title>
@@ -80,11 +115,11 @@
     
     <category term="服务器" scheme="https://blog.jkl.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
+    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
+    
     <category term="随身WiFi" scheme="https://blog.jkl.asia/tags/%E9%9A%8F%E8%BA%ABWiFi/"/>
     
     <category term="Debian" scheme="https://blog.jkl.asia/tags/Debian/"/>
-    
-    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
     
     <category term="ADB" scheme="https://blog.jkl.asia/tags/ADB/"/>
     
@@ -158,9 +193,9 @@
     
     <category term="手机" scheme="https://blog.jkl.asia/tags/%E6%89%8B%E6%9C%BA/"/>
     
-    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
-    
     <category term="鸿蒙" scheme="https://blog.jkl.asia/tags/%E9%B8%BF%E8%92%99/"/>
+    
+    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
     
     <category term="Android" scheme="https://blog.jkl.asia/tags/Android/"/>
     
@@ -418,9 +453,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
-    
     <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
+    
+    <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
   </entry>
   
@@ -1018,9 +1053,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
     
@@ -1055,9 +1090,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="UOS" scheme="https://blog.jkl.asia/tags/UOS/"/>
     
@@ -1121,11 +1156,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="Mac" scheme="https://blog.jkl.asia/tags/Mac/"/>
     
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -1247,6 +1282,8 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
+    
     <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
     
     <category term="激活" scheme="https://blog.jkl.asia/tags/%E6%BF%80%E6%B4%BB/"/>
@@ -1254,8 +1291,6 @@
     <category term="优化" scheme="https://blog.jkl.asia/tags/%E4%BC%98%E5%8C%96/"/>
     
     <category term="分区" scheme="https://blog.jkl.asia/tags/%E5%88%86%E5%8C%BA/"/>
-    
-    <category term="更新" scheme="https://blog.jkl.asia/tags/%E6%9B%B4%E6%96%B0/"/>
     
     <category term="安全" scheme="https://blog.jkl.asia/tags/%E5%AE%89%E5%85%A8/"/>
     
@@ -1317,13 +1352,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="广告" scheme="https://blog.jkl.asia/tags/%E5%B9%BF%E5%91%8A/"/>
+    
     <category term="清理" scheme="https://blog.jkl.asia/tags/%E6%B8%85%E7%90%86/"/>
     
     <category term="防护" scheme="https://blog.jkl.asia/tags/%E9%98%B2%E6%8A%A4/"/>
     
     <category term="电脑" scheme="https://blog.jkl.asia/tags/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="广告" scheme="https://blog.jkl.asia/tags/%E5%B9%BF%E5%91%8A/"/>
     
   </entry>
   
