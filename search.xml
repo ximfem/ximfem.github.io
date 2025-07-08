@@ -92,11 +92,11 @@
             
             <tag> 服务器 </tag>
             
+            <tag> 刷机 </tag>
+            
             <tag> 随身WiFi </tag>
             
             <tag> Debian </tag>
-            
-            <tag> 刷机 </tag>
             
             <tag> ADB </tag>
             
@@ -166,9 +166,9 @@
             
             <tag> 手机 </tag>
             
-            <tag> 刷机 </tag>
-            
             <tag> 鸿蒙 </tag>
+            
+            <tag> 刷机 </tag>
             
             <tag> Android </tag>
             
@@ -522,9 +522,9 @@
       
         <tags>
             
-            <tag> Github </tag>
-            
             <tag> 网站 </tag>
+            
+            <tag> Github </tag>
             
             <tag> Netlify </tag>
             
@@ -774,13 +774,13 @@
       
         <tags>
             
+            <tag> SSH </tag>
+            
             <tag> Github </tag>
             
             <tag> 开源 </tag>
             
             <tag> 项目 </tag>
-            
-            <tag> SSH </tag>
             
         </tags>
       
@@ -888,13 +888,13 @@
       
         <tags>
             
-            <tag> SSH </tag>
-            
             <tag> Termux </tag>
             
             <tag> Kali </tag>
             
             <tag> Linux </tag>
+            
+            <tag> SSH </tag>
             
             <tag> VNC </tag>
             
@@ -956,13 +956,13 @@
             
             <tag> 系统 </tag>
             
-            <tag> VMware </tag>
+            <tag> Kali </tag>
             
             <tag> SSH </tag>
             
-            <tag> Kali </tag>
-            
             <tag> 黑客 </tag>
+            
+            <tag> VMware </tag>
             
         </tags>
       
@@ -1140,9 +1140,9 @@
       
         <tags>
             
-            <tag> wifi </tag>
-            
             <tag> 钓鱼 </tag>
+            
+            <tag> wifi </tag>
             
         </tags>
       
