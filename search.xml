@@ -92,11 +92,11 @@
             
             <tag> 服务器 </tag>
             
+            <tag> 刷机 </tag>
+            
             <tag> 随身WiFi </tag>
             
             <tag> Debian </tag>
-            
-            <tag> 刷机 </tag>
             
             <tag> ADB </tag>
             
@@ -166,9 +166,9 @@
             
             <tag> 手机 </tag>
             
-            <tag> 刷机 </tag>
-            
             <tag> 鸿蒙 </tag>
+            
+            <tag> 刷机 </tag>
             
             <tag> Android </tag>
             
@@ -588,9 +588,9 @@
       
         <tags>
             
-            <tag> 服务器 </tag>
-            
             <tag> OpenVPN </tag>
+            
+            <tag> 服务器 </tag>
             
             <tag> Ubuntu </tag>
             
@@ -954,9 +954,9 @@
       
         <tags>
             
-            <tag> 系统 </tag>
-            
             <tag> VMware </tag>
+            
+            <tag> 系统 </tag>
             
             <tag> Kali </tag>
             
@@ -989,9 +989,9 @@
       
         <tags>
             
-            <tag> 系统 </tag>
-            
             <tag> VMware </tag>
+            
+            <tag> 系统 </tag>
             
             <tag> UOS </tag>
             
@@ -1051,11 +1051,11 @@
       
         <tags>
             
-            <tag> 系统 </tag>
-            
             <tag> Mac </tag>
             
             <tag> VMware </tag>
+            
+            <tag> 系统 </tag>
             
         </tags>
       
