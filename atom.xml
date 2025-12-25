@@ -6,7 +6,7 @@
   <link href="https://blog.jkl.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.jkl.asia/"/>
-  <updated>2025-02-28T10:33:20.041Z</updated>
+  <updated>2025-12-25T17:34:51.555Z</updated>
   <id>https://blog.jkl.asia/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软路由 — 移动XR30路由器刷OpenWRT</title>
+    <link href="https://blog.jkl.asia/%E8%BD%AF%E8%B7%AF%E7%94%B1-%E2%80%94-%E7%A7%BB%E5%8A%A8XR30%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7OpenWR/"/>
+    <id>https://blog.jkl.asia/%E8%BD%AF%E8%B7%AF%E7%94%B1-%E2%80%94-%E7%A7%BB%E5%8A%A8XR30%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7OpenWR/</id>
+    <published>2025-12-25T17:31:43.000Z</published>
+    <updated>2025-12-25T17:34:51.555Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">对于办理宽带时运营商配套送的路由器，通常性能有限、功能简陋且存在隐私安全隐患。刷入OpenWrt后，可大幅提升网络稳定性，解锁流量监控、广告过滤等高级功能，并支持科学上网等自定义插件。不仅能充分挖掘硬件潜能，还能获得更安全、透明且完全由自己掌控的网络环境。本文以二手平台淘回来的移动XR30路由器为例，演示完整的刷机流程和后续的配置。</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-1.jpg" alt="img"> </p><h2 id="开启SSH"><a href="#开启SSH" class="headerlink" title="开启SSH"></a>开启SSH</h2><p align="center"><font size="3">用网线连接路由器的LAN口和电脑的网口</font></p><p align="center"><font size="3">打开路由器后台管理页面192.168.10.1，第一次访问会自动填充密码，点击登录即可</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-2.png" alt="img"> </p><p align="center"><font size="3">暂不设置</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-3.png" alt="img"> </p><p align="center"><font size="3">点击“更多”</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-4.png" alt="img"> </p><p align="center"><font size="3">管理→配置管理→选择文件</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-5.png" alt="img"> </p><p align="center"><font size="3">选择“XR30开启SSH配置文件”这个conf文件，点击“导入设置”</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-6.png" alt="img"> </p><p align="center"><font size="3">等待更新完成，然后路由器会自动重启</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-7.png" alt="img"> </p><p align="center"><font size="3">路由器重启后，刷新一下会重新进入登录页面，输入路由器底部的用户名和密码，登录</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-8.png" alt="img"> </p><p align="left"><font size="3">新建SSH连接（这里用的软件是MobaXterm），输入主机IP：192.168.10.1，指定用户名：root，点击“OK”</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-9.png" alt="img"> </p><p align="center"><font size="3">接受并保存</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-10.png" alt="img"> </p><p align="center"><font size="3">连接成功即代表开启了路由器的SSH功能</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-11.png" alt="img"> </p><h2 id="刷入UBoot固件"><a href="#刷入UBoot固件" class="headerlink" title="刷入UBoot固件"></a>刷入UBoot固件</h2><p align="left"><font size="3">在左边的文件窗格，进入/tmp/目录，将uboot固件(mt7981_cmcc_xr30-fip-114M-parts-CN-MESH.bin)拖进去上传</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-12.png" alt="img"> </p><p align="center"><font size="3">输入以下命令写入uboot</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mtd write /tmp/mt7981_cmcc_xr30-fip-114M-parts-CN-MESH.bin FIP</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251226-13.png" alt="img"> </p><h2 id="刷入OpenWRT固件"><a href="#刷入OpenWRT固件" class="headerlink" title="刷入OpenWRT固件"></a>刷入OpenWRT固件</h2><p align="center"><font size="3">拔掉路由器电源，按住mesh按键，插上电源，10秒左右松开</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-14.jpg" alt="img"> </p><p align="center"><font size="3">修改电脑以太网的IP到192.168.1.x网段（可以直接照抄下面的）</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-15.png" alt="img"> </p><p align="left"><font size="3">浏览器打开192.168.1.1进入uboot页面，选择openwrt固件(immortalwrt-mediatek-mt7981-cmcc_xr30-squashfs-factory.bin)并上传</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-16.png" alt="img"> </p><p align="center"><font size="3">上传完成后点击“更新”</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-17.png" alt="img"> </p><p align="center"><font size="3">等待完成更新并自动重启设备</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-18.png" alt="img"> </p><p align="center"><font size="3">将电脑以太网的IP改成自动(DHCP)</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-19.png" alt="img"> </p><p align="center"><font size="3">浏览器打开192.168.1.1，进入openwrt登录界面，输入默认密码password进行登录</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-20.png" alt="img"> </p><p align="center"><font size="3">成功进入管理后台(建议登录后先修改默认密码，在系统→管理权里面修改)</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-21.png" alt="img"> </p><h2 id="配置网络"><a href="#配置网络" class="headerlink" title="配置网络"></a>配置网络</h2><p align="center"><font size="3">进入网络→接口页面，编辑LAN</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-22.png" alt="img"> </p><p align="center"><font size="3">在常规设置下修改IPv4地址为其他网段，防止与光猫的IP冲突</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-23.png" alt="img"> </p><p align="center"><font size="3">修改好之后保存并应用</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-24.png" alt="img"> </p><p align="center"><font size="3">然后将网址修改为你刚才更改的网段的IP，刷新网页（如果没法访问的话，将网线重新拔插一下）</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-25.png" alt="img"> </p><p align="center"><font size="3">进入无线页面，这里可以更改2.4G和5G无线WiFi的名称、密码等等，改完后保存并应用即可</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-26.png" alt="img"> </p><p align="center"><font size="3">配置好之后用网线从光猫的LAN口接到路由器的WAN口就可以正常上网了</font></p><h2 id="配置常用功能"><a href="#配置常用功能" class="headerlink" title="配置常用功能"></a>配置常用功能</h2><h3 id="科学上网"><a href="#科学上网" class="headerlink" title="科学上网"></a>科学上网</h3><p align="center"><font size="3">进入服务→PassWall→节点订阅，添加订阅信息，保存并应用</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-27.png" alt="img"> </p><p align="center"><font size="3">添加后进行一次手动订阅，获取节点信息</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-28.png" alt="img"> </p><p align="center"><font size="3">然后回到基本设置，打开主开关，选择节点，保存并应用即可</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-29.png" alt="img"> </p><h3 id="网络加速"><a href="#网络加速" class="headerlink" title="网络加速"></a>网络加速</h3><p align="center"><font size="3">进入网络→网络加速页面，打开全锥形NAT，保存并应用</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-30.png" alt="img"> </p><p align="left"><font size="3">打开光猫登录页面(一般是192.168.1.1)，用超级管理员账号密码登录(可以搜索一下自己的光猫怎么获取超级管理员密码，实在不行就问装宽带的业务小哥拿)</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-31.png" alt="img"> </p><p align="center"><font size="3">启用UPnP</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-32.png" alt="img"> </p><p align="center"><font size="3">查看路由器在光猫这边分配的IP(这里是192.168.1.5)</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-33.png" alt="img"> </p><p align="center"><font size="3">将DMZ主机设置为路由器，填入路由器IP</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-34.png" alt="img"> </p><p align="left"><font size="3">用NatTypeTester测试一下NAT类型，如果显示FullCone表明成功设置为NAT1网络(有时候需要关闭电脑防火墙才能检测到)，延迟丢包的情况会大幅减少</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-35.png" alt="img"> </p><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p align="center"><font size="3">还可以通过安装软件包实现更多的功能</font></p><p><img src="https://cdn.jkl.asia/blog/20251226-36.png" alt="img"> </p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">通过本文可以将普通的XR30路由器改造成可玩性更高的OpenWRT软路由，将路由器的性能发挥到极致。但是需要注意，目前还没有很成熟的刷回原系统的方案，所以一旦刷机就要做好无法刷回原系统的打算。</font></p><p><img src="\img\123.gif" /></p><h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left"><font size="3">本期配套资源下载：</font></p><p align="left"><font size="3">123云盘：<a href="https://www.123865.com/s/YzWSVv-TOM7d">点击访问</a></font></p><p align="left"><font size="3">百度网盘：<a href="https://pan.baidu.com/s/1HHv1VTxKFzj67mwo3K9_LA?pwd=ijkl">点击访问</a></font></p></div><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="路由器" scheme="https://blog.jkl.asia/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+    <category term="软路由" scheme="https://blog.jkl.asia/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
+    
+    <category term="OpenWRT" scheme="https://blog.jkl.asia/tags/OpenWRT/"/>
+    
+  </entry>
   
   <entry>
     <title>安卓软件去除广告和更新弹窗</title>
@@ -115,11 +148,11 @@
     
     <category term="服务器" scheme="https://blog.jkl.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
-    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
-    
     <category term="随身WiFi" scheme="https://blog.jkl.asia/tags/%E9%9A%8F%E8%BA%ABWiFi/"/>
     
     <category term="Debian" scheme="https://blog.jkl.asia/tags/Debian/"/>
+    
+    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
     
     <category term="ADB" scheme="https://blog.jkl.asia/tags/ADB/"/>
     
@@ -193,9 +226,9 @@
     
     <category term="手机" scheme="https://blog.jkl.asia/tags/%E6%89%8B%E6%9C%BA/"/>
     
-    <category term="鸿蒙" scheme="https://blog.jkl.asia/tags/%E9%B8%BF%E8%92%99/"/>
-    
     <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
+    
+    <category term="鸿蒙" scheme="https://blog.jkl.asia/tags/%E9%B8%BF%E8%92%99/"/>
     
     <category term="Android" scheme="https://blog.jkl.asia/tags/Android/"/>
     
@@ -1053,8 +1086,6 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
-    
     <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
@@ -1062,6 +1093,8 @@
     <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
     <category term="黑客" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E5%AE%A2/"/>
+    
+    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
   </entry>
   
@@ -1090,9 +1123,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
-    
     <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
     <category term="UOS" scheme="https://blog.jkl.asia/tags/UOS/"/>
     
@@ -1156,11 +1189,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
     <category term="Mac" scheme="https://blog.jkl.asia/tags/Mac/"/>
     
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
-    
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
