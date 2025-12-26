@@ -6,7 +6,7 @@
   <link href="https://blog.jkl.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.jkl.asia/"/>
-  <updated>2025-12-25T17:34:51.555Z</updated>
+  <updated>2025-12-26T18:31:20.470Z</updated>
   <id>https://blog.jkl.asia/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移动XR30路由器救砖方法</title>
+    <link href="https://blog.jkl.asia/%E7%A7%BB%E5%8A%A8XR30%E8%B7%AF%E7%94%B1%E5%99%A8%E6%95%91%E7%A0%96%E6%96%B9%E6%B3%95/"/>
+    <id>https://blog.jkl.asia/%E7%A7%BB%E5%8A%A8XR30%E8%B7%AF%E7%94%B1%E5%99%A8%E6%95%91%E7%A0%96%E6%96%B9%E6%B3%95/</id>
+    <published>2025-12-26T17:59:48.000Z</published>
+    <updated>2025-12-26T18:31:20.470Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">为了重新截取上一篇刷机教程的过程图，想着把路由器先刷回原系统，但是网上关于这款路由器的刷机资料很少，了解到XR30与移动另一款路由器RAX3000M的硬件配置相近，就想着用RAX3000M的固件来刷机，没想到后面直接开不了机了，然后就走上了漫长的救砖之路，希望能给遇到相同情况的网友一些参考。</font></p><h2 id="当前状态"><a href="#当前状态" class="headerlink" title="当前状态"></a>当前状态</h2><div class="note warning modern"><p>电源灯不亮</p><p>启动报错ERROR:  BL2: Failed to load image id 3 (-5)</p><p>NMBM元数据被破坏</p><p>U-Boot环境被破坏</p><p>U-Boot的BL2和FIP部分仍然存活</p></div><p><img src="https://cdn.jkl.asia/blog/20251227-1.png" alt="img"> </p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p align="center"><font size="3">拆掉外壳，取出主板</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-2.jpg" alt="img"> </p><p align="center"><font size="3">找到TTL接口，从上往下顺序依次是GND、TX、VCC、RX</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-3.jpg" alt="img"> </p><p align="center"><font size="3">通过USB转TTL工具连接到电脑USB口</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-4.jpg" alt="img"> </p><p align="center"><font size="3">在设备管理器查看对应的COM口，这里是COM4（如果看不到的话有可能是没装驱动，装一下CH340驱动）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-5.png" alt="img"> </p><p align="center"><font size="3">用网线连接电脑网口与路由器的LAN口</font></p><p align="center"><font size="3">进入设置，修改电脑的IPv4网段为192.168.1.x（按以下例子修改就好），保存</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-6.png" alt="img"> </p><p align="center"><font size="3">打开MT798X串口TTL救砖命令.bat</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-7.png" alt="img"> </p><p align="center"><font size="3">输入COM口编号，这里输入4，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-8.png" alt="img"> </p><p align="center"><font size="3">下载波特率选择1，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-9.png" alt="img"> </p><p align="center"><font size="3">选择11这个uboot固件，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-10.png" alt="img"> </p><p align="center"><font size="3">插上路由器电源，会自动下载uboot救砖固件</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-11.png" alt="img"> </p><p align="center"><font size="3">看到出现FIP SENT的时候，再等待一会</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-12.png" alt="img"> </p><p align="center"><font size="3">直到出现下面的页面（如果是空白的话按两下CTRL+C键）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-13.png" alt="img"> </p><p align="center"><font size="3">输入以下命令擦除其他固件的数据：</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nand erase 0x07fe0000 0x20000  # 擦除存放NMBM签名的物理块 (1023号块)</span><br><span class="line"></span><br><span class="line">nand erase 0x07fc0000 0x20000  # 为了确保所有NMBM相关区域被清理，再擦除1022号块（通常存放备份）</span><br><span class="line"></span><br><span class="line">nand erase 0x280000 0x1a00000  # 擦除从0x280000开始的固件分区（约26MB，覆盖RAX3000M数据）</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-14.png" alt="img"> </p><p align="center"><font size="3">通过TFTP的方式将固件下载到路由器的内存里，先执行以下命令配置网络</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setenv serverip 192.168.1.2  # 你的电脑IP，也就是上面设置的静态IP</span><br><span class="line"></span><br><span class="line">setenv ipaddr 192.168.1.1  # 路由器IP</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-15.png" alt="img"> </p><p align="center"><font size="3">打开tftpd64.exe</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-16.png" alt="img"> </p><p align="center"><font size="3">这个要允许</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-17.png" alt="img"> </p><p align="left"><font size="3">选择OpenWRT固件(这里是firmware.bin，其实就是之前的immortalwrt-mediatek-mt7981-cmcc_xr30-squashfs-factory.bin)所在的目录，选择IP对应的有线网卡</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-18.png" alt="img"> </p><p align="center"><font size="3">继续执行以下命令进行固件下载和写入</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tftpboot 0x46000000 firmware.bin  # 通过TFTP下载固件到内存，firmware.bin是固件的文件名</span><br><span class="line">nand write 0x46000000 0x280000 0x$filesize  # 将内存中的固件写入</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-19.png" alt="img"> </p><p align="center"><font size="3">reset重启路由器</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-20.png" alt="img"> </p><p align="center"><font size="3">重启后报错变成了ERROR:  BL2: Failed to load image id 3 (-2)</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-21.png" alt="img"> </p><p align="left"><font size="3">我们需要关闭NMBM只读模式并重建环境。先拔掉路由器电源，关闭这个窗口，重新打开MT798X串口TTL救砖命令.bat并重复前面的步骤，然后会出现这个界面</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-22.png" alt="img"> </p><p align="center"><font size="3">按两次CTRL+C回到命令行模式</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-23.png" alt="img"> </p><p align="center"><font size="3">输入以下命令关闭NMBM只读模式并重建环境</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setenv nmbm_mode default</span><br><span class="line">saveenv</span><br></pre></td></tr></table></figure><p align="center"><font size="3">看到OK后输入reset重启路由器</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-24.png" alt="img"> </p><p align="center"><font size="3">现在还需要修复U-Boot主程序（FIP）。重复前面的步骤，进入这个界面（不需要CTRL+C）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-25.png" alt="img"> </p><p align="center"><font size="3">浏览器打开192.168.1.1/uboot.html这个页面</font></p><p align="center"><font size="3">上传fip.bin固件</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-26.png" alt="img"> </p><p align="center"><font size="3">上传成功后点击更新，等待重启</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-27.png" alt="img"> </p><p align="center"><font size="3">拔掉路由器电源，关闭命令行窗口，重新打开MT798X串口TTL救砖命令.bat并重复前面的步骤</font></p><p align="center"><font size="3">浏览器打开192.168.1.1，再次上传firmware.bin并更新，等待重启</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-28.png" alt="img"> </p><p><img src="https://cdn.jkl.asia/blog/20251227-29.png" alt="img"> </p><p align="center"><font size="3">重启完成后即可正常使用，完成救砖</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-30.png" alt="img"> </p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">救砖完成后，把路由器装回外壳正常使用就可以了。建议定期对路由器进行备份，这样一旦出现问题重刷系统后也能通过备份文件快速恢复配置信息。</font></p><p><img src="\img\123.gif" /></p><h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left"><font size="3">本期配套资源下载：</font></p><p align="left"><font size="3">123云盘：<a href="https://www.123865.com/s/YzWSVv-ZOM7d">点击访问</a></font></p><p align="left"><font size="3">百度网盘：<a href="https://pan.baidu.com/s/1Q6op23_toxyxS6GBKGzWyw?pwd=geek">点击访问</a></font></p></div><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="路由器" scheme="https://blog.jkl.asia/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
+    
+    <category term="救砖" scheme="https://blog.jkl.asia/tags/%E6%95%91%E7%A0%96/"/>
+    
+  </entry>
   
   <entry>
     <title>软路由 — 移动XR30路由器刷OpenWRT</title>
@@ -148,11 +181,11 @@
     
     <category term="服务器" scheme="https://blog.jkl.asia/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
+    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
+    
     <category term="随身WiFi" scheme="https://blog.jkl.asia/tags/%E9%9A%8F%E8%BA%ABWiFi/"/>
     
     <category term="Debian" scheme="https://blog.jkl.asia/tags/Debian/"/>
-    
-    <category term="刷机" scheme="https://blog.jkl.asia/tags/%E5%88%B7%E6%9C%BA/"/>
     
     <category term="ADB" scheme="https://blog.jkl.asia/tags/ADB/"/>
     
@@ -550,13 +583,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
+    
     <category term="内网穿透" scheme="https://blog.jkl.asia/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     
     <category term="NATAPP" scheme="https://blog.jkl.asia/tags/NATAPP/"/>
     
     <category term="花生壳" scheme="https://blog.jkl.asia/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/"/>
-    
-    <category term="网站" scheme="https://blog.jkl.asia/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
@@ -890,13 +923,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
-    
     <category term="Github" scheme="https://blog.jkl.asia/tags/Github/"/>
     
     <category term="开源" scheme="https://blog.jkl.asia/tags/%E5%BC%80%E6%BA%90/"/>
     
     <category term="项目" scheme="https://blog.jkl.asia/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
   </entry>
   
@@ -1016,13 +1049,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
+    
     <category term="Termux" scheme="https://blog.jkl.asia/tags/Termux/"/>
     
     <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
     
     <category term="Linux" scheme="https://blog.jkl.asia/tags/Linux/"/>
-    
-    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
     <category term="VNC" scheme="https://blog.jkl.asia/tags/VNC/"/>
     
@@ -1086,15 +1119,15 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
-    <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
-    <category term="黑客" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E5%AE%A2/"/>
+    <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
     
-    <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    <category term="黑客" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
   </entry>
   
@@ -1123,9 +1156,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
     <category term="UOS" scheme="https://blog.jkl.asia/tags/UOS/"/>
     
@@ -1189,11 +1222,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
     <category term="Mac" scheme="https://blog.jkl.asia/tags/Mac/"/>
     
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
+    
+    <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
