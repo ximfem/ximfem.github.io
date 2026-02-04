@@ -6,7 +6,7 @@
   <link href="https://blog.jkl.asia/atom.xml" rel="self"/>
   
   <link href="https://blog.jkl.asia/"/>
-  <updated>2025-12-26T18:31:20.470Z</updated>
+  <updated>2026-01-04T04:55:41.435Z</updated>
   <id>https://blog.jkl.asia/</id>
   
   <author>
@@ -17,13 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>异地组网实现远程访问家庭局域网服务</title>
+    <link href="https://blog.jkl.asia/%E5%BC%82%E5%9C%B0%E7%BB%84%E7%BD%91%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E5%BA%AD%E5%B1%80%E5%9F%9F%E7%BD%91%E6%9C%8D%E5%8A%A1/"/>
+    <id>https://blog.jkl.asia/%E5%BC%82%E5%9C%B0%E7%BB%84%E7%BD%91%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E5%AE%B6%E5%BA%AD%E5%B1%80%E5%9F%9F%E7%BD%91%E6%9C%8D%E5%8A%A1/</id>
+    <published>2026-01-04T04:36:56.000Z</published>
+    <updated>2026-01-04T04:55:41.435Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">你是否曾想过在外也能像在家一样，安全便捷地访问家中的NAS、路由器或自建服务器？依赖公网IP或第三方转发服务不仅设置复杂，还存在安全与稳定性的顾虑。通过异地组网技术，我们可以将不同位置的设备纳入同一个虚拟局域网，实现直接、高效的远程访问。本文将介绍两种主流的异地组网方案，并演示其详细的配置过程。</font></p><h2 id="Zerotier"><a href="#Zerotier" class="headerlink" title="Zerotier"></a>Zerotier</h2><p align="center"><font size="3">打开<a href="https://my.zerotier.com/" target="_blank">官网</a>，进入旧版控制中心</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-1.png" alt="img"> </p><p align="center"><font size="3">注册一个账号</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-2.png" alt="img"> </p><p align="center"><font size="3">输入账号信息完成注册</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-3.png" alt="img"> </p><p align="center"><font size="3">登陆账号</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-4.png" alt="img"> </p><p align="center"><font size="3">创建网络</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-5.png" alt="img"> </p><p align="center"><font size="3">点击创建好的网络</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-6.png" alt="img"> </p><p align="center"><font size="3">复制网络ID</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-7.png" alt="img"> </p><p align="center"><font size="3">打开客户端<a href="https://www.zerotier.com/download/" target="_blank">下载页</a>，下载需要组网的平台对应的客户端</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-8.png" alt="img"> </p><p align="center"><font size="3">这里以Windows电脑和iPhone手机为例，安装好Windows客户端后，加入网络</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-9.png" alt="img"> </p><p align="center"><font size="3">输入上面复制的网络ID，加入</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-10.png" alt="img"> </p><p align="center"><font size="3">回到平台，编辑刚刚加入的设备</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-11.png" alt="img"> </p><p align="center"><font size="3">勾选授权，然后保存</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-12.png" alt="img"> </p><p align="left"><font size="3">在另一个设备上下载并安装好客户端(以iPhone为例，国区ID没法下载客户端，需要外区的ID)，同样输入这个网络ID加入网络，遇到这个弹窗要点允许</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-13.png" alt="img"> </p><p align="center"><font size="3">然后打开开关加入网络</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-14.png" alt="img"> </p><p align="center"><font size="3">同样要进行授权</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-15.png" alt="img"> </p><p align="left"><font size="3">这样组网后的设备就可以通过平台分配的IP互相访问了，但由于Zerotier免费版有连接设备限制（之前是25台，现在已经缩减到10台了），不可能每台需要组网的设备都加入进来，所以要通过配置路由实现访问同一局域网下的所有设备。添加一个路由(免费版也只能添加一个)，前面填局域网所在网段/24，后面填平台分配的任一台处于该局域网下的设备的IP，添加之后，就可以通过局域网IP(比如192.168.2.5)远程访问局域网中的设备和服务了</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-16.png" alt="img"> </p><p><img src="https://cdn.jkl.asia/blog/20260104-17.png" alt="img"> </p><p align="left"><font size="3">一般我不会将电脑或手机作为远程局域网的中心节点设备，因为它们不是一直开机，我的做法是直接在软路由上安装客户端并加入网络，用路由器作为中心节点。以OpenWRT为例，搜索zerotier，安装最后那个中文版本</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-18.png" alt="img"> </p><p align="left"><font size="3">安装后重启路由器，会看到VPN下面多了一个ZeroTier的菜单，输入网络ID并启用，同时勾选“自动客户端NAT”，保存并应用</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-19.png" alt="img"> </p><p align="center"><font size="3">最后在平台上把路由改成平台分配给路由器的IP就可以了</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-20.png" alt="img"> </p><h2 id="Tailscale"><a href="#Tailscale" class="headerlink" title="Tailscale"></a>Tailscale</h2><p align="center"><font size="3">打开<a href="https://tailscale.com/" target="_blank">官网</a>，开始使用</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-21.png" alt="img"> </p><p align="center"><font size="3">随便使用一种方式登录(推荐用微软账号登录)</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-22.png" alt="img"> </p><p align="center"><font size="3">第一次使用会让你填个问卷，随便选然后就可以进入下一步了</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-23.png" alt="img"> </p><p align="center"><font size="3">进入到管理页面</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-24.png" alt="img"> </p><p align="left"><font size="3">进入<a href="https://tailscale.com/download" target="_blank">下载页</a>，下载设备对应的客户端并安装，然后登录同一个账号(Windows版本安装时，可能需要网络加速一下，因为需要在外网下载安装一些东西)</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-25.png" alt="img"> </p><p align="center"><font size="3">在其他设备上安装并登录好同一个账号后就可以看到所有设备了</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-26.png" alt="img"> </p><p align="center"><font size="3">常用的设备建议禁用密钥过期</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-27.png" alt="img"> </p><p align="center"><font size="3">现在使用分配的IP+服务端口就可以访问内网服务了</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-28.png" alt="img"> </p><p align="center"><font size="3">在设备上也可以看到同一个账号下的所有设备</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-29.png" alt="img"> </p><p align="center"><font size="3">继续配置路由，以实现通过一台中心节点设备访问局域网内所有设备，以OpenWRT路由器为例</font></p><p align="center"><font size="3">目前OpenWRT未集成Tailscale的luci软件包，所以我们需要先去下面的<a href="https://github.com/asvow/luci-app-tailscale/releases" target="_blank">仓库</a>下载</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/asvow/luci-app-tailscale/releases</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20260104-30.png" alt="img"> </p><p align="center"><font size="3">在OpenWRT软件包处手动上传刚刚下载的软件包</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-31.png" alt="img"> </p><p align="center"><font size="3">选择软件包，上传，然后等待自动安装完成</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-32.png" alt="img"> </p><p align="center"><font size="3">安装完成后会在VPN菜单栏下看到Tailscale功能</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-33.png" alt="img"> </p><p align="center"><font size="3">先启用</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-34.png" alt="img"> </p><p align="center"><font size="3">在高级设置里面，打开路由功能，取消勾选“Accept DNS”功能，勾选“Exit Node”功能，添加局域网段</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-35.png" alt="img"> </p><p align="center"><font size="3">保存并应用</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-36.png" alt="img"> </p><p align="center"><font size="3">点这里，打开登录链接登录相同的账号</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-37.png" alt="img"> </p><p align="center"><font size="3">同样在Tailscale管理后台禁用密钥过期，然后编辑路由设置</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-38.png" alt="img"> </p><p align="center"><font size="3">勾选设置的网段，保存</font></p><p><img src="https://cdn.jkl.asia/blog/20260104-39.png" alt="img"> </p><p align="center"><font size="3">然后就可以通过局域网IP+端口直接访问路由器下所有设备的服务了</font></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">至此，我们已经成功通过虚拟专网搭建起一个贯通异地的虚拟局域网，实现了对家庭内部服务的直接、安全访问。无论选择哪种方案，其核心都是将便捷性与控制权交回自己手中，让数据流转更自由。你可以根据自身网络环境和需求选择最适合的工具，开启无缝的跨地域网络体验。其他还有很多类似的组网服务，比如节点小宝、星空组网、蒲公英等，有兴趣的话大家可以去查找相关教程，由于篇幅有限，本文就不详细展开了。</font></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
+    
+    
+    <category term="组网" scheme="https://blog.jkl.asia/tags/%E7%BB%84%E7%BD%91/"/>
+    
+    <category term="OpenWRT" scheme="https://blog.jkl.asia/tags/OpenWRT/"/>
+    
+    <category term="Zerotier" scheme="https://blog.jkl.asia/tags/Zerotier/"/>
+    
+    <category term="Tailscale" scheme="https://blog.jkl.asia/tags/Tailscale/"/>
+    
+  </entry>
+  
+  <entry>
     <title>移动XR30路由器救砖方法</title>
     <link href="https://blog.jkl.asia/%E7%A7%BB%E5%8A%A8XR30%E8%B7%AF%E7%94%B1%E5%99%A8%E6%95%91%E7%A0%96%E6%96%B9%E6%B3%95/"/>
     <id>https://blog.jkl.asia/%E7%A7%BB%E5%8A%A8XR30%E8%B7%AF%E7%94%B1%E5%99%A8%E6%95%91%E7%A0%96%E6%96%B9%E6%B3%95/</id>
     <published>2025-12-26T17:59:48.000Z</published>
-    <updated>2025-12-26T18:31:20.470Z</updated>
+    <updated>2025-12-27T11:18:47.655Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">为了重新截取上一篇刷机教程的过程图，想着把路由器先刷回原系统，但是网上关于这款路由器的刷机资料很少，了解到XR30与移动另一款路由器RAX3000M的硬件配置相近，就想着用RAX3000M的固件来刷机，没想到后面直接开不了机了，然后就走上了漫长的救砖之路，希望能给遇到相同情况的网友一些参考。</font></p><h2 id="当前状态"><a href="#当前状态" class="headerlink" title="当前状态"></a>当前状态</h2><div class="note warning modern"><p>电源灯不亮</p><p>启动报错ERROR:  BL2: Failed to load image id 3 (-5)</p><p>NMBM元数据被破坏</p><p>U-Boot环境被破坏</p><p>U-Boot的BL2和FIP部分仍然存活</p></div><p><img src="https://cdn.jkl.asia/blog/20251227-1.png" alt="img"> </p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p align="center"><font size="3">拆掉外壳，取出主板</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-2.jpg" alt="img"> </p><p align="center"><font size="3">找到TTL接口，从上往下顺序依次是GND、TX、VCC、RX</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-3.jpg" alt="img"> </p><p align="center"><font size="3">通过USB转TTL工具连接到电脑USB口</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-4.jpg" alt="img"> </p><p align="center"><font size="3">在设备管理器查看对应的COM口，这里是COM4（如果看不到的话有可能是没装驱动，装一下CH340驱动）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-5.png" alt="img"> </p><p align="center"><font size="3">用网线连接电脑网口与路由器的LAN口</font></p><p align="center"><font size="3">进入设置，修改电脑的IPv4网段为192.168.1.x（按以下例子修改就好），保存</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-6.png" alt="img"> </p><p align="center"><font size="3">打开MT798X串口TTL救砖命令.bat</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-7.png" alt="img"> </p><p align="center"><font size="3">输入COM口编号，这里输入4，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-8.png" alt="img"> </p><p align="center"><font size="3">下载波特率选择1，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-9.png" alt="img"> </p><p align="center"><font size="3">选择11这个uboot固件，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-10.png" alt="img"> </p><p align="center"><font size="3">插上路由器电源，会自动下载uboot救砖固件</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-11.png" alt="img"> </p><p align="center"><font size="3">看到出现FIP SENT的时候，再等待一会</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-12.png" alt="img"> </p><p align="center"><font size="3">直到出现下面的页面（如果是空白的话按两下CTRL+C键）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-13.png" alt="img"> </p><p align="center"><font size="3">输入以下命令擦除其他固件的数据：</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nand erase 0x07fe0000 0x20000  # 擦除存放NMBM签名的物理块 (1023号块)</span><br><span class="line"></span><br><span class="line">nand erase 0x07fc0000 0x20000  # 为了确保所有NMBM相关区域被清理，再擦除1022号块（通常存放备份）</span><br><span class="line"></span><br><span class="line">nand erase 0x280000 0x1a00000  # 擦除从0x280000开始的固件分区（约26MB，覆盖RAX3000M数据）</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-14.png" alt="img"> </p><p align="center"><font size="3">通过TFTP的方式将固件下载到路由器的内存里，先执行以下命令配置网络</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setenv serverip 192.168.1.2  # 你的电脑IP，也就是上面设置的静态IP</span><br><span class="line"></span><br><span class="line">setenv ipaddr 192.168.1.1  # 路由器IP</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-15.png" alt="img"> </p><p align="center"><font size="3">打开tftpd64.exe</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-16.png" alt="img"> </p><p align="center"><font size="3">这个要允许</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-17.png" alt="img"> </p><p align="left"><font size="3">选择OpenWRT固件(这里是firmware.bin，其实就是之前的immortalwrt-mediatek-mt7981-cmcc_xr30-squashfs-factory.bin)所在的目录，选择IP对应的有线网卡</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-18.png" alt="img"> </p><p align="center"><font size="3">继续执行以下命令进行固件下载和写入</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tftpboot 0x46000000 firmware.bin  # 通过TFTP下载固件到内存，firmware.bin是固件的文件名</span><br><span class="line">nand write 0x46000000 0x280000 0x$filesize  # 将内存中的固件写入</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-19.png" alt="img"> </p><p align="center"><font size="3">reset重启路由器</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-20.png" alt="img"> </p><p align="center"><font size="3">重启后报错变成了ERROR:  BL2: Failed to load image id 3 (-2)</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-21.png" alt="img"> </p><p align="left"><font size="3">我们需要关闭NMBM只读模式并重建环境。先拔掉路由器电源，关闭这个窗口，重新打开MT798X串口TTL救砖命令.bat并重复前面的步骤，然后会出现这个界面</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-22.png" alt="img"> </p><p align="center"><font size="3">按两次CTRL+C回到命令行模式</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-23.png" alt="img"> </p><p align="center"><font size="3">输入以下命令关闭NMBM只读模式并重建环境</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setenv nmbm_mode default</span><br><span class="line">saveenv</span><br></pre></td></tr></table></figure><p align="center"><font size="3">看到OK后输入reset重启路由器</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-24.png" alt="img"> </p><p align="center"><font size="3">现在还需要修复U-Boot主程序（FIP）。重复前面的步骤，进入这个界面（不需要CTRL+C）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-25.png" alt="img"> </p><p align="center"><font size="3">浏览器打开192.168.1.1/uboot.html这个页面</font></p><p align="center"><font size="3">上传fip.bin固件</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-26.png" alt="img"> </p><p align="center"><font size="3">上传成功后点击更新，等待重启</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-27.png" alt="img"> </p><p align="center"><font size="3">拔掉路由器电源，关闭命令行窗口，重新打开MT798X串口TTL救砖命令.bat并重复前面的步骤</font></p><p align="center"><font size="3">浏览器打开192.168.1.1，再次上传firmware.bin并更新，等待重启</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-28.png" alt="img"> </p><p><img src="https://cdn.jkl.asia/blog/20251227-29.png" alt="img"> </p><p align="center"><font size="3">重启完成后即可正常使用，完成救砖</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-30.png" alt="img"> </p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">救砖完成后，把路由器装回外壳正常使用就可以了。建议定期对路由器进行备份，这样一旦出现问题重刷系统后也能通过备份文件快速恢复配置信息。</font></p><p><img src="\img\123.gif" /></p><h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left"><font size="3">本期配套资源下载：</font></p><p align="left"><font size="3">123云盘：<a href="https://www.123865.com/s/YzWSVv-ZOM7d">点击访问</a></font></p><p align="left"><font size="3">百度网盘：<a href="https://pan.baidu.com/s/1Q6op23_toxyxS6GBKGzWyw?pwd=geek">点击访问</a></font></p></div><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p align="left" style="text-indent:32.4px;"><font size="3">为了重新截取上一篇刷机教程的过程图，想着把路由器先刷回原系统，但是网上关于这款路由器的刷机资料很少，了解到XR30与移动另一款路由器RAX3000M的硬件配置相近，就想着用RAX3000M的固件来刷机，没想到后面直接开不了机了，然后就走上了漫长的救砖之路，希望能给遇到相同情况的网友一些参考。</font></p><h2 id="当前状态"><a href="#当前状态" class="headerlink" title="当前状态"></a>当前状态</h2> <div class='checkbox red checked'><input type="checkbox" checked="checked"/>            <p>电源灯不亮</p>            </div> <div class='checkbox red checked'><input type="checkbox" checked="checked"/>            <p>启动报错ERROR: BL2: Failed to load image id 3 (-5)</p>            </div> <div class='checkbox red checked'><input type="checkbox" checked="checked"/>            <p>NMBM元数据被破坏</p>            </div> <div class='checkbox red checked'><input type="checkbox" checked="checked"/>            <p>U-Boot环境被破坏</p>            </div> <div class='checkbox red checked'><input type="checkbox" checked="checked"/>            <p>U-Boot的BL2和FIP部分仍然存活</p>            </div><div style="height: 15px;"></div><p><img src="https://cdn.jkl.asia/blog/20251227-1.png" alt="img"> </p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p align="center"><font size="3">拆掉外壳，取出主板</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-2.jpg" alt="img"> </p><p align="center"><font size="3">找到TTL接口，从上往下顺序依次是GND、TX、VCC、RX</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-3.jpg" alt="img"> </p><p align="center"><font size="3">通过USB转TTL工具连接到电脑USB口</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-4.jpg" alt="img"> </p><p align="center"><font size="3">在设备管理器查看对应的COM口，这里是COM4（如果看不到的话有可能是没装驱动，装一下CH340驱动）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-5.png" alt="img"> </p><p align="center"><font size="3">用网线连接电脑网口与路由器的LAN口</font></p><p align="center"><font size="3">进入设置，修改电脑的IPv4网段为192.168.1.x（按以下例子修改就好），保存</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-6.png" alt="img"> </p><p align="center"><font size="3">打开MT798X串口TTL救砖命令.bat</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-7.png" alt="img"> </p><p align="center"><font size="3">输入COM口编号，这里输入4，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-8.png" alt="img"> </p><p align="center"><font size="3">下载波特率选择1，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-9.png" alt="img"> </p><p align="center"><font size="3">选择11这个uboot固件，回车</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-10.png" alt="img"> </p><p align="center"><font size="3">插上路由器电源，会自动下载uboot救砖固件</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-11.png" alt="img"> </p><p align="center"><font size="3">看到出现FIP SENT的时候，再等待一会</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-12.png" alt="img"> </p><p align="center"><font size="3">直到出现下面的页面（如果是空白的话按两下CTRL+C键）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-13.png" alt="img"> </p><p align="center"><font size="3">输入以下命令擦除其他固件的数据：</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nand erase 0x07fe0000 0x20000  # 擦除存放NMBM签名的物理块 (1023号块)</span><br><span class="line"></span><br><span class="line">nand erase 0x07fc0000 0x20000  # 为了确保所有NMBM相关区域被清理，再擦除1022号块（通常存放备份）</span><br><span class="line"></span><br><span class="line">nand erase 0x280000 0x1a00000  # 擦除从0x280000开始的固件分区（约26MB，覆盖RAX3000M数据）</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-14.png" alt="img"> </p><p align="center"><font size="3">通过TFTP的方式将固件下载到路由器的内存里，先执行以下命令配置网络</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setenv serverip 192.168.1.2  # 你的电脑IP，也就是上面设置的静态IP</span><br><span class="line"></span><br><span class="line">setenv ipaddr 192.168.1.1  # 路由器IP</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-15.png" alt="img"> </p><p align="center"><font size="3">打开tftpd64.exe</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-16.png" alt="img"> </p><p align="center"><font size="3">这个要允许</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-17.png" alt="img"> </p><p align="left"><font size="3">选择OpenWRT固件(这里是firmware.bin，其实就是之前的immortalwrt-mediatek-mt7981-cmcc_xr30-squashfs-factory.bin)所在的目录，选择IP对应的有线网卡</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-18.png" alt="img"> </p><p align="center"><font size="3">继续执行以下命令进行固件下载和写入</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tftpboot 0x46000000 firmware.bin  # 通过TFTP下载固件到内存，firmware.bin是固件的文件名</span><br><span class="line">nand write 0x46000000 0x280000 0x$filesize  # 将内存中的固件写入</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jkl.asia/blog/20251227-19.png" alt="img"> </p><p align="center"><font size="3">reset重启路由器</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-20.png" alt="img"> </p><p align="center"><font size="3">重启后报错变成了ERROR:  BL2: Failed to load image id 3 (-2)</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-21.png" alt="img"> </p><p align="left"><font size="3">我们需要关闭NMBM只读模式并重建环境。先拔掉路由器电源，关闭这个窗口，重新打开MT798X串口TTL救砖命令.bat并重复前面的步骤，然后会出现这个界面</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-22.png" alt="img"> </p><p align="center"><font size="3">按两次CTRL+C回到命令行模式</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-23.png" alt="img"> </p><p align="center"><font size="3">输入以下命令关闭NMBM只读模式并重建环境</font></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setenv nmbm_mode default</span><br><span class="line">saveenv</span><br></pre></td></tr></table></figure><p align="center"><font size="3">看到OK后输入reset重启路由器</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-24.png" alt="img"> </p><p align="center"><font size="3">现在还需要修复U-Boot主程序（FIP）。重复前面的步骤，进入这个界面（不需要CTRL+C）</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-25.png" alt="img"> </p><p align="center"><font size="3">浏览器打开192.168.1.1/uboot.html这个页面</font></p><p align="center"><font size="3">上传fip.bin固件</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-26.png" alt="img"> </p><p align="center"><font size="3">上传成功后点击更新，等待重启</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-27.png" alt="img"> </p><p align="center"><font size="3">拔掉路由器电源，关闭命令行窗口，重新打开MT798X串口TTL救砖命令.bat并重复前面的步骤</font></p><p align="center"><font size="3">浏览器打开192.168.1.1，再次上传firmware.bin并更新，等待重启</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-28.png" alt="img"> </p><p><img src="https://cdn.jkl.asia/blog/20251227-29.png" alt="img"> </p><p align="center"><font size="3">重启完成后即可正常使用，完成救砖</font></p><p><img src="https://cdn.jkl.asia/blog/20251227-30.png" alt="img"> </p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p align="left" style="text-indent:32.4px;"><font size="3">救砖完成后，把路由器装回外壳正常使用就可以了。建议定期对路由器进行备份，这样一旦出现问题重刷系统后也能通过备份文件快速恢复配置信息。</font></p><p><img src="\img\123.gif" /></p><h2 id="配套资源"><a href="#配套资源" class="headerlink" title="配套资源"></a>配套资源</h2><div class="note info no-icon flat"><p align="left"><font size="3">本期配套资源下载：</font></p><p align="left"><font size="3">123云盘：<a href="https://www.123865.com/s/YzWSVv-ZOM7d">点击访问</a></font></p><p align="left"><font size="3">百度网盘：<a href="https://pan.baidu.com/s/1Q6op23_toxyxS6GBKGzWyw?pwd=geek">点击访问</a></font></p></div><p><img src="\img\ewm.png" style="zoom:50%;" /></p><p align="center"><font color="grey" size="3">（部分素材来源于网络，如有侵权请联系作者删除）</font></p>]]></content>
     
     
       
@@ -74,11 +109,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="OpenWRT" scheme="https://blog.jkl.asia/tags/OpenWRT/"/>
+    
     <category term="路由器" scheme="https://blog.jkl.asia/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
     
     <category term="软路由" scheme="https://blog.jkl.asia/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/"/>
-    
-    <category term="OpenWRT" scheme="https://blog.jkl.asia/tags/OpenWRT/"/>
     
   </entry>
   
@@ -292,11 +327,11 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
-    
     <category term="钉钉" scheme="https://blog.jkl.asia/tags/%E9%92%89%E9%92%89/"/>
     
     <category term="打卡" scheme="https://blog.jkl.asia/tags/%E6%89%93%E5%8D%A1/"/>
+    
+    <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
     
     <category term="Todesk" scheme="https://blog.jkl.asia/tags/Todesk/"/>
     
@@ -801,9 +836,9 @@
     
     <category term="Ubuntu" scheme="https://blog.jkl.asia/tags/Ubuntu/"/>
     
-    <category term="主机" scheme="https://blog.jkl.asia/tags/%E4%B8%BB%E6%9C%BA/"/>
-    
     <category term="远程" scheme="https://blog.jkl.asia/tags/%E8%BF%9C%E7%A8%8B/"/>
+    
+    <category term="主机" scheme="https://blog.jkl.asia/tags/%E4%B8%BB%E6%9C%BA/"/>
     
   </entry>
   
@@ -923,13 +958,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
-    
     <category term="Github" scheme="https://blog.jkl.asia/tags/Github/"/>
     
     <category term="开源" scheme="https://blog.jkl.asia/tags/%E5%BC%80%E6%BA%90/"/>
     
     <category term="项目" scheme="https://blog.jkl.asia/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
   </entry>
   
@@ -1049,13 +1084,13 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E7%8E%A9%E6%9C%BA%E6%95%99%E7%A8%8B/%E5%8E%9F%E5%88%9B/"/>
     
     
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
+    
     <category term="Termux" scheme="https://blog.jkl.asia/tags/Termux/"/>
     
     <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
     
     <category term="Linux" scheme="https://blog.jkl.asia/tags/Linux/"/>
-    
-    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
     <category term="VNC" scheme="https://blog.jkl.asia/tags/VNC/"/>
     
@@ -1121,11 +1156,11 @@
     
     <category term="系统" scheme="https://blog.jkl.asia/tags/%E7%B3%BB%E7%BB%9F/"/>
     
+    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
+    
     <category term="VMware" scheme="https://blog.jkl.asia/tags/VMware/"/>
     
     <category term="Kali" scheme="https://blog.jkl.asia/tags/Kali/"/>
-    
-    <category term="SSH" scheme="https://blog.jkl.asia/tags/SSH/"/>
     
     <category term="黑客" scheme="https://blog.jkl.asia/tags/%E9%BB%91%E5%AE%A2/"/>
     
@@ -1317,9 +1352,9 @@
     <category term="原创" scheme="https://blog.jkl.asia/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%8E%9F%E5%88%9B/"/>
     
     
-    <category term="wifi" scheme="https://blog.jkl.asia/tags/wifi/"/>
-    
     <category term="钓鱼" scheme="https://blog.jkl.asia/tags/%E9%92%93%E9%B1%BC/"/>
+    
+    <category term="wifi" scheme="https://blog.jkl.asia/tags/wifi/"/>
     
   </entry>
   

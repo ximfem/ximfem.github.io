@@ -1406,7 +1406,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(/img/bg.jpg);
+  background: url(https://cdn.jkl.asia/blog/bg.jpg);
   background-attachment: local;
   background-position: center;
   background-size: cover;
